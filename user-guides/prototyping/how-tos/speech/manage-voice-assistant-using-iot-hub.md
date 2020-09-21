@@ -36,7 +36,11 @@ If you have not yet created a voice assistant application, please see [QuickStar
 
     If your settings do not match, edit them and click **Update**.
 
+    ![module_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_module_settings.png)
+
 1. Click on the **Environment Variables** tab. Verify that there are no environment variables defined.
+
+    ![environment_variables](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_environment_variables.png)
 
 1. Click on the **Container Create Options** tab. Verify your **HostConfig** settings match those shown below. If not they do not match, update your settings.
 
@@ -98,6 +102,8 @@ If you have not yet created a voice assistant application, please see [QuickStar
     ```
 
     Add the route if it does not exist.
+
+    ![routes](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_routes.png)
 
 1. Click **Review + Create**.
 
