@@ -1,6 +1,6 @@
 
 # Welcome to the Project Santa Cruz Private Preview
-By participating in this preview program you will get an early start using the Project Santa Cruz Dev Kits and services while providing our product and engineering team valuable feedback.
+This public repo provides documentation and example ML models to participants in the preview program. Although the content is public, participation in the program requires a dev kit. If you are with a company working within the edge AI value chain, your company might qualify for a dev kit. Go to https://aka.ms/scpreview to apply.
 
 On this page you will find everything you need to get started, including these [getting started videos](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/videos.md).
 
