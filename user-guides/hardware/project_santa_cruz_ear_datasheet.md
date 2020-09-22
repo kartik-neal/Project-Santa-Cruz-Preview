@@ -20,7 +20,7 @@ ms.topic: reference  # the type of article
 |Weight                          |TBD          |
 |OS                              |NA           |
 |Management Control Plane        |ADU          |
-|Supported Software and Services |Customizable Keywords and Commands <br> Azure IoT Hub <br> Azure IoT Edge <br> Azure Machine Learning <br> Azure Device Update <br> ONNX <br> OpenVINO        |
+|Supported Software and Services |Customizable Keywords and Commands <br> Azure IoT Hub <br> Azure IoT Edge <br> Azure Machine Learning <br> Azure Device Update <br> ONNX |
 |General Processor               |NA         |
 |AI Acceleration                 |XMOS XUF208 Codec        |
 |Sensors and Visual Indicators   |Microphones: <br> 4x MEM Sensing Microsystems MSM261D3526Z1CM <br> Interposer: <br> 2x Buttons, USB Hub, PCM, 3x LEDs, LED Driver          |
