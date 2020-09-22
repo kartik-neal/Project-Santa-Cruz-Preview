@@ -2,7 +2,7 @@
 # Welcome to the Project Santa Cruz Private Preview
 This public repo provides documentation and example ML models to participants in the preview program. Although the content is public, participation in the program requires a dev kit. If you are with a company working within the edge AI value chain, your company might qualify for a dev kit. Go to https://aka.ms/scpreview to apply.
 
-On this page you will find everything you need to get started, including these [getting started videos](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/videos.md).
+On this page you will find everything you need to get started using your dev kit, including these [getting started videos](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/videos.md).
 
 ## 1. Ensure your Azure Subscription is On-boarded
 - [Onboard your Azure subscription](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md)
