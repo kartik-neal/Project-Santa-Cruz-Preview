@@ -28,7 +28,7 @@ performed within the notebook in the cloud.
 
     ![download_zip](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/download_zip.png)
 
-## Set up Azure Machine Learning portal and notebook
+## Set up Azure Machine Learning portal
 
 1. Go to the [Azure Machine Learning Portal](https://ml.azure.com).
 1. Select your directory, Azure subscription, and Machine Learning workspace from the drop down menus and click **Get started**.
@@ -54,37 +54,21 @@ performed within the notebook in the cloud.
 
     Once your workspace creation is complete, return to the machine learning portal tab and click **Get started**.
 
-1. In the machine learning workspace homepage, click **Notebooks** on the left-hand pane.
+1. In the machine learning workspace homepage, click **Compute** on the left-hand pane.
 
-    ![notebooks](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/notebook.png)
-
-1. Under the **My files** tab, click the vertical arrow to upload your .ipynb file.
-
-    ![upload_files](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/upload_files.png)
-
-1. Navigate to and select the [Transferlearningusing_SSDLiteV2 Model.ipynb file](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/Transferlearningusing_SSDLiteV2%20Model.ipynb) from your local copy of the
-Project Santa Cruz GitHub repository. Click **Open**. In the **Upload files** window, check the box next
-to **I trust contents from this file** and click **Upload**.
-
-    ![select_file](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/select_file.png)
-
-1. On the top right menu bar, check your **Compute** status. If no computes are found, click the **+** icon to create a new compute.
-
-    ![no_computes_found](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/no_computes_found.png)
-
-1. In the **New compute instance** window, enter a **Compute name**, choose a **Virtual machine type**, and select a **Virtual machine size**. Click **Create**.
+1. If there is no existing compute instance, then create new CPU or GPU compute by
+   clicking on **New**, then enter a **Compute name**, choose a **Virtual machine type**,
+   and select a **Virtual machine size**. Click **Create**.
 
     ![new_compute_instance](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/new_compute_instance.png)
 
-    Once you click **Create**, your **Compute** status will display a blue circle and **\<your compute name> - Creating**
+    Once you click **Create**, it takes few minutes to create compute instance and
+    once created, the status will show as Running.
 
-    ![compute_creating](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/compute_creating.png)
+    Your **Compute** status will display a green circle and
+    **\<your compute name> - Running** after compute creation is complete.
+    This compute instance runs Jupyter server and will be leveraged for this tutorial.
 
-    Your **Compute** status will display a green circle and **\<your compute name> - Running** after compute creation is complete.
-
-    ![compute_running](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/compute_running.png)
-
-1. Once the compute is running, select the **Python 3.6 - AzureML** kernel from the drop-down menu next to the **+** icon.
 
 ## Visual Studio Code development environment setup
 
