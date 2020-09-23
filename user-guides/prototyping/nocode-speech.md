@@ -15,7 +15,7 @@ In this quickstart, you make your own voice assistant using the Project Santa Cr
 2. Connect the Ear SoM to your devkit.
 3. Power on the devkit.
    * The 1st LED light on the Ear SoM will change to bright green to indicate Ear SoM was powered on. 
-   *	The 2nd LED changes to blinking to indicate Ear SOM is waiting for authentication.
+   *	The 2nd LED changes to blinking green to indicate Ear SOM is waiting for authentication.
 4. Wait for the authentication process to complete. It can take up to 3 minutes.
 5. Proceed to the next section when you see one of the following:
    * Both LED light turn off. This indicates that authentication is completed and devkit is not configured with a keyword.
@@ -27,7 +27,7 @@ In this quickstart, you make your own voice assistant using the Project Santa Cr
 
 The first step in creating a voice assistant is to navigate to the Project Santa Cruz in Azure portal.
 
-1. Start your browser and go to the [Azure preview portal](https://preview.portal.azure.com/#home).
+1. Start your browser and go to the [Azure preview portal](https://go.microsoft.com/fwlink/?linkid=2135819).
 2. Sign into your Azure account. 
 3. Use the Search box at the top of the page, enter *Project Santa Cruz*.
 4. In the list that appears, choose *Project Santa Cruz*. Your browser displays the Project Santa Cruz Overview page.
@@ -41,13 +41,13 @@ Alternatively, you can navigate directly to the [Project Santa Cruz Overview pag
 
 You can build a voice assistant using available templates. The Hospitality template is available for the private preview. Healthcare is also scheduled to be released soon.
 
-1.	Open **Demos & Tutorials** tab. 
-2.	Click **Try out voice assistant templates** under **Speech tutorials and demos**.
-3.	Select IoT hub to which your device is connected from the **IoT hub** list.
+1. Open **Demos & Tutorials** tab. 
+2. Click **Try out voice assistant templates** under **Speech tutorials and demos**.
+3. Select IoT hub to which your device is connected from the **IoT hub** list.
 4. Choose the device from the list.
-5.	Select one of the speech templates.
+5. Select one of the speech templates.
 6. Click the **I agree to terms & conditions for this project.** checkbox.
-7.	Click **Create** button. The portal deploys the resource to the device.
+7. Click **Create** button. The portal deploys the resource to the device.
 
 
 ![Project Santa Cruz Portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/aed-try-speech-themes.png)
@@ -119,15 +119,14 @@ Check led lights on the Ear SOM.
    
 ### Voice Assistant does not respond to a custom keyword created in Speech Studio
 
-This might happen if speech module is out of date. 
-Follow these steps to update the speech module to the latest version.
-* Complete [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md) (you can skip the step about wifi configuration if device will be connected to the same network).
+This might happen if the speech module is out of date. Follow these steps to update the speech module to the latest version.
 
-### Documentation links are not working
-
-Make sure that the onboarding process for your organization is completed. 
-   * Contact your lead PM to find the latest status. 
-   * Request onboarding to the private preview documentation.
+1. Click on **Devices** in the left navigation menu.
+2. Find your device in the list and click on it - the device window will open.
+3. Open **Speech** tab.
+4. Check module version.  
+5. You will see the **Update** button if an update is available. 
+6. Click on the **Update** button. usually it takes around 2-3 minutes to deply an updated version.
 
 ## Clean up resources
 
