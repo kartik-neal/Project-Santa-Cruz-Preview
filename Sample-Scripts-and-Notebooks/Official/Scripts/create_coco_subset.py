@@ -51,16 +51,16 @@ if __name__ == "__main__":
     # Sanity check args
     for jsonfpath in args.input_jsons:
         if not os.path.exists(jsonfpath):
-            print(f"{jsonfpath} does not exist.")
+            print("{} does not exist.".format(jsonfpath))
             exit(1)
 
     for imgdpath in args.input_imgs:
         if not os.path.isdir(imgdpath):
-            print(f"{imgdpath} is not a directory. Need a path to each directory containing images.")
+            print("{} is not a directory. Need a path to each directory containing images.".format(imgdpath))
             exit(2)
 
     if os.path.exists(args.output):
-        print(f"Output directory {args.output} already exists.")
+        print("Output directory {} already exists.".format(args.output))
         exit(3)
 
     # Read in the JSON files to get all the image file names
@@ -89,7 +89,7 @@ if __name__ == "__main__":
                 found = True
                 break
         if not found:
-            print(f"Could not find image: {imgfname} in any image directory. Excluding it.")
+            print("Could not find image: {} in any image directory. Excluding it.".format(imgfname))
 
     # Now copy all images over to the new location
     print("Copying images...")

@@ -16,16 +16,16 @@ if __name__ == "__main__":
 
     # Sanity check the args
     if not os.path.isdir(args.modelpath):
-        print(f"Given a path to the TF object detection API root, but it does not point to a directory: {args.modelpath}")
+        print("Given a path to the TF object detection API root, but it does not point to a directory: {}".format(args.modelpath))
         exit(1)
 
     if not os.path.isfile(args.config):
-        print(f"Given a path to a config file, but it does not point to a real file: {args.config}")
+        print("Given a path to a config file, but it does not point to a real file: {}".format(args.config))
         exit(2)
 
     chckpt_dpath = os.path.dirname(args.checkpoint)
     if not os.path.isdir(chckpt_dpath):
-        print(f"Given a path to a checkpoint, but it does not seem to exist: {args.checkpoint}. Specifically, cannot find {chckpt_dpath}")
+        print("Given a path to a checkpoint, but it does not seem to exist: {}. Specifically, cannot find {}".format(args.checkpoint, chckpt_dpath))
         exit(3)
 
     # Abspath everything
@@ -45,8 +45,8 @@ if __name__ == "__main__":
         "python3",
         script,
         "--input_type=image_tensor",
-        f"--pipeline_config_path={configfpath}",
-        f"--output_directory={args.outputdpath}",
-        f"--trained_checkpoint_prefix={args.checkpoint}",
+        "--pipeline_config_path={}".format(configfpath),
+        "--output_directory={}".format(args.outputdpath),
+        "--trained_checkpoint_prefix={}.".format(args.checkpoint),
     ]
     subprocess.run(script_and_args)
