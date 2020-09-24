@@ -65,29 +65,25 @@ This article describes how to configure your voice assistant application using I
 
 ## How to find out appId, key and region
 
-    To locate your **appID**, **key**, and **region**, go to [Speech Studio](https://speech.microsoft.com/):
+To locate your **appID**, **key**, and **region**, go to [Speech Studio](https://speech.microsoft.com/):
 
-    - Sign in and select the appropriate speech resource.
+1. Sign in and select the appropriate speech resource.
+1. On the **Speech Studio** home page, click on **Custom Commands** under **Voice Assistants**.
+1. Select your target project.
 
-    - On the **Speech Studio** home page, click on **Custom Commands** under **Voice Assistants**.
+![project](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project.png)
 
-        ![custom_commands](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_custom_commands.png)
+1. Click on **Settings** on the left-hand menu panel.
 
-    - Select your target project.
+![project_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project_settings.png)
 
-        ![project](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project.png)
+1. The **appID** and **key** will be located under the **General** settings tab.
 
-    - Click on **Settings** on the left-hand menu panel.
+![general_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_general_settings.png)
 
-        ![project_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project_settings.png)
+1. To find your **region**, open the **LUIS resources** tab within the settings. The **Authoring resource** selection will contain region information.
 
-    - The **appID** and **key** will be located under the **General** settings tab.
-
-        ![general_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_general_settings.png)
-
-    - To find your **region**, open the **LUIS resources** tab within the settings. The **Authoring resource** selection will contain region information.
-
-        ![luis_resources](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_luis_resources.png)
+![luis_resources](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_luis_resources.png)
 
 1. After entering your **speechConfigs** information, click **Update**.
 
