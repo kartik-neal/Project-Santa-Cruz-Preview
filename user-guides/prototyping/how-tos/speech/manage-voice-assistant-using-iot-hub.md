@@ -73,19 +73,16 @@ To locate your **appID**, **key**, and **region**, go to [Speech Studio](https:/
 
 ![project](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project.png)
 
-1. Click on **Settings** on the left-hand menu panel.
-
-![project_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_project_settings.png)
-
+4. Click on **Settings** on the left-hand menu panel.
 1. The **appID** and **key** will be located under the **General** settings tab.
 
 ![general_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_general_settings.png)
 
-1. To find your **region**, open the **LUIS resources** tab within the settings. The **Authoring resource** selection will contain region information.
+6. To find your **region**, open the **LUIS resources** tab within the settings. The **Authoring resource** selection will contain region information.
 
 ![luis_resources](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_luis_resources.png)
 
-1. After entering your **speechConfigs** information, click **Update**.
+7. After entering your **speechConfigs** information, click **Update**.
 
 1. Click on the **Routes** tab at the top of the **Set modules** page. Ensure you have a route with the following value:
 
@@ -94,8 +91,6 @@ To locate your **appID**, **key**, and **region**, go to [Speech Studio](https:/
     ```
 
     Add the route if it does not exist.
-
-    ![routes](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_routes.png)
 
 1. Click **Review + Create**.
 
