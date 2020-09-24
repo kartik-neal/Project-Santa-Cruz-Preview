@@ -34,8 +34,6 @@ This article describes how to configure your voice assistant application using I
 
     If your settings do not match, edit them and click **Update**.
 
-    ![module_settings](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_module_settings.png)
-
 1. Click on the **Environment Variables** tab. Verify that there are no environment variables defined.
 
     ![environment_variables](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_environment_variables.png)
