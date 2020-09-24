@@ -19,7 +19,7 @@ def detect_on_image(imgfpath: str, detection_graph, min_threshold: float):
     Detects and displays bounding boxes on a single image.
     """
     with detection_graph.as_default():
-        with tf.Session(graph=detection_graph) as sess:
+        with tf.Session(graph=detection_graph) as sess:  # pylint: disable=no-member
             # Read in the image and convert from BGR to RGB
             image_np = cv2.resize(cv2.imread(imgfpath), (250, 250))[:,:,::-1]  # pylint: disable=no-member
 
@@ -43,10 +43,10 @@ def detect_on_image(imgfpath: str, detection_graph, min_threshold: float):
 
             # Actual detection.
             boxes, scores, classes, num_detections = sess.run([boxes, scores, classes, num_detections], feed_dict={image_tensor: image_np_expanded})
-            print(f"BOXES (shaped {boxes.shape}):\n{boxes}")
-            print(f"SCORES (shaped {scores.shape}):\n{scores}")
-            print(f"CLASSES (shaped {classes.shape}):\n{classes}")
-            print(f"NDETECTIONS (shaped {num_detections.shape}):\n{num_detections}")
+            print("BOXES (shaped {}):\n{}".format(boxes.shape, boxes))
+            print("SCORES (shaped {}):\n{}".format(scores.shape, scores))
+            print("CLASSES (shaped {}):\n{}".format(classes.shape, classes))
+            print("NDETECTIONS (shaped {}):\n{}".format(num_detections.shape, num_detections))
 
             # Visualization of the results of a detection.
             vis_util.visualize_boxes_and_labels_on_image_array(
@@ -59,8 +59,8 @@ def detect_on_image(imgfpath: str, detection_graph, min_threshold: float):
                 line_thickness=3,
                 min_score_thresh=min_threshold
                 )
-            cv2.imshow("Image", image_np[:,:,::-1])
-            cv2.waitKey(0)
+            cv2.imshow("Image", image_np[:,:,::-1])  # pylint: disable=no-member
+            cv2.waitKey(0)                           # pylint: disable=no-member
 
 def detect_on_all_images_in_directory(imgdpath: str, detection_graph, min_threshold: float):
     """
@@ -84,21 +84,21 @@ if __name__ == "__main__":
     # Sanity check the args
     graphpath = args.graph
     if not os.path.isfile(graphpath):
-        print(f"Given a path to a frozen graph, but it does not exist: {graphpath}")
+        print("Given a path to a frozen graph, but it does not exist: {}".format(graphpath))
         exit(1)
 
     pbtxtfpath = args.pbtxt
     if not os.path.isfile(pbtxtfpath):
-        print(f".pbtxt file is not a file. Given: {pbtxtfpath}")
+        print(".pbtxt file is not a file. Given: {}".format(pbtxtfpath))
         exit(2)
 
     modeldpath = args.modelpath
     if not os.path.isdir(modeldpath):
-        print(f"Model path is not a directory. Given: {modeldpath}")
+        print("Model path is not a directory. Given: {}".format(modeldpath))
         exit(3)
 
     if args.nclasses <= 0:
-        print(f"Number of classes given is: {args.nclasses}, but must be greater than zero.")
+        print("Number of classes given is: {}, but must be greater than zero.".format(args.nclasses))
         exit(4)
 
     # Abspath everything so we don't have to keep doing it
@@ -139,8 +139,8 @@ if __name__ == "__main__":
 
     # Read the frozen graph
     detection_graph = tf.Graph()
-    with detection_graph.as_default():
-        od_graph_def = tf.GraphDef()
+    with detection_graph.as_default():  # pylint: disable=not-context-manager
+        od_graph_def = tf.GraphDef()    # pylint: disable=no-member
         with tf.io.gfile.GFile(graphpath, 'rb') as fid:
             serialized_graph = fid.read()
             od_graph_def.ParseFromString(serialized_graph)
@@ -157,5 +157,5 @@ if __name__ == "__main__":
     elif os.path.isdir(args.image):
         detect_on_all_images_in_directory(args.image, detection_graph, args.min_threshold)
     else:
-        print(f"Given something I don't understand for image. Should be a file or a directory. Given: {args.image}")
+        print("Given something I don't understand for image. Should be a file or a directory. Given: {}".format(args.image))
         exit(5)
