@@ -50,7 +50,7 @@ With [Speech Studio](https://speech.microsoft.com/), you can create a custom key
 
 Follow the [Speech Studio documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-devices-sdk-create-kws) for guidance on creating a custom keyword. Once configured, your new keyword will be available in the Project Santa Cruz portal for use with your voice assistant application.
 
-## Command configuration
+## Commands configuration
 
 Custom commands make it easy to build rich voice commanding apps optimized for voice-first interaction experiences. Custom commands are best suited for task completion or command-and-control scenarios.
 
