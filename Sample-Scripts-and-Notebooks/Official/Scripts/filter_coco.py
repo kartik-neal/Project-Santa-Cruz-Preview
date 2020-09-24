@@ -5,12 +5,15 @@ https://github.com/immersive-limit/coco-manager/blob/master/filter.py
 It is copyright Immersive Limit LLC:
 Copyright (c) 2020 Immersive Limit LLC
 
+It has been modified slightly to remove fstrings and anything else that
+requires Python greater than version 3.5.
+
 This script takes the main COCO JSON and a list of class names and returns a JSON
 file that contains annotations for only images containing at least one of the class
 items.
 """
 import json
-from pathlib import Path
+import os
 
 class CocoFilter():
     """ Filters the COCO dataset
@@ -35,7 +38,7 @@ class CocoFilter():
                 self.categories[cat_id] = category
                 self.category_set.add(category['name'])
             else:
-                print(f'ERROR: Skipping duplicate category id: {category}')
+                print('ERROR: Skipping duplicate category id: {}'.format(category))
 
             # Add category id to the super_categories dict
             if super_category not in self.super_categories:
@@ -50,7 +53,7 @@ class CocoFilter():
             if image_id not in self.images:
                 self.images[image_id] = image
             else:
-                print(f'ERROR: Skipping duplicate image id: {image}')
+                print('ERROR: Skipping duplicate image id: {}'.format(image))
 
     def _process_segmentations(self):
         self.segmentations = dict()
@@ -67,7 +70,7 @@ class CocoFilter():
         """
         missing_categories = set(self.filter_categories) - self.category_set
         if len(missing_categories) > 0:
-            print(f'Did not find categories: {missing_categories}')
+            print('Did not find categories: {}'.format(missing_categories))
             should_continue = input('Continue? (y/n) ').lower()
             if should_continue != 'y' and should_continue != 'yes':
                 print('Quitting early.')
@@ -110,18 +113,18 @@ class CocoFilter():
 
     def main(self, args):
         # Open json
-        self.input_json_path = Path(args.input_json)
-        self.output_json_path = Path(args.output_json)
+        self.input_json_path = os.path.abspath(args.input_json)
+        self.output_json_path = os.path.abspath(args.output_json)
         self.filter_categories = args.categories
 
         # Verify input path exists
-        if not self.input_json_path.exists():
+        if not os.path.isfile(self.input_json_path):
             print('Input json path not found.')
             print('Quitting early.')
             quit()
 
         # Verify output path does not already exist
-        if self.output_json_path.exists():
+        if os.path.exists(self.output_json_path):
             should_continue = input('Output path already exists. Overwrite? (y/n) ').lower()
             if should_continue != 'y' and should_continue != 'yes':
                 print('Quitting early.')
