@@ -61,7 +61,9 @@ This article describes how to configure your voice assistant application using I
     }
     ```
 
-    Note: The keyword used above is a default publicly available keyword. If you wish to use your own, you can add your own custom keyword by uploading a created table file to blob storage. Blob storage needs to be configured with either anonymous container access or anonymous blob access.
+    **Note**: The keyword used above is a default publicly available keyword. If you wish to use your own, you can add your own custom keyword by uploading a created table file to blob storage. Blob storage needs to be configured with either anonymous container access or anonymous blob access.
+
+## How to find out appId, key and region
 
     To locate your **appID**, **key**, and **region**, go to [Speech Studio](https://speech.microsoft.com/):
 
