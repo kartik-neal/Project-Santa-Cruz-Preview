@@ -36,8 +36,6 @@ This article describes how to configure your voice assistant application using I
 
 1. Click on the **Environment Variables** tab. Verify that there are no environment variables defined.
 
-    ![environment_variables](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_environment_variables.png)
-
 1. Click on the **Container Create Options** tab. Verify your **HostConfig** settings match those shown below. If not they do not match, update your settings.
 
     ```
