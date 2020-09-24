@@ -1,12 +1,7 @@
-# Update your voice assistant keyword using IoT Hub
+# Configure voice assistant application using IoT Hub
 
-This article describes how to configure the keyword within your voice assistant application using IoT Hub only. Keyword configuration (as well as command configuration) may also be accomplished through the [Project Santa Cruz portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/voice-assistant-config.md).
+This article describes how to configure your voice assistant application using IoT Hub. Keyword configuration (as well as command configuration) may also be accomplished through the [Project Santa Cruz portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/voice-assistant-config.md).
 
-## What is a keyword?
-
-A keyword is a word or short phrase used to activate a voice assistant device. For example, "Hey Cortana" is the keyword for the Cortana assistant. Voice activation allows your users to start interacting with your product completely hands-free by simply speaking the keyword. As your product continuously listens for the keyword, all audio is processed locally on the device until a detection occurs to ensure their data stays as private as possible.
-
-## Keyword configuration
 
 1. Open the [Azure portal](https://portal.azure.com) and type **IoT Hub** into the search bar. Click on the icon to open the IoT Hub page.
 
@@ -112,5 +107,3 @@ A keyword is a word or short phrase used to activate a voice assistant device. F
 1. Click **Review + Create**.
 
 1. Click **Create**.
-
-Congratulations! You will now be able to use your new keyword within your voice assistant application.
