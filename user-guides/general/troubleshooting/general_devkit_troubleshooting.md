@@ -53,11 +53,11 @@ journalctl -u hostapd.service -u wpa_supplicant.service -u ztpd.service -u syste
 
 |Command:                        |Function:                  |
 |--------------------------------|---------------------------|
-|docker ps                       |shows which containers are running |
-|docker images                   |shows which images are on the device |
-|docker rmi [image id] -f        |deletes an image from the device |
-|docker logs -f edgeAgent <br> docker logs -f [module_name] |takes container logs of specified module |
-|docker image prune              |removes all dangling images |
+|[docker ps](https://docs.docker.com/engine/reference/commandline/ps/) |shows which containers are running |
+|[docker images](https://docs.docker.com/engine/reference/commandline/images/) |shows which images are on the device |
+|[docker rmi [image id] -f](https://docs.docker.com/engine/reference/commandline/rmi/) |deletes an image from the device |
+|[docker logs -f edgeAgent](https://docs.docker.com/engine/reference/commandline/logs/) <br> docker logs -f [module_name] |takes container logs of specified module |
+|[docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/) |removes all dangling images |
 |watch docker ps <br> watch ifconfig [interface] |check docker container download status |
 
 
