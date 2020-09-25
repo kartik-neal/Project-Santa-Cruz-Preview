@@ -160,3 +160,5 @@ Your feedback will help us continue to fine-tune and improve the advanced tools 
 
 For more information on Project Santa Cruz Quests and to provide feedback on other experiences,
 please visit the [test scenarios page](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/test-scenarios.md).
+
+For additional Azure Machine Learning service example notebooks, please visit this [repo](https://github.com/Azure/MachineLearningNotebooks/tree/2aa7c53b0ce84e67565d77e484987714fdaed36e/how-to-use-azureml)
