@@ -43,7 +43,7 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
 
 1. After step 3 above, connect the ethernet cable to the device and your ethernet hub or port
 1. Open a web browser on your laptop or desktop 
-1. Type in http://10.1.1.1:4242
+1. Type in http://IPAddress (Where "IPAddress" is the local IP address of the DevKit/Brainbox which you can get from the ethernet router or hub)
 1. Proceed through OOBE following the steps outline in Next Steps
 
 ## Next steps
