@@ -82,4 +82,4 @@ If the runtime status of **azureeyemodule** is not listed as **running**, click 
 
 View your device's RTSP video stream through the [Project Santa Cruz portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/vision/vision_view_video-stream.md) or [VLC media player](https://www.videolan.org/vlc/index.html).
 
-To open the RTSP stream in VLC media player, go to **Media** -> **Open network stream** -> **rtsp://[device IP address]/result**.-**********
+To open the RTSP stream in VLC media player, go to **Media** -> **Open network stream** -> **rtsp://[device IP address]/result.
