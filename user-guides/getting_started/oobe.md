@@ -74,7 +74,7 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 
 1. After the device has been powered on, connect the ethernet cord to the device and your ethernet hub or port
 1. Open a web browser on your laptop or desktop 
-1. Type in http://10.1.1.1:4242
+1. Type in http://<IP Address> (IP address is the local IP address of the DevKit/Brainbox which you can get from the ethernet router or hub)
 1. OOBE will launch 
 1. Proceed through OOBE following the Welcome steps outlined above
 
