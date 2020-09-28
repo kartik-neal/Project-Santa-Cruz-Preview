@@ -10,7 +10,8 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 
 ## OOBE Wi-Fi Procedure
 
-1. After the devkit has been powered on, connect your laptop to the Santa Cruz Wi-Fi AP. 
+1. After the devkit has been powered on, connect your laptop to the Santa Cruz Wi-Fi AP.
+    1. We recommend not using a Mobile Wi-Fi hotspot to go through OOBE
 1. On your computer, open your network and internet settings and connect to the following:
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's WiFi MAC address)
     2. Password: santacruz
