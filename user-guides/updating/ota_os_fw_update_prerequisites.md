@@ -1,72 +1,56 @@
 # OTA OS and FW Update Prerequisites
 
-1. Toggle Azure Device Update (ADU) on. This can be accomplished through the [onboarding website](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md). After turning on ADU, please wait 5 business days for the service to propagate to your Azure account.
+1. Toggle Azure Device Update (ADU) on. This can be accomplished through the [onboarding website](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md).
 
     ![onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_dps_adu.png)
 
-1. Add the ADU service principal within your Azure Active Directory (AAD) tenant.
+1. Enable Azure Feature Control. This step allows you to get access to the ADU Private Preview resource.
 
-    1. Launch [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7). If you do not have PowerShell, download and install the appropriate [release](https://github.com/PowerShell/PowerShell/releases).
+    1. Go to https://docs.microsoft.com/en-us/rest/api/resources/features/register#code-try-0. Log in and click **Try it**.
 
-    1. Open PowerShell and run the following commands with AAD admin permissions (if you do not have AAD admin permissions, please contact your organization's admin before proceeding):
+        ![try_it](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_try_it.png)
 
-        1. ```powershell
-            Install-Module AzureAD
-            ```
+    1. On the **Rest API Try It** page, enter the following values within the **Parameters** section:
+        - **featureName**: "PublicPreview"  
+        - **resourceProviderNamespace**: "Microsoft.DeviceUpdate"  
+        - **subscriptionId**: choose/enter your Azure subscription that will be used with Project Santa Cruz  
+        - **api-version**: keep the default value
 
-            Enter **Y** when prompted to start the module installation.
+    1. At the bottom of the **Rest API Try It** page, click **Run**.
 
-            ![install_module](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_install_module.png)
+        ![try_it_parameters](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_try_it_parameters.png)
 
-        1. ```powershell
-            Connect-AzureAD
-            ```
+1. Register the ADU resource provider on the subscription.
 
-            Enter your login details in the **Sign in** window.
+    1. Open the [Azure portal](https://ms.portal.azure.com/#home).
 
-            ![account_sign_in](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_account_sign_in.png)
+    1. In the search bar, type **Subscriptions** and click on the yellow key icon to open the **Subscriptions** page.
 
-            After you sign in, you will see your account information displayed in the PowerShell terminal confirming connection to your Azure Active Directory.
+    1. Select your Azure subscription.
 
-            ![connect_azuread](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_connect_azuread.png)
+    1. On your subscription overview page, select **Resource providers** under **Settings**.
 
-        1. ```powershell
-            New-AzureADServicePrincipal -AppId '6ee392c4-d339-4083-b04d-6b7947c6cf78'
-            ```
+    1. Enter **DeviceUpdate** in the search bar.
 
-            You may close PowerShell after adding the ADU service principal within your AAD tenant.
+    1. Select **Microsoft.DeviceUpdate** and click **Register** on the command bar. **Status** will update to **Registered** when registration has completed.  
 
-1. Assign ADU roles to users who will be performing ADU OTA updates. Currently, ADU supports FullAccessAdmin and ReadOnlyAdmin. To assign ADU roles for users, do the following:
+    ![deviceupdate](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_deviceupdate.png)
 
-    1. Sign in to the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod).
+1. Add a role assignment to a user or Azure AD group to grant access to Import and Deploy Updates within IoT Hub. Please note that it can take up to 1 business day for all update services to be set up in your account.
 
-    1. Select **Azure Active Directory**. Use the search bar if the Azure Active Directory icon is not present on your portal homepage.
+    1. On your Azure subscription page, select **Access control (IAM)** on the left menu panel.
 
-        ![azure_portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_azure_portal.png)
+    1. Click **Add** within **Add a role assignment**.
 
-    1. Select **Enterprise applications** on the left pane.
+        ![iam](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_iam.png)
 
-        ![azure_active_directory](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_azure_active_directory.png)
+    1. For **Select a Role**, select **Device Update Administrator**.
 
-    1. On the **Enterprise applications | All applications** page, change the **Application type** to **Microsoft Applications** and click **Apply**.
+    1. Assign access to a user or Azure AD group.
 
-        ![enterprise_applications](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_enterprise_applications.png)
+    1. Click **Save**.
 
-    1. In the search bar, type Azure Device Update or its application ID (application ID: 6ee392c4-d339-4083-b04d-6b7947c6cf78). Select **Azure Device Update**.
-
-        ![all_applications](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_all_applications.png)
-
-    1. On the **Azure Device Update** page, select **Users and groups**.
-
-        ![azure_device_update](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/prereqs_azure_device_update.png)
-
-    1. On the **Azure Device Update | Users and groups** page, select **Add user**.
-
-    1. On the **Add Assignment** page, select a user or a group.
-
-    1. On the **Add Assignment** page, select **Role** and add either **Allow full access to ADU management APIs** or **Allow read-only access to ADU management APIs**.
-
-    1. Select the **Assign** button at the bottom of the page.
+    ![add_role](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_add_role.png)
 
 ## Next steps
 
