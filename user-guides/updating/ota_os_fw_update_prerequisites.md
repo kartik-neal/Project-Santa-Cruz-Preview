@@ -20,7 +20,7 @@
 
         ![try_it_parameters](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_try_it_parameters.png)
 
-1. Register the ADU resource provider on the subscription.
+1. Register the ADU resource provider within your subscription.
 
     1. Open the [Azure portal](https://ms.portal.azure.com/#home).
 
