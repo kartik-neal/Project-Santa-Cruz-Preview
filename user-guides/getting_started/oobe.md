@@ -59,7 +59,7 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 
         ![code_sign_in](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_code_sign_in.png)
 
-1. Select the IoT Hub you created during the onboarding process to assign it to your devkit.
+1. Select the IoT Hub you created during the onboarding process to assign it to your devkit. * mark shows an IoT Hub with DPS. If you are not sure which IoT Hub name you have created during the onboarding process, you can review it by accessing https://projectsantacruz.microsoft.com/.
 
     ![iot_hub](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_iot_hub.png)
 
