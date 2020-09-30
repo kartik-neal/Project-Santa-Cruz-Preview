@@ -27,7 +27,7 @@ In this quickstart, you make your own voice assistant using the Project Santa Cr
 
 The first step in creating a voice assistant is to navigate to the Project Santa Cruz in Azure portal.
 
-1. Start your browser and go to the [Azure preview portal](https://go.microsoft.com/fwlink/?linkid=2135819).
+1. Start your browser and go to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2135819).
 2. Sign into your Azure account. 
 3. Use the Search box at the top of the page, enter *Project Santa Cruz*.
 4. In the list that appears, choose *Project Santa Cruz*. Your browser displays the Project Santa Cruz Overview page.
@@ -83,51 +83,6 @@ Try any of the following commands to interact with your voice assistant. Always 
 * "Close blinds."
 * "Set temp to 75."
 
-## Troubleshooting
-
-### Project Santa Cruz is not available in the Azure portal
-
-1. Verify the Azure portal link. For the Project Santa Cruz private preview you must use the preview version of the Azure portal at  https://preview.portal.azure.com.
-2. Make sure that the onboarding process for your organization is completed. 
-   * Contact your lead PM to find the latest status. 
-   * Request onboarding to the Project Santa Cruz developer experience in Azure portal. 
-
-### Voice assistant application cannot be created - resource deployment fails
-
-1. Verify that the following resource providers are registered in the subscription:
-   * Cognitive Services
-   * Storage
-   * Web
-2. Register resource providers if they are not registered.
-
-#### How to register resource providers
-
-1. Select **Subscriptions** from the left navigation menu
-2. Find the subscription that use for private preview and click on it to open detailed info
-3. Select **Resource Providers** in the left navigation menu
-4. Find each of the resource providers below and **Register** if they are not registered
-   * Cognitive Services
-   * Storage
-   * Web
-
-### Voice Assistant was created but does not respond to commands
-
-Check led lights on the Ear SOM. 
-   * 3 bright blue lights indicate that voice assistant is ready and waiting for the keyword
-   * no lights when devkit is powered indicate that devkit completed initialization and needs to be configured
-   * any combination of green lights indicates that Ear SOM did not complete initialization 
-   
-### Voice Assistant does not respond to a custom keyword created in Speech Studio
-
-This might happen if the speech module is out of date. Follow these steps to update the speech module to the latest version.
-
-1. Click on **Devices** in the left navigation menu.
-2. Find your device in the list and click on it - the device window will open.
-3. Open **Speech** tab.
-4. Check module version.  
-5. You will see the **Update** button if an update is available. 
-6. Click on the **Update** button. usually it takes around 2-3 minutes to deply an updated version.
-
 ## Clean up resources
 
 Follow these steps to clean up resources you deployed in this quickstart: 
@@ -142,6 +97,32 @@ Follow these steps to clean up resources you deployed in this quickstart:
 8. Press **Delete** to delete resources.
 
 **WARNING:** This will remove any custom keywords you created in Speech Studio and voice assistant will no longer function. 
+
+## Troubleshooting
+
+### Project Santa Cruz is not available in the Azure portal
+
+1. Verify the Azure portal link. For the Project Santa Cruz private preview you must use special link [Project Santa Cruz Overview page](https://go.microsoft.com/fwlink/?linkid=2135819).
+
+### Voice Assistant was created but does not respond to commands
+
+Check led lights on the Ear SOM. 
+   * 3 bright blue lights indicate that voice assistant is ready and waiting for the keyword.
+   * no lights when devkit is powered indicate that devkit completed initialization and needs to be configured.
+   * any combination of green lights indicates that Ear SOM did not complete initialization. 
+
+Read more about [Ear SOM led lights](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ear_som_speech_module_troubleshooting.md#understanding-ear-som-led-indicators).
+   
+### Voice Assistant does not respond to a custom keyword created in Speech Studio
+
+This might happen if the speech module is out of date. Follow these steps to update the speech module to the latest version.
+
+1. Click on **Devices** in the left navigation menu.
+2. Find your device in the list and click on it - the device window will open.
+3. Open **Speech** tab.
+4. Check module version.  
+5. You will see the **Update** button if an update is available. 
+6. Click on the **Update** button. usually it takes around 2-3 minutes to deply an updated version.
 
 ## Provide feedback
 
