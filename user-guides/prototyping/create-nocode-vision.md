@@ -12,13 +12,14 @@ Project Santa Cruz enables you to build and deploy complete computer vision solu
 
 ## Project Santa Cruz in the Azure Portal
 
-1. Open a browser and sign into your [Azure account](https://preview.portal.azure.com/#home).
-
-1. In the **Search** box at the top of the page, enter **Project Santa Cruz**.
-
-1. Select **Project Santa Cruz** under **Services**.
+1. Start your browser and go to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2135819).
+2. Sign into your Azure account. 
+3. Use the Search box at the top of the page, enter *Project Santa Cruz*.
+4. In the list that appears, choose *Project Santa Cruz*. Your browser displays the Project Santa Cruz Overview page.
 
 Alternatively, you can navigate directly to the [Project Santa Cruz Overview page](https://go.microsoft.com/fwlink/?linkid=2135819).
+
+![Project Santa Cruz Portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/aed-portal-home-page.png)
 
 ## Create a vision prototype
 
