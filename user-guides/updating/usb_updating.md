@@ -9,58 +9,80 @@ ms.topic: reference  # the type of article
 
 # USB updating
 
-This guide will show you how to flash the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites are satisfied before working through the USB update procedure.  
+This guide will show you how to flash the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites are satisfied before working through the USB update procedure.
+
+There are three USB update methods:
+
+- Method #1: .swu file with a USB storage device.
+- Method #2: .raw file with the NXP UUU tool.
+- Method #3: variation of method #2 for non-standard situations (i.e. your device does not boot).
+
+Please note that method #1 is the only method that does not delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
 
 ## Prerequisites
 
-- [Devkit setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) complete.
-
 - Windows PC with an available USB-C port.
 
-- USB-C cable, included in the Project Santa Cruz Development Kit.  
+- USB storage device (for method #1).
+
+- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit.  
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102). Download the uuu.exe file under the Assets tab.
+- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102) (for method #2 and #3). Download the uuu.exe file under the Assets tab.
 
     ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
 
 - [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
 
-## USB update procedure
+## USB update method #1: USB storage device
 
-1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (pe101-uefi-\<version>.raw.xz) as well as the associated emmc_full.txt and fast-hab-fw.raw files.
+1. Navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download) and download the **Microsoft-PE-101-\<version>.swu** file for your target build (located under the OTA category).
+
+1. Copy the .swu file onto an empty USB storage device.
+
+1. Connect the USB storage device to the carrier board of your Project Santa Cruz Devkit.
+
+1. Update your device:
+
+    1. Option 1: use PuTTY to reboot the device.
+        - Open Putty and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
+        - To confirm the current software version, enter the following into the PuTTY terminal:
+            ```
+            cat /etc/adu-version
+            ```
+        - Once you are ready to start the update, enter:
+            ```
+            reboot
+            ```
+        - Once the device has rebooted, SSH into the device again and run **cat /etc/adu-version** to check the software version and confirm that the update was successful.
+
+    1. Option 2: use the physical on/off button to reboot the device.
+        - Turn the device off.
+        - Once it has completely powered down, turn it back on again.
+        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
+
+## USB update method #2: NXP UUU tool
+
+1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files.
 
     ![update_download](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_update_download.png)
 
-1. Extract the pe101-uefi-\<version>.raw file from the compressed pe101-uefi\<version>.raw.xz file. Right click on the .xz image file and select 7-Zip > Extract Here.  
+1. Extract the **pe101-uefi-\<version>.raw** file from the compressed **pe101-uefi\<version>.raw.xz** file. Right click on the .xz image file and select **7-Zip** > **Extract Here**.  
 
     ![extract_update_files](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_extract_update_files.png)
 
-1. Copy the extracted pe101-uefi-\<version>.raw file, as well as the associated emmc_full.txt and fast-hab-fw.raw files, to the folder containing the UUU tool (uuu.exe).  
+1. Copy the extracted **pe101-uefi-\<version>.raw** file, as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files, to the folder containing the UUU tool (uuu.exe).  
 
 1. Plug in the carrier board power cable and turn on the device.  
 
 1. Connect to the devkit's Wi-Fi AP (password = santacruz).
 
-    ![wifi_ap](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_wifi_ap.png)  
+1. Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
 
-1. Open PuTTY. Enter the following and click Open to SSH into your devkit:
+    ![putty](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty.png)
 
-    1. Host Name: 10.1.1.1
-    1. Port: 22
-    1. Connection Type: SSH
-
-    ![putty](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty.png)  
-
-1. Log in to the PuTTY terminal. If you set up an SSH username and password during the [OOBE]( https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md), enter those login credentials when prompted. Otherwise, enter the following:  
-
-    1. login as: root
-    1. Password: p@ssw0rd
-
-    ![putty_login](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_putty_login.png)  
-
-1. Next, open a command prompt (Start > cmd) and navigate to the folder where the update files are stored. Run the following command:
+1. Next, open a command prompt (**Start** > **cmd**) and navigate to the folder where the update files are stored. Run the following command:
 
     ```console
     uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
@@ -104,17 +126,17 @@ This guide will show you how to flash the carrier board of the Project Santa Cru
         cat /etc/adu-version
         ```
 
-        The terminal will display the current software version, which should match the installed update (pe101-uefi-\<version>.raw).
+        The terminal will display the current software version, which should match the installed update (**pe101-uefi-\<version>.raw**).
 
         ![putty_terminal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty_terminal.png)
 
-## Non-standard situations
+## USB update method #3: non-standard situations
 
 There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (i.e. if you need to recover an unbootable device). In these situations, please follow this guidance.
 
  1. Toggle the Boot Configuration DIP switches to 1011 and remove the SD card so the device will boot into USB flash mode.
 
- 1. Run the UUU command corresponding to your build (see above).
+ 1. Run the UUU command corresponding to your build (see method #2 above).
 
  1. Power on the device.
 
