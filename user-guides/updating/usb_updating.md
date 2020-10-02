@@ -35,34 +35,7 @@ Please note that method #1 is the only method that does not delete the contents 
 
 - [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
 
-## USB update method #1: USB storage device
-
-1. Navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download) and download the **Microsoft-PE-101-\<version>.swu** file for your target build (located under the OTA category).
-
-1. Copy the .swu file onto an empty USB storage device.
-
-1. Connect the USB storage device to the carrier board of your Project Santa Cruz Devkit.
-
-1. Update your device:
-
-    1. Option 1: use PuTTY to reboot the device.
-        - Open Putty and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
-        - To confirm the current software version, enter the following into the PuTTY terminal:
-            ```
-            cat /etc/adu-version
-            ```
-        - Once you are ready to start the update, enter:
-            ```
-            reboot
-            ```
-        - Once the device has rebooted, SSH into the device again and run **cat /etc/adu-version** to check the software version and confirm that the update was successful.
-
-    1. Option 2: use the physical on/off button to reboot the device.
-        - Turn the device off.
-        - Once it has completely powered down, turn it back on again.
-        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
-
-## USB update method #2: NXP UUU tool
+## USB update method #1: NXP UUU tool
 
 1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files.
 
@@ -130,7 +103,7 @@ Please note that method #1 is the only method that does not delete the contents 
 
         ![putty_terminal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty_terminal.png)
 
-## USB update method #3: non-standard situations
+## USB update method #2: non-standard situations
 
 There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (i.e. if you need to recover an unbootable device). In these situations, please follow this guidance.
 
