@@ -11,25 +11,25 @@ ms.topic: reference  # the type of article
 
 This guide will show you how to flash the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites are satisfied before working through the USB update procedure.
 
-There are three USB update methods:
+There are two USB update methods:
 
-- Method #1: .swu file with a USB storage device.
-- Method #2: .raw file with the NXP UUU tool.
-- Method #3: variation of method #2 for non-standard situations (i.e. your device does not boot).
+<!---- Method #1: .swu file with a USB storage device.--->
+- Method #1: .raw file with the NXP UUU tool.
+- Method #2: variation of method #1 for non-standard situations (i.e. your device does not boot).
 
-Please note that method #1 is the only method that does not delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
+Please note that both methods delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
 
 ## Prerequisites
 
 - Windows PC with an available USB-C port.
 
-- USB storage device (for method #1).
+<!----- USB storage device (for method #1).--->
 
 - Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit.  
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102) (for method #2 and #3). Download the uuu.exe file under the Assets tab.
+- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102). Download the uuu.exe file under the Assets tab.
 
     ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
 
