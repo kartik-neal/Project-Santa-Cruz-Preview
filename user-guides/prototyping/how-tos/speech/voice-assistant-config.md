@@ -10,17 +10,13 @@ A keyword is a word or short phrase used to activate a voice assistant. For exam
 
 ### Configuration within the voice assistant demo window
 
-<!---1. On the overview page of the [Project Santa Cruz portal](https://go.microsoft.com/fwlink/?linkid=2135819), click on **Speech** under **AI Projects** on the left menu pane.--->
-
-<!---1. Select the speech project you would like to configure.--->
-
 1. Click **change** next to **Custom Keyword** on the demo page.
 
     ![hospitality_demo](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_hospitality_demo.png)
 
-1. Select one of the available keywords and click **Save** to apply changes.
+    If you do not have the demo page open, navigate to the device page (see below) and click **Test your voice assistant** under **Actions** to access the demo.
 
-    <!---![change_keyword](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/how-tos/speech/article_images/speech_change_keyword.png)--->
+1. Select one of the available keywords and click **Save** to apply changes.
 
 1. The three LED lights on the Ear SOM will change to bright blue (no flashing) when configuration is complete and your voice assistant is ready to use.
 
@@ -56,11 +52,7 @@ Custom commands make it easy to build rich voice commanding apps optimized for v
 
 ### Configuration within the voice assistant demo window
 
-<!---1. On the overview page of the [Project Santa Cruz portal](https://go.microsoft.com/fwlink/?linkid=2135819), click on **Speech** under **AI Projects** on the left menu pane.--->
-
-<!---1. Select the speech project you would like to configure.--->
-
-1. Click **Change** next to **Custom Command** on the demo page.
+1. Click **Change** next to **Custom Command** on the demo page. If you do not have the demo page open, navigate to the device page (see below) and click **Test your voice assistant** under **Actions** to access the demo.
 
 1. Select one of the available custom commands and click **Save** to apply changes.
 
