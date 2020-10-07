@@ -21,7 +21,7 @@ Please note that both methods delete the contents of your device's data partitio
 
 ## Prerequisites
 
-- Windows PC with an available USB-C port.
+- Windows or Linux PC with an available USB-C port.
 
 <!----- USB storage device (for method #1).--->
 
@@ -29,7 +29,7 @@ Please note that both methods delete the contents of your device's data partitio
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102). Download the uuu.exe file under the Assets tab.
+- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102). Download the uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
 
     ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
 
@@ -45,7 +45,7 @@ Please note that both methods delete the contents of your device's data partitio
 
     ![extract_update_files](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_extract_update_files.png)
 
-1. Copy the extracted **pe101-uefi-\<version>.raw** file, as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files, to the folder containing the UUU tool (uuu.exe).  
+1. Copy the extracted **pe101-uefi-\<version>.raw** file, as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files, to the folder containing the UUU tool (uuu.exe for Windows or uuu for Linux).  
 
 1. Plug in the carrier board power cable and turn on the device.  
 
@@ -55,11 +55,16 @@ Please note that both methods delete the contents of your device's data partitio
 
     ![putty](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty.png)
 
-1. Next, open a command prompt (**Start** > **cmd**) and navigate to the folder where the update files are stored. Run the following command:
+1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command:
 
-    ```console
-    uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
-    ```
+    - Windows:
+        ```console
+        uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
+    - Linux:
+        ```console
+        sudo ./uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
 
     ![cmd_flash](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_cmd_flash.png)  
 
@@ -109,7 +114,7 @@ There are a few situations where it is not possible to gracefully USB update (re
 
  1. Toggle the Boot Configuration DIP switches to 1011 and remove the SD card so the device will boot into USB flash mode.
 
- 1. Run the UUU command corresponding to your build (see method #2 above).
+ 1. Run the UUU command corresponding to your build (see method #1 above).
 
  1. Power on the device.
 
