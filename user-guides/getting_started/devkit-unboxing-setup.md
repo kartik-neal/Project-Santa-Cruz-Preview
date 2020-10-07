@@ -42,7 +42,7 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
     > [!NOTE]
     > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
 
-1. The PE-101 carrier board is assigned a default address of 10.1.1.1 on the Santa Cruz Wi-fi AP. To reach the OOBE (out-of-box-experience), open a browser and go to http://10.1.1.1:4242.
+1. The PE-101 carrier board is assigned a default address of 10.1.1.1 on the Santa Cruz Wi-fi AP. To reach the OOBE (out-of-box-experience), open a browser and go to http://10.1.1.1:4242 (for builds released prior to 09/08/2020).  Use http://10.1.1.1 (for builds released after 09/08/2020).
 
 ### Ethernet setup
 
