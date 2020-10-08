@@ -10,28 +10,20 @@ ms.topic: reference  # the type of article
 
 Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits and devices, please complete the onboarding as described herein. The onboarding process involves connecting an appropriate Azure subscription and IoT Hub to Project Santa Cruz, which allows you to connect, manage, and update your devices with ease. Perform the following steps to complete the onboarding:
 
-1. Read and sign the Project Santa Cruz NDA and provide your tenant ID through the Private Preview email invitation. If you have not received an email invitation, please reach out to your Project Santa Cruz representative for assistance.
+1. Open a browser and enter https://projectsantacruz.microsoft.com/ in the address bar to open the onboarding tool.  
 
-    1. To locate your tenant ID, sign in to the [Azure Portal](https://ms.portal.azure.com/#home) and click **View** under **Manage Azure Active Directory**. If this link is not available on your portal’s home screen, type Azure Active Directory into the search bar at the top of the page and click on the link with the blue pyramid icon.
+1. Enter your account login details and click **Next**.
 
-        ![azure_portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_azure_portal.png)
-
-    1. The tenant ID will be displayed in the **Tenant information** box on the **Overview** page of Azure Active Directory. For more information on tenant IDs, please see the Azure Active Directory [documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-create-new-tenant).
-
-        ![azure_active_directory](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_azure_active_directory.png)
-
-    1. You will be able to access the Project Santa Cruz onboarding website within three to four days after submitting your Private Preview agreement.
-    
-    > [!NOTE]
-    > If you have a personal (MSA) account, you will not be able to access the onboarding tool. Please follow the [MSA account onboarding access guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create a new user as a “work/school account” (corporate account), which will be able to access the onboarding website. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
- 
-1. Once your Private Preview agreement has been processed, open a browser and enter https://projectsantacruz.microsoft.com/ in the address bar to access the onboarding tool.  
-
-1. Enter your account login details and click **Next**. The account must be associated with the tenant ID provided through the Private Preview email invitation.  
- 
     ![onboarding_welcome_page](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_welcome_page.png)
 
-1. Click **Get Started** on the onboarding welcome screen.
+1. Click **Request access**. It may take up to 2 business days to process your request to access the onboarding portal.
+
+    > [!NOTE]
+    > If you have a personal (MSA) account, you will not be able to access the onboarding tool. Please follow the [MSA account onboarding access guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create a new user as a “work/school account” (corporate account), which will be able to access the onboarding website. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
+
+    ![request_access](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_request_access.png)
+
+1. Once you have access to the onboarding portal through the URL above, click **Get Started** on the onboarding welcome screen.
 
 1. Select the Azure subscription you would like to use with Project Santa Cruz from the drop-down menu. If you do not have an Azure subscription, or if you would like to create a new subscription to use with Project Santa Cruz, click the blue **Learn more** icon. This link redirects to the Azure website where you may create a new Azure account. Note that the free account, which currently provides $200 in credits to use within 30 days of the account opening, is sufficient to get started with Project Santa Cruz. Your account credit card will be charged for usage following the exhaustion or expiration of the credits. After you have selected the appropriate Azure subscription from the drop-down on the onboarding screen, click **Next**.
 
