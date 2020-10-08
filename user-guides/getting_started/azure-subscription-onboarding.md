@@ -14,12 +14,12 @@ Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits 
 
 1. Enter your account login details and click **Next**.
 
+    > [!NOTE]
+    > If you have a personal (MSA) account, you will not be able to access the onboarding tool. Please follow the [MSA account onboarding access guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create a new user as a “work/school account” (corporate account), which will be able to access the onboarding website. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
+
     ![onboarding_welcome_page](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_welcome_page.png)
 
 1. Click **Request access**. It may take up to 2 business days to process your request to access the onboarding portal.
-
-    > [!NOTE]
-    > If you have a personal (MSA) account, you will not be able to access the onboarding tool. Please follow the [MSA account onboarding access guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create a new user as a “work/school account” (corporate account), which will be able to access the onboarding website. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
 
     ![request_access](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_request_access.png)
 
