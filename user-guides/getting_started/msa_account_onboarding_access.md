@@ -10,12 +10,6 @@ If you are using an MSA personal account, we will need you to complete some addi
 
     ![aad](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/msa_aad.png)
 
-1. Please provide the **Tenant ID**, located in the **Tenant information** box, to your Project Santa Cruz representative so that we can enable the preview experiences within your account.
-
-    ![tenant](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/msa_tenant.png)
-
-    Note: If you have already provided this Tenant ID to your Project Santa Cruz representative, you may skip this step.
-
 1. In Azure Active Directory, select **Users** under **Manage**.
 
 1. Select **+ New user** to create a new user.
