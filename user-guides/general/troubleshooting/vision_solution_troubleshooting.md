@@ -34,11 +34,7 @@
 
 1. Click on the **Iot Hub** icon.
 
-    ![iot_hub_2](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/article_images/vision_iot_hub_2.png)
-
 1. Select the IoT Hub that your target device is connected to.
-
-    ![iot_hub](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/article_images/vision_iot_hub.png)
 
 1. Select **Iot Edge** and check the box next to your target device ID. Click the trash can icon to delete your device.
 
