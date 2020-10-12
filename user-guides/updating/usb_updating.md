@@ -29,7 +29,7 @@ Please note that both methods delete the contents of your device's data partitio
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases/tag/uuu_1.3.102). Download the uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
+- [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases). Download the **Latest Release** uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
 
     ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
 
