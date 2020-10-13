@@ -124,12 +124,20 @@ performed within the notebook through your remote compute instance.
         ![azure_sign_in](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/article_images/transfer_learning_azure_sign_in.png)
 
     1. Activate the Python extension and Azure account by clicking the Azure icon on the left-hand side of VS Code.
+
+        ![azure_icon](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/azure_icon.png)
+
     1. Open the Transferlearningusing_SSDLiteV2 Model_VSCode.ipynb notebook from the **myworkspace** folder.
     1. Open the command palette. Enter and select **Python: specify local or remote Jupyter server for connections**.
     1. You should see a list of connection options to choose from. Select **Azure ML Compute Instances**.
+
+        ![azure_ml_compute_instances](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/azure_ml_compute_instances.png)
+
     1. Follow the guided prompts to choose a subscription, workspace, and remote compute instance. Select the workspace and remote compute instance created earlier in this tutorial. You also have the option of creating a new compute instance.
     1. After selecting a compute instance, you’ll be prompted to reload your VS Code window. Once you reload, select
        the **Python 3.6 - AzureML** kernel. You can now run any of the cells in your notebook. Running a notebook cell will instantiate the connection between your notebook and your compute instance. The notebook toolbar will be updated to reflect the compute instance you’re working on.
+
+        ![kernel](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/azure_ml_compute_instances.png)
 
 ## Working with the notebook
 
