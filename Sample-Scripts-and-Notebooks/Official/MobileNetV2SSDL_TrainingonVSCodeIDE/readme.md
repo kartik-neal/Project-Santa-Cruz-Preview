@@ -137,7 +137,7 @@ performed within the notebook through your remote compute instance.
     1. After selecting a compute instance, you’ll be prompted to reload your VS Code window. Once you reload, select
        the **Python 3.6 - AzureML** kernel. You can now run any of the cells in your notebook. Running a notebook cell will instantiate the connection between your notebook and your compute instance. The notebook toolbar will be updated to reflect the compute instance you’re working on.
 
-        ![kernel](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/azure_ml_compute_instances.png)
+        ![kernel](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/kernel.png)
 
 ## Working with the notebook
 
