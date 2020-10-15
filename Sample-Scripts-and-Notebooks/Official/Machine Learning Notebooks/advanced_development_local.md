@@ -66,7 +66,7 @@ performed within the notebook through your remote compute instance.
 
     1. Option 1:
 
-        Use the [Dev Tools Pack Installer](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/dev-tools-installer.md) to install the following packages:
+        Use the [Dev Tools Pack Installer](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/dev-tools-installer.md) to install the following packages:
 
         - Visual Studio Code
         - Python 3.5, 3.6, or 3.7
