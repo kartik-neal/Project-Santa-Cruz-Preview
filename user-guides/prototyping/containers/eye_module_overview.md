@@ -6,6 +6,8 @@ azureeyemodule is a container that controls the Eye SoM and enables vision AI so
 
 Refer to the following diagram and corresponding steps to understand the process between deploying the azureeyemodule container and receiving inference results from the module's AI model. Note that the "host" refers to the carrier board of the devkit, the "AI accelerator" refers to the SoM, and the “camera module” refers to the camera that connects to the SoM.
 
+![azureeyemodule_diagram](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/azureeyemodule_diagram.png)
+
 1. The container is deployed from the Azure cloud to the host.
 2. The container starts and authenticates with the security chip.
 3. If the AI camera is authenticated, the container sends the AI model to the AI accelerator and a "start" signal to initiate camera capture.
@@ -42,15 +44,25 @@ azureeyemodule supports the following module twin settings:
 
 1. Log in to the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and open **All resources**.
 
+    ![azure_portal](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/azure_portal.png)
+
 1. On the **All resources** page, click on the name of the IoT Hub that was provisioned to your devkit during the OOBE process.
 
 1. On the left side of the IoT Hub page, click on **IoT Edge** under **Automatic Device Management**. On the IoT Edge devices page, find the device ID of your devkit. Click the device ID of your devkit to open its IoT Edge device page.
 
-1. Click **azureeyemodule** under the **Modules** tab.  
+    ![iot_edge](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/iot_edge.png)
+
+1. Click **azureeyemodule** under the **Modules** tab.
+
+    ![device_page](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/device_page.png)
 
 1. On the azureeyemodule page, open **Module Identity Twin**.
 
+    ![module_page](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/module_page.png)
+
 1. Scroll down to **properties**. Please note that the properties "Running" and "Logging" are not active at this time.
+
+    ![module_identity_twin](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/prototyping/containers/images/module_identity_twin.png)
 
 1. Make your desired edits and click the **Save** icon.
 
