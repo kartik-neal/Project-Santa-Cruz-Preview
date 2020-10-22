@@ -1,6 +1,13 @@
 
 # Welcome to the Project Santa Cruz Private Preview
 
+> **MAINTENANCE ALERT**: Scheduled maintenance for the Ear/Eye SoM related cloud service will occur at 1:00PM PST on Wednesday, 10/28/2020. The maintenance period will last between 15 minutes and 1 hour. During this time, users may encounter the following problem with the Ear/Eye SoM:
+>
+> - If the AI application restarts or the SoM is reconnected to the carrier board of the devkit, the AI application will receive a hardware initialization failure and will not be able to access the SoM.
+>    - In this case, the Ear SoM LED indicators will keep flashing instead of turning off after 15 seconds.
+> - If the AI application is already running prior to the maintenance period, the application will continue to run without error unless a restart/reboot is triggered.
+>- If a hardware initialization failure is encountered, restart the AI application after maintenance is completed.
+
 This public repo provides documentation and example ML models to participants in the preview program. Although the content is public, participation in the program requires a devkit. If you are with a company working within the edge AI value chain, your company might qualify for a devkit. Go to https://aka.ms/scpreview to apply.
 
 On this page you will find everything you need to get started using your devkit, including these [getting started videos](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/videos.md).
