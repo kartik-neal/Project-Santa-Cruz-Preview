@@ -98,7 +98,7 @@ edited directly in the notebook. To run a cell, click the play icon on the left 
 
 ## Provide feedback
 
-After completing the advanced tools cloud development experience as well as the [local development experience](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/tree/main/Sample-Scripts-and-Notebooks/Official/MobileNetV2SSDL_TrainingonVSCodeIDE), please provide feedback
+After completing the advanced tools cloud development experience, please provide feedback
 via this [questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzoJxrXKT0dEvfQyxsA0h8lUMzE0V0pCTFU4UUVSS0xTRUtNT0hZSEs1Ry4u).
 Your feedback will help us continue to fine-tune and improve the advanced tools experience.
 

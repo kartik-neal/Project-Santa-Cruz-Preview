@@ -149,7 +149,7 @@ each cell of the notebook individually as some of the cells require input parame
 
 ## Provide feedback
 
-After completing the advanced tools local development experience as well as the [cloud development experience](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/tree/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks),
+After completing the advanced tools local development experience,
 please provide feedback on your experience via
 this [questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzoJxrXKT0dEvfQyxsA0h8lUMzE0V0pCTFU4UUVSS0xTRUtNT0hZSEs1Ry4u).
 Your feedback will help us continue to fine-tune and improve the advanced tools experience.
