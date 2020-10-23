@@ -81,5 +81,6 @@ After building a speech no-code solution, check out the following resources for 
 - [Getting support](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/get-support.md)
 - [Reporting issues](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/report-a-bug.md)
 - [Providing feedback](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/give-feedback.md)
-- [Complete the Focused Test Scenarios](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/test-scenarios.md)
+- [Complete the focused test scenarios](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/test-scenarios.md)
 - [Known issues](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/release-notes/known-issues.md)
+- [Release notes](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/release-notes/release-notes.md)
