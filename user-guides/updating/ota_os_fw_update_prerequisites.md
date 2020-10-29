@@ -4,22 +4,6 @@
 
     ![onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/onboarding_dps_adu.png)
 
-1. Register the ADU resource provider within your subscription.
-
-    1. Open the [Azure portal](https://ms.portal.azure.com/#home).
-
-    1. In the search bar, type **Subscriptions** and click on the yellow key icon to open the **Subscriptions** page.
-
-    1. Select your Azure subscription.
-
-    1. On your subscription overview page, select **Resource providers** under **Settings**.
-
-    1. Enter **DeviceUpdate** in the search bar.
-
-    1. Select **Microsoft.DeviceUpdate** and click **Register** on the command bar. **Status** will update to **Registered** when registration has completed.  
-
-    ![deviceupdate](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_deviceupdate.png)
-
 1. Enable Azure Feature Control. This step allows you to get access to the ADU Private Preview resource.
 
     1. Go to https://docs.microsoft.com/en-us/rest/api/resources/features/register#code-try-0. Log in and click **Try it**.
@@ -35,6 +19,24 @@
     1. At the bottom of the **Rest API Try It** page, click **Run**.
 
         ![try_it_parameters](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_try_it_parameters.png)
+    
+    1. Please wait approximately 30 minutes for the Azure Feature Control registration to complete. Once this is complete, proceed to the next step.
+
+1. Register the ADU resource provider within your subscription.
+
+    1. Open the [Azure portal](https://ms.portal.azure.com/#home).
+
+    1. In the search bar, type **Subscriptions** and click on the yellow key icon to open the **Subscriptions** page.
+
+    1. Select your Azure subscription.
+
+    1. On your subscription overview page, select **Resource providers** under **Settings**.
+
+    1. Enter **DeviceUpdate** in the search bar.
+
+    1. Select **Microsoft.DeviceUpdate** and click **Register** on the command bar. **Status** will update to **Registered** when registration has completed.  
+
+    ![deviceupdate](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_deviceupdate.png)
 
 1. Add a role assignment to a user or Azure AD group to grant access to Import and Deploy Updates within IoT Hub. Please note that it can take up to 1 business day for all update services to be set up in your account.
 
