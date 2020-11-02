@@ -9,40 +9,42 @@ ms.topic: reference  # the type of article
 
 # USB updating
 
-This guide will show you how to USB update the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites are satisfied before working through the USB update procedure.
+This guide will show you how to update the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites corresponding to your selected USB update method are satisfied before working through the update procedure.
 
 There are three USB update methods:
 
 - Method #1: .swu file with a USB storage device.
-- Method #1: .raw file with the NXP UUU tool.
-- Method #2: variation of method #1 for non-standard situations (i.e. your device does not boot).
+- Method #2: .raw file with the NXP UUU tool.
+- Method #3: variation of method #1 for non-standard situations (e.g. your device does not boot).
 
-Please note that Method #1 keeps the data intact on the device. while Method #2 and #3 will delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
+Please note that Method #1 keeps the data intact on the device, while Method #2 and #3 will delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
 
 ## USB update method #1: USB storage device
 
-Prerequisites
+### Method #1 prerequisites
 
-- Windows or Linux PC.
+- Windows or Linux PC with an available USB-C port.
 
-- USB storage device
+- USB storage device.
 
-- Devkit Carrier board (Note: needs to be running a SW version from September 16, 2020 (2020.109.116.120) or later. See step 4 below to confirm the version of your device. If that is not the case, please update your devices over-the-air (OTA) or use method #2 or #3.)
+- USB-C cable, included in the Project Santa Cruz devkit.
 
-- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) [optional].
+- Devkit carrier board (Note: the carrier board needs to be running a SW version from September 16, 2020 (2020.109.116.120) or later. See step 4 below to confirm the version of your device. If your SW version is not from September 16, 2020 or later, please update your device [over-the-air (OTA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) or use method #2 or #3 below.)
 
-Steps
+- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (optional]).
+
+### Update procedure
 
 1. Navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download) and download the **Microsoft-PE-101-\<version>.swu** file for your target build (located under the OTA category).
- 
+
 1. Copy the .swu file onto an empty USB storage device.
- 
-1. Connect the USB storage device to the carrier board of your Project Santa Cruz Devkit.
- 
+
+1. Connect the USB storage device to the carrier board of your Project Santa Cruz devkit.
+
 1. Update your device:
- 
+
     1. Option 1: use PuTTY to reboot the device.
-        - Open Putty and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
+        - Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
         - To confirm the current software version, enter the following into the PuTTY terminal:
             ```
             cat /etc/adu-version
@@ -52,23 +54,35 @@ Steps
             reboot
             ```
         - Once the device has rebooted, SSH into the device again and run **cat /etc/adu-version** to check the software version and confirm that the update was successful.
- 
+
     1. Option 2: use the physical on/off button to reboot the device.
        - Turn the device off.
         - Once it has completely powered down, turn it back on again.
         - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
- 
-Common issues
+
+### Common issues
 
 - Make sure the .swu file is directly at the root of the USB storage device and not under a directory.
 
-- The NTFS USB file system is not supported as it is not readable by the Devkit’s kernel. Please use an alternate USB file system.
+- The NTFS USB file system is not supported as it is not readable by the devkit’s kernel. Please use an alternate USB file system.
 
-Common Error Messages
+### Common error messages
+
+|Error Message - Status|Issue    |Solution  |
+|----------------------|---------|----------|
+|NoOp\|NO_USBDEVICES (2) |No USB device plugged in. |Ensure the USB storage device is plugged in.|
+|Error\|INSTALL_ERROR (13) |The .swu update file version is the same as the SW version on the device. |Select a different .swu update file version.|
+|Success (0) |None (connected USB device with valid .swu file). | |
+|NoOp\|NO_SWU_FOUND (2) |USB device plugged in, but no .swu file found. |Ensure you have a .swu file on your USB storage device. To find the latest files, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download).|
+|ESRCH (3) |Multiple .swu files found on a single USB device. |Ensure you only have one .swu file (i.e. the one you wish to update to).|
+|ESRCH (3) |Multiple .swu files found across multiple USB devices. |Ensure you only have one USB storage device with one .swu file.|
+|Error\|INSTALL_ERROR (13) |Incorrect .swu file (e.g. bad signature, incorrect file). |Ensure you are using the correct .swu file. |
+|ESRCH (2) |Unrecognized file system/unexpected error. |Ensure you are using a supported USB file system (NTFS USB file system is not supported).|
+
 
 ## USB update method #2: NXP UUU tool
 
-Prerequisites
+### Method #2 prerequisites
 
 - Windows or Linux PC with an available USB-C port.
 
@@ -82,7 +96,7 @@ Prerequisites
 
 - [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
 
-Steps
+### Update procedure
 
 1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files.
 
@@ -155,9 +169,9 @@ Steps
 
         ![putty_terminal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty_terminal.png)
 
-## USB update method #2: non-standard situations
+## USB update method #3: non-standard situations
 
-Prerequisites
+### Method #3 prerequisites
 
 - Windows or Linux PC with an available USB-C port.
 
@@ -171,9 +185,9 @@ Prerequisites
 
 - [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
 
-Steps
+### Update procedure
 
-There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (i.e. if you need to recover an unbootable device). In these situations, please follow this guidance.
+There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (e.g. if you need to recover an unbootable device). In these situations, please follow this guidance.
 
  1. Toggle the Boot Configuration DIP switches to 1011 and remove the SD card so the device will boot into USB flash mode.
 
