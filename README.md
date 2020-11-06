@@ -57,7 +57,7 @@ After building a speech no-code solution, check out the following resources for 
 - [Devkit datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_developer_kit_datasheet.md)
 - [Eye SoM datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_eye_datasheet.md)
 - [Ear SoM Datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_ear_datasheet.md)
-- [Devkit Safety Manual (EN)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/PE-101%20DevKit%20Safety%20Manual%20(2020-10-21).pdf)
+- [Devkit Safety Manual (EN)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/PE-101%20DevKit%20Safety%20Manual%20(2020-11-05).pdf)
 - [Devkit Safety Manual (FR-CA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/FR-CA%20DevKit%20Safety%20Manual%20(2020-10-21).pdf)
 
 ### Containers
