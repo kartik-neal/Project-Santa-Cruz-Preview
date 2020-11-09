@@ -48,7 +48,7 @@ After building a speech no-code solution, check out the following resources for 
 - [Over-the-air update prerequisites](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_os_fw_update_prerequisites.md)
 - [Update your devkit carrier board over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ota_update.md)
 - [Update your devkit carrier board via USB](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/usb_updating.md)
-- [Update your Ear SoM firmware over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ear_som_firmware.md)
+- [Update your Eye or Ear SoM firmware over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/eye_and_ear_som_firmware_update.md)
 
 ## Additional technical information
 
