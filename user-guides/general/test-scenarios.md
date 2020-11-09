@@ -26,7 +26,7 @@ Experience documentation:
 
 - [Over-the-air OS update (carrier board)](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ota_update.md)
 - [USB OS update (carrier board)](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/usb_updating.md)
-- [Over-the-air firmware update (Eye/Ear SoM)](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ear_som_firmware.md)
+- [Over-the-air firmware update (Eye/Ear SoM)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/eye_and_ear_som_firmware_update.md)
 
 Questionnaire: please provide feedback [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-EYOjUzOMlKvDaulVXd95tUNDc1V05EMDA2NjBRVDc5UlZBMVkwRjRNQSQlQCN0PWcu).
 
