@@ -6,7 +6,7 @@ ms.author: v-elqu     # the author's Microsoft alias (if applicable) - will be a
 ms.date: {@date}           # the date - will be auto-populated when template is first applied
 ms.topic: reference  # the type of article
 --->
-# Ear SoM firmware updating
+# Eye and Ear SoM Firmware Update
 
 ## Prerequisites:
 
@@ -17,9 +17,9 @@ ms.topic: reference  # the type of article
 - [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md) complete.
 - [General OTA Update Prerequisites](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ota_os_fw_update_prerequisites.md) have been satisfied. 
 
-## Ear SoM Firmware Update Procedure: 
+## Eye and Ear SoM Firmware Update Procedure: 
 
-1. Connect the Azure Ear SoM to the carrier board of the devkit. 
+1. Connect the Azure Eye or Ear SoM to the carrier board of the devkit. 
 
 1. Plug in and power on the devkit. There are three LEDs on the Azure Ear SoM, labeled L01, L02, and L03. Upon powering on the devkit, L01 and L02 will turn green, and L02 will flash on and off for several seconds, indicating that the SoM authentication is in progress. After authentication is complete, all three LEDs will turn blue. 
  
@@ -61,7 +61,7 @@ ms.topic: reference  # the type of article
     “TASK_ID”:”<integer>”
     }
     ```
-    The PID_VID is the USB VID and PID of the Ear SoM Codec, which is currently VID045ePID0671. The TASK_ID is a sequence ID, which can be set to any integer. The PKG_URL is a Base64 encoded URL for the firmware package update, which will be available to you through Private Preview. If you cannot access the PKG_URL for firmware updates, please contact your Private Preview representative.
+    The PID_VID is the USB VID and PID of the component you are updating: Ear Codec - 0x0671/0x045E, Ear Secure Chip - 0x0673/0x045E, Eye Secure Chip - 0x066F/0x045E. The TASK_ID is a sequence ID, which can be set to any integer. The PKG_URL is a Base64 encoded URL for the firmware package update, which will be available to you through Private Preview. If you cannot access the PKG_URL for firmware updates, please contact your Private Preview representative.
 
     After entering the Method Name and Payload information, click Invoke Method to run the firmware update. If the PKG_URL is invalid, you will receive a success message, but the codec will reject the invalid package and keep the current firmware version. 
 
