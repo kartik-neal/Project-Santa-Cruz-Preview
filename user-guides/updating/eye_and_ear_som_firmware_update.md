@@ -36,7 +36,7 @@ ms.topic: reference  # the type of article
 
     ![set_modules](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_set_modules.png)
 
-1. Find **azureearspeechmodule** on the **IoT Edge Modules** page and click to open it.
+1. Find **azureearspeechclinetmodule** on the **IoT Edge Modules** page and click to open it.
 
     ![speechclient](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_speechclient.png)
 
@@ -44,11 +44,11 @@ ms.topic: reference  # the type of article
 
     ![desired_status_stopped](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_desired_status_stopped.png)
 
-1. Back on the **IoT Edge Modules** page, click **devmmclient**. This will open the **IoT Edge Module Details** page for devmmclient. 
+1. Back on the **IoT Edge Modules** page, click **devmmclientmodule**. This will open the **IoT Edge Module Details** page for devmmclientmodule. 
 
     ![devmmclient](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_devmmclient.png)
 
-1. Click **Direct method** on the devmmclient **Iot Edge Module Details** page.
+1. Click **Direct method** on the devmmclientmodule **Iot Edge Module Details** page.
 
     ![direct_method](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_direct_method.png)
 
@@ -66,11 +66,11 @@ ms.topic: reference  # the type of article
 
     ![upgrade_dev](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_upgrade_dev.png)
 
-1. Click **Direct method** on the **IoT Edge Module Details** page to open the **Direct method** page for devmmclient a second time. Set the **Method Name** to **QueryDevInfo**, remove any settings from the **Payload** box, and click **Invoke Method**. The new firmware version can be seen in the **Result** box at the bottom of the page.
+1. Click **Direct method** on the **IoT Edge Module Details** page to open the **Direct method** page for devmmclientmodule a second time. Set the **Method Name** to **QueryDevInfo**, remove any settings from the **Payload** box, and click **Invoke Method**. The new firmware version can be seen in the **Result** box at the bottom of the page.
 
     ![query_dev_info](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_query_dev_info.png)
 
-1. Return to the **Set Modules** page and select **azureearspeechmodule** to open the azureearspeechmodule **Update IoT Edge Module** page again. Select **running** under the **Desired Status** drop-down menu and click **Update**.
+1. Return to the **Set Modules** page and select **azureearspeechclientmodule** to open the azureearspeechclientmodule **Update IoT Edge Module** page again. Select **running** under the **Desired Status** drop-down menu and click **Update**.
 
 Congratulations! The firmware of the Azure Ear SoM has been successfully updated, and the device may be used normally.
 
