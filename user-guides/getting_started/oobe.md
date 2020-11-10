@@ -69,7 +69,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![connect_device](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_connect_device.png)
 
-1. Click **Copy** to copy your device code. Once you have copied your device code, click **Login to Azure**, which opens a new browser tab.
+1. Click **Copy** to copy your device code (this may take a few seconds to generate). Once you have copied your device code, click **Login to Azure**, which opens a new browser tab.
 
     ![device_code](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_device_code.png)
 
