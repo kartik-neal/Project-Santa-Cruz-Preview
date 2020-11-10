@@ -4,92 +4,96 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 
 ## Prerequisites
 
-- [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) completed.
-- Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed.
-- Computer with Wi-Fi connectivity.
+- Project Santa Cruz devkit
+- Ethernet cable (optional)
+- [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) completed
+- Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed
+- Computer with Wi-Fi connectivity
 
-## OOBE Procedure
+## Connecting to OOBE
 
-You can connect and start OOBE through any of the following interfaces; SoftAP, WiFi, or Ethernet.  Replace <your_devices_ip> in the table below with your device's corresponding IP address.
+You can connect to and start OOBE through any of the following interfaces: SoftAP, Wi-Fi, or Ethernet. Replace **<your_devices_ip>** in the table below with your device's corresponding IP address.
+
+If connecting over the SoftAP, your IP address will be 10.1.1.1. If connecting over Ethernet, use the local IP address of the devkit, which you can get from the Ethernet router or hub. Connecting over Wi-Fi requires the device IP address that is provided during the OOBE (step 4 of the OOBE procedure below).
+
 OOBE Web Address |      Note
 ------------------ | ----------------
 http://<your_devices_ip>:4242 | for builds released prior to 09/08/2020
 http://<your_devices_ip> | for builds released on or after 09/08/2020
 
-In the below walkthrough, we will be using the SoftAP IP address of 10.1.1.1
+**We do NOT recommend using a mobile device for the OOBE unless you only want to configure non-IoT Hub items.**
 
-1. After the devkit has been powered on, connect your laptop to the Santa Cruz Wi-Fi AP.
-   
-   **We recommend not using a Mobile device to go through OOBE unless you want to configure the device's Wifi, SSH, or other non-IoT Hub items.**
-1. On your computer, open your network and internet settings and connect to the following:
-    1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's WiFi MAC address)
+1. To get started, power on your devkit.
+
+1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
+
+    1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
     2. Password: santacruz
-    > [!NOTE]
-    > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher).  This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
-1. Open a browser and go to http://10.1.1.1:4242.  *(Remember to remove the “:4242” for builds on or after 09/08/2020)*
 
-1. Click Next on the OOBE Welcome screen.  
+    > [!NOTE]
+    > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
+
+1. Open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build as noted above.
+
+## OOBE procedure
+
+1. Click **Next** on the OOBE **Welcome** screen.  
 
     ![welcome_screen](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_welcome_screen.png)
 
-1. On the Network connection page, click “Connect to a new WiFi network” to connect your devkit to a Wi-Fi network.
+1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
 
     ![network_connection](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_network_connection.png)
 
 1. Select your Wi-Fi network from the available connections.
-    >[NOTE] The WiFi network you connect to, must currently have internet connectivity so we can communicate with Azure. EAP[PEAP/MSCHAP], captive portals, and Enterprise EAP-TLS connectivity is currently not supported.
+
+    >[!NOTE] The Wi-Fi network you connect to must currently have internet connectivity so we can communicate with Azure. EAP[PEAP/MSCHAP], captive portals, and Enterprise EAP-TLS connectivity is currently not supported.
+
     ![wifi](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi.png)
 
-1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown.  You can use this IP for OOBE or SSH sessions. Then, click Next.
+1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, click **Next**.
 
     ![wifi_success](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi_success.png)
 
-1. We recommend you stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP.  Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the WiFi connection screen.  Using the above example screen you would enter this into your web browser: http://192.168.1.254:4242 *(Remember to remove the “:4242” for builds on or after 09/08/2020)*.
+1. We recommend you stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
 
-1. Read through the License Agreement, select “I Accept”, and click Next.
+1. Read through the License Agreement, select **I Accept**, and click **Next**.
 
     ![license_agreement](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_license_agreement.png)
 
-1. If you would like to set up SSH for remote access to your devkit, enter your SSH login and password, and click Next.  
+1. If you would like to set up SSH for remote access to your devkit, enter your SSH login and password and click **Next**.  
 
     ![ssh](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_ssh.png)
 
-1. On the next screen, click “Connect with a new device” to begin the process of linking your devkit to Azure.
+1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.
 
     ![connect_device](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_connect_device.png)
 
-1. Click “Copy” to copy your device code, and then click Login to Azure, which opens a new browser tab.
+1. Click **Copy** to copy your device code. Once you have copied your device code, click **Login to Azure**, which opens a new browser tab.
 
     ![device_code](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_device_code.png)
 
-    1. On the new browser tab, paste your device code into window and click Next.
+    1. On the new browser tab, paste the device code you copied in the previous step into the window and click **Next**.
 
         ![enter_code](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_enter_code.png)
 
-    1. Sign into your Azure account (the same account used during the onboarding process) and click Next. Navigate back to the OOBE window, which will show “Successfully Linked” once account sign-in is successful.
+    1. Sign into your Azure account (the same account used during the onboarding process) and click **Next**. Navigate back to the OOBE window, which will show “Successfully Linked” once account sign-in is successful.
 
         ![code_sign_in](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_code_sign_in.png)
 
-1. Select the IoT Hub you created during the onboarding process to assign it to your devkit. * mark shows an IoT Hub with DPS. If you are not sure which IoT Hub name you have created during the onboarding process, you can review it by accessing https://projectsantacruz.microsoft.com/.
+1. Select the IoT Hub you created during the onboarding process to assign it to your devkit. The asterisk "*" indicates IoT Hubs with DPS enabled. If you are not sure which IoT Hub name you created during the onboarding process, you can review it by accessing https://projectsantacruz.microsoft.com/.
 
     ![iot_hub](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_iot_hub.png)
 
-1. Enter a device name for your devkit, check the TPM enrollment box, and click Next.  
+1. Enter a device name for your devkit, check the TPM enrollment box, and click **Next**.  
 
     ![device_name](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_device_name.png)
 
-1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home).  
-  >[NOTE] If your “Preview Video Output” link is using 10.1.1.1:3000, we recommend you disconnect your PC from the SoftAP as outlined in step 8 and use http://<your_noted_IP_address>:3000 to get the best experience.
+1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home).
+
+  >[!NOTE] If your **Preview Video Output** link is using 10.1.1.1:3000, we recommend you disconnect your PC from the SoftAP as outlined in step 5 and use http://<your_noted_IP_address>:3000 to get the best experience.
   
    ![oobe_complete](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_complete.png)
-
-## OOBE Ethernet Procedure
-
-1. After the device has been powered on, connect the ethernet cord to the device and your ethernet hub or port
-1. Open a web browser on your laptop or desktop 
-1. Type in http://<your_IP_address>:4242  Where *<your_IP_address>* is the local IP address of the DevKit/Brainbox which you can get from the ethernet router or hub.  Use http://<your_IP_address> for builds released on or after 09/08/2020.
-1. OOBE will launch 
-1. Proceed through OOBE following the Welcome steps outlined above
 
 ## Provide feedback
 
