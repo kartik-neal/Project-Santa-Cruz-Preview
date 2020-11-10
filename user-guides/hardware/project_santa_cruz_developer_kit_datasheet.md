@@ -32,7 +32,7 @@ ms.topic: reference  # the type of article
 |Memory                          |4GB     |
 |Ports                           |1x Ethernet <br> 2x USB-A 3.0 <br> 1x USB-C <br> 1x HDMI (inactive)     |
 |Certification                   |CE <br> FCC     |
-|Operating Temperature           |-20 to 70 degrees C     |
+|Operating Temperature           |0 to 35 degrees C     |
 |Relative Humidity               |8% to 90%    |
 |Noise                           |NA     |
 |Shock                           |NA     |
