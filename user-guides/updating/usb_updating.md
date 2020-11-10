@@ -129,20 +129,28 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
     ![cmd_flash](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_cmd_flash.png)  
 
-1. Connect the carrier board to the host PC with the USB-C cable.  
+1. Connect the supplied **USB-C to USB-A** cable to the carrier board's USB-C port and to the host PC using the USB-A side of the cable.
 
 1. In the PuTTY terminal, run the following commands:
 
-    1. Set the device to usb update mode.
+    1. Set the device to usb update mode.  If you are not signed into SSH as root please add **"sudo"** to the beginning of these commands.
 
         ```console
         flagutil    -wBfRequestUsbFlash    -v1
         ```
+        or if you are not logged on as a root
+        ```console
+        sudo flagutil    -wBfRequestUsbFlash    -v1
+        ```        
 
     1. Reboot the device. The update installation will begin.
 
         ```console
         reboot -f
+        ```
+        or if you are not logged in as root
+        ```console
+        sudo reboot -f
         ```
 
         ![putty_usb_update_mode](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_putty_usb_update_mode.png)
