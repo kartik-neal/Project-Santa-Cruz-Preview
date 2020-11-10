@@ -25,7 +25,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 1. To get started, power on your devkit.
 
-1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
+1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port. Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
 
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
     2. Password: santacruz
@@ -57,7 +57,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 1. We recommend you stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
 
-1. Read through the License Agreement, select **I Accept**, and click **Next**.
+1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
     ![license_agreement](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_license_agreement.png)
 
