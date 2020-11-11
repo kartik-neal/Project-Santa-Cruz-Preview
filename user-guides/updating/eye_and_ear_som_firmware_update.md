@@ -72,7 +72,7 @@ ms.topic: reference  # the type of article
 
 1. Return to the **Set Modules** page and select **azureearspeechclientmodule** if you updated the Ear SoM or **azureeyemodule** if you updated the Eye SoM to open its **Update IoT Edge Module** page again. Select **running** under the **Desired Status** drop-down menu and click **Update**.
 
-Congratulations! The firmware of the Azure Ear SoM has been successfully updated, and the device may be used normally.
+Congratulations! The firmware of the Azure Ear/Eye SoM has been successfully updated, and the device may be used normally.
 
 ## Provide feedback
 
