@@ -36,7 +36,7 @@ ms.topic: reference  # the type of article
 
     ![set_modules](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_set_modules.png)
 
-1. Find **azureearspeechclinetmodule** on the **IoT Edge Modules** page and click to open it.
+1. On the **IoT Edge Modules** page, find **azureearspeechclientmodule** if updating the Ear SoM or **azureeyemodule** if updating the Eye SoM. Click the appropriate module to open it.
 
     ![speechclient](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_speechclient.png)
 
@@ -44,7 +44,7 @@ ms.topic: reference  # the type of article
 
     ![desired_status_stopped](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_desired_status_stopped.png)
 
-1. Back on the **IoT Edge Modules** page, click **devmmclientmodule**. This will open the **IoT Edge Module Details** page for devmmclientmodule. 
+1. Back on the **IoT Edge Modules** page, click **devmmclientmodule**. This will open the **IoT Edge Module Details** page for devmmclientmodule.
 
     ![devmmclient](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_devmmclient.png)
 
@@ -70,7 +70,7 @@ ms.topic: reference  # the type of article
 
     ![query_dev_info](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_query_dev_info.png)
 
-1. Return to the **Set Modules** page and select **azureearspeechclientmodule** to open the azureearspeechclientmodule **Update IoT Edge Module** page again. Select **running** under the **Desired Status** drop-down menu and click **Update**.
+1. Return to the **Set Modules** page and select **azureearspeechclientmodule** if you updated the Ear SoM or **azureeyemodule** if you updated the Eye SoM to open its **Update IoT Edge Module** page again. Select **running** under the **Desired Status** drop-down menu and click **Update**.
 
 Congratulations! The firmware of the Azure Ear SoM has been successfully updated, and the device may be used normally.
 
