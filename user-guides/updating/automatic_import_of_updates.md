@@ -1,4 +1,4 @@
-# Instructions for configuring the AAD Application for Automatic Import Update
+# AAD application configuration for the Automatic Import Update (AIU) service
 
 Automatic Import Update (AIU) functionality enables you to directly receive the latest updates for your Project Santa Cruz devkits in your Azure Device Update instance within your Azure IoT Hub.
 
