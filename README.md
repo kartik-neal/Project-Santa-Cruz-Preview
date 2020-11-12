@@ -45,6 +45,7 @@ After building a speech no-code solution, check out the following resources for 
 ## Keep your devkits up to date
 
 - [Update experience overview](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/update_experience_overview.md)
+- [Enable Automatic Import Updates (AIU)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/automatic_import_of_updates.md)
 - [Over-the-air update prerequisites](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_os_fw_update_prerequisites.md)
 - [Update your devkit carrier board over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ota_update.md)
 - [Update your devkit carrier board via USB](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/usb_updating.md)
