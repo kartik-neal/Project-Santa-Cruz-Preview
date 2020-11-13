@@ -4,4 +4,4 @@ Project Santa Cruz provides AI model protections at rest, during transition, and
 
 The Project Santa Cruz devkit is shipped with a secured AI model locker and a Python SDK, as highlighted in the following diagram. The server provides secured key and model management capabilities. In the future, the SDK will interact with a device TPM and attestation service to prove device identity with the server and retrieve protected keys or models.
 
-![architecture]()
+![architecture](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/secured_locker/images/architecture.png)
