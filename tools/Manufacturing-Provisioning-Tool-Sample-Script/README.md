@@ -10,7 +10,7 @@
 | 1.0.201112.1001 | November 13. 2020 | (Open source version)<br>-Rename WifiDPP_PSK to Wifi-SoftAP_PSK. |
 
 ## Introduction
-**Manufacturing Provisioning Tool Sample Script for Santa Cruz devices** is a Linux shell script for Santa Cruz device manufacturers to <ins>capture the device identities or hardware keys in the manufacturing line</ins>. The tool will generate a “device record” with those hardware identities, output it directly or save to a JSON file.
+**Manufacturing Provisioning Tool Sample Script for Santa Cruz devices** is a Linux shell script for Santa Cruz device manufacturers to <ins>run on the device and capture its device identities or hardware keys in the manufacturing line</ins>. The tool will generate a “device record” with those hardware identities, output it directly or save to a JSON file.
 The “device record” can then be used in post manufacturing process to provision each device to Azure as well as enabling Wi-Fi Zero Touch Provisioning scenario. However, **this tool only covers “collecting” the information for provisioning and does not handle the actual enrollment process to Azure**.
 
 ## Hardware requirement and Prerequisite
@@ -18,12 +18,12 @@ This script currently supports the following hardware. With minor customization 
  - PE100 (i.MX 8)
  - DKSC-101 (i.MX 8)
 
-The tool must be executed with the following environment requirements:
+The tool must be executed on the Santa Cruz device with the following environment requirements:
 
  - Microsoft Mariner OS
 	 - (With other dependences below fulfilled, this tool should be able to run on various of Linux distros, or just need minor modifications.)
  - TPM must be enabled
- - TPM tool package ([tpm2-tools v4.2](https://github.com/tpm2-software/tpm2-tools/wiki)) must be included
+ - TPM tool package ([tpm2-tools v4.2](https://github.com/tpm2-software/tpm2-tools/wiki)) must be included in the Mariner OS for the device.
 	 - For Wifi ZTP key feature, the version of tpm2-tools must be 4.2 or later. No action needed for PE100/DKSC-101 if using the private preview image.
  - The Serial Number of device shall be store in a permanent memory (e.g. EEPROM) and properly exposed to OS.
 
@@ -39,14 +39,18 @@ Manufacturing featured options:
         Name of supported models: pe100 pe101.
         (pe101 is for DKSC-101)
     -n, --serialnum=<serial_number> (Optional)
-        Given serial number to be compared with what've read from hardware.
+        Given serial number to be compared with what've read from hardware. When this parameter is provided,
+        if the input serial number does not match to serial number that is stored in the hardware,
+        the tool will output error and will not return the device record. 
     -o, --overridesn (Optional)
         Override device record with given serial number instead of serial number read from hardware.
         (This approach is not recommended, but is an alternative when S/N is not yet store in the firmware.)
     -f, --file=<output_filename> (Optional)
         Redirect device record output from standard output to a file at /tmp.
     --inittpm (Optional)
-        Clear TPM before to provision TPM.
+        Clear TPM before to provision TPM. When this paramete is used, the tool actually call the following tpm2-tools commands:
+		tpm2_clear -c p
+		tpm2_clear -c l
 
 Other options:
 
@@ -111,7 +115,7 @@ The following device identity/information (if applicable to the hardware) shall 
 
  - [Fixed] Support for DKSC-101 to be enabled. 
  - [Fixed] Wi-Fi ZTP key   provisioning and capturing is not implemented yet. Will be providing in future version of script. 
- - [Won’t fix] For some early preview hardware, the tool cannot retrieve the completed S/N (last 4 digits will be “0000”). This is caused by a hardware issue, not an issue of
+ - [Won’t fix] For some early preview hardware (S/N: 1624662100xxx203xxxx), the tool cannot retrieve the completed S/N (last 4 digits will be “0000”). This is caused by a hardware issue, not an issue of
    the tool itself.
 
 ## Issue Reporting
