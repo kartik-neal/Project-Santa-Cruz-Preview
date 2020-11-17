@@ -1,4 +1,5 @@
-﻿﻿# Known issues
+﻿﻿﻿﻿﻿
+# Known issues
 
 If you encounter any of these issues, it is not necessary to open a bug. If you have trouble with any of the workarounds, please open an Issue in GitHub.
 
