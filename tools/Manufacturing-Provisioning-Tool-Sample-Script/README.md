@@ -9,7 +9,7 @@ The device record can then be used in a post-manufacturing process to provision 
 
 This script currently supports the following hardware. With minor customization (if necessary), it may support other Santa Cruz devices that are loaded with Mariner OS.
  - PE100 (i.MX 8)
- - DKSC-101 (i.MX 8): this is the project Santa Cruz devkit, sometimes referred to as the PE101.
+ - DKSC-101 (i.MX 8): this is the Project Santa Cruz devkit, sometimes referred to as the PE101.
 
 Additionally, the Santa Cruz device must meet the following environment requirements:
 
@@ -91,48 +91,47 @@ Output example:
     }
     rc=0
 
-### Description of Output Data
+### Description of output data
 
-The following device identity/information (if applicable to the hardware) shall exists before performing the capturing with the script.
+The following device identity/information (if applicable to the hardware) shall print before the script generates the device record.
 
  - SerialNumber
-	 - This shall be the key for associate the other device identities with the actual hardware. (Microsoft strongly recommend that the the S/N should be visible on the device. That way, there is an easy way to associate physical device with its virtual copy on the Azure side.)
+	 - This shall be the key for associating the other device identities with the actual hardware. (Microsoft strongly recommends that the S/N should be visible on the device. That way, there is an easy way to associate a physical device with its virtual copy on the Azure side.)
  - TPM_EkPub
-	 - This key can be used as the secrete key for connecting device to   Azure IoTHub.
+	 - This key can be used as the secrete key for connecting the device to Azure IoT Hub.
  - TPM_EkPub_Digest
-	 - This hash can be used as the Enrollment Device ID for register the
-   device to Azure DPS service.
+	 - This hash can be used as the Enrollment Device ID for registering the device to the Azure DPS service.
  - LAN0MAC
-	 - MAC address of the ethernet.
+	 - Ethernet MAC address.
  - WifiDPP_EccPub
-	 - This is a derivative ID from the TPM key. Used for enabling the Wi-Fi ZTP (Zero Touch Provisioning) feature.
+	 - This is a derivative ID from the TPM key. It is used for enabling the Wi-Fi ZTP (Zero Touch Provisioning) feature.
  - Wifi_MAC
-	 - Used for enabling the Wifi ZTP (Zero Touch Provisioning) feature. Can also serve as a secondary device identity if necessary.
-**[Note]** WifiDPP_EccPub and Wifi_MAC are only required if the manufacturer want to enable the Wi-Fi ZTP feature and Wi-Fi module is included in the hardware design. However, pre-record the WifiDPP_EccPub at manufacturing would make the experience of future hardware/function expansion more seamless. (If there is a chance that SI/customer will install the Wi-Fi module and enable ZTP later, they would already have the ECC Key.)
+	 - Used for enabling the Wi-Fi ZTP (Zero Touch Provisioning) feature. Can also serve as a secondary device identity if necessary.
+**[Note]** WifiDPP_EccPub and Wifi_MAC are only required if the manufacturer wants to enable the Wi-Fi ZTP feature and the Wi-Fi module is included in the hardware design. However, pre-recording the WifiDPP_EccPub at the manufacturing stage would make the experience of future hardware/function expansion more seamless. (i.e. if there is a chance that the SI/customer will install the Wi-Fi module and enable ZTP later, they would already have the ECC Key.)
  - Wifi-SoftAP_PSK
-	 - This is also a derivative ID from the TPM key. Default password of the Wi-Fi SoftAP.
+	 - This is also a derivative ID from the TPM key. It is the default password of the Wi-Fi SoftAP.
 
-## Known Issue
+## Known issues
 
  - [Fixed] Support for DKSC-101 to be enabled. 
- - [Fixed] Wi-Fi ZTP key   provisioning and capturing is not implemented yet. Will be providing in future version of script. 
- - [Won’t fix] For some early preview hardware (S/N: 1624662100xxx203xxxx), the tool cannot retrieve the completed S/N (last 4 digits will be “0000”). This is caused by a hardware issue, not an issue of
-   the tool itself.
+ - [Fixed] Wi-Fi ZTP key provisioning and capturing is not implemented yet. Will be providing in future version of script. 
+ - [Won’t fix] For some early preview hardware (S/N: 1624662100xxx203xxxx), the tool cannot retrieve the completed S/N (last 4 digits will be “0000”). This is caused by a hardware issue, not the tool itself.
 
-## Issue Reporting
+## Issue reporting
 
-For any issue and feedback relates to the manufacturing tool, please file an issue on GitHub.
-1.	Log in to the [Project Santa Cruz Preview](https://github.com/microsoft/Project-Santa-Cruz-Preview/)
-2.	Select Issues, then New issue.
-3.	Use the following prefix “**[MFG Scrip]**”, followed by a clear title of issue.
-4.	Provide clear description and attach the error log if any.
+For any issues or feedback related to the manufacturing provisioning tool, please file an issue on GitHub.
 
-## Release Notes
+1. Log in to the [Project Santa Cruz GitHub repo](https://github.com/microsoft/Project-Santa-Cruz-Preview/)
+2. Select **Issues**, then **New issue**.
+3. Use the prefix “**[MFG Script]**”, followed by a clear title of the issue.
+4. Provide a description and attach the error log, if any.
+
+## Release notes
 
 | Version | Release Date | Description |
 |--|--|--|
 | 0.1.200417.1 | April 24, 2020 | Beta version released. |
-| 0.2.200501.1 | May 20, 2020 | -Support PE101<br>-Provision/capture of Wifi ZTP key enabled. |
-| 0.3.200706.1 | July 10, 2020 | -Support read S/N on Mariner OS and checking mechanism.<br>-Modified/Add new fields: "WifiDPP_MAC, "WifiDPP_PSK". |
+| 0.2.200501.1 | May 20, 2020 | -Support for PE101 <br>-Provision/capture of Wi-Fi ZTP key enabled. |
+| 0.3.200706.1 | July 10, 2020 | -Support for reading S/N on Mariner OS and checking mechanism.<br>-Modified/added new fields: "WifiDPP_MAC, "WifiDPP_PSK". |
 | 0.4.200806.1 | August 15. 2020 | Minor bug fix. |
 | 1.0.201112.1001 | November 13. 2020 | (Open source version)<br>-Rename WifiDPP_PSK to Wifi-SoftAP_PSK. |
