@@ -15,4 +15,4 @@ If you encounter any of these issues, it is not necessary to open a bug. If you 
 | Device update | Users may lose their Wi-Fi connection settings after their first update. | Run through OOBE after updating to setup the Wi-Fi connection. This is fixed after the first update. |
 | Dev Tools Pack Installer | Optional Caffe install may fail if Docker is not running properly on system. | Make sure Docker is installed and running, then retry Caffe installation. |
 | Dev Tools Pack Installer | Optional CUDA install fails on incompatible systems. | Verify system compatibility with CUDA prior to running installer. |
-| Docker | If your internal network uses 172.xxx, docker containers will fail to connect to edge. | Add a special bip section to the /etc/docker/daemon.json file like this: `{    "bip": "192.168.168.1/24"}` |
+| Docker, Network, IoT Edge | If your internal network uses 172.x.x.x, docker containers will fail to connect to edge. | Add a special bip section to the /etc/docker/daemon.json file like this: `{    "bip": "192.168.168.1/24"}` |
