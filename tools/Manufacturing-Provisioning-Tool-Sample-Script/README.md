@@ -1,80 +1,80 @@
-# Manufacturing Provisioning Tool Sample Script for Santa Cruz Devices
-
-## Table of Tool Updates
-| Version | Released Date | Description |
-|--|--|--|
-| 0.1.200417.1 | April 24, 2020 | Beta version released. |
-| 0.2.200501.1 | May 20, 2020 | -Support PE101<br>-Provision/capture of Wifi ZTP key enabled. |
-| 0.3.200706.1 | July 10, 2020 | -Support read S/N on Mariner OS and checking mechanism.<br>-Modified/Add new fields: "WifiDPP_MAC, "WifiDPP_PSK". |
-| 0.4.200806.1 | August 15. 2020 | Minor bug fix. |
-| 1.0.201112.1001 | November 13. 2020 | (Open source version)<br>-Rename WifiDPP_PSK to Wifi-SoftAP_PSK. |
+# Manufacturing provisioning tool sample script for Project Santa Cruz devices
 
 ## Introduction
-**Manufacturing Provisioning Tool Sample Script for Santa Cruz devices** is a Linux shell script for Santa Cruz device manufacturers to <ins>run on the device and capture its device identities or hardware keys in the manufacturing line</ins>. The tool will generate a “device record” with those hardware identities, output it directly or save to a JSON file.
-The “device record” can then be used in post manufacturing process to provision each device to Azure as well as enabling Wi-Fi Zero Touch Provisioning scenario. However, **this tool only covers “collecting” the information for provisioning and does not handle the actual enrollment process to Azure**.
 
-## Hardware requirement and Prerequisite
-This script currently supports the following hardware. With minor customization (if necessary), it shall be able to support Santa Cruz device that loaded with Mariner OS.
+The manufacturing provisioning tool sample script is a Linux shell script that allows Santa Cruz device manufacturers to capture device identities or hardware keys in the manufacturing line. The tool generates a “device record” with those hardware identities, which it can output directly or save to a JSON file.
+The device record can then be used in a post-manufacturing process to provision each device to Azure and enable Wi-Fi Zero-Touch Provisioning. Please note that **this tool only covers “collecting” the information for provisioning and does not handle the actual enrollment process to Azure**.
+
+## Prerequisites
+
+This script currently supports the following hardware. With minor customization (if necessary), it may support other Santa Cruz devices that are loaded with Mariner OS.
  - PE100 (i.MX 8)
- - DKSC-101 (i.MX 8)
+ - DKSC-101 (i.MX 8): this is the project Santa Cruz devkit, sometimes referred to as the PE101.
 
-The tool must be executed on the Santa Cruz device with the following environment requirements:
+Additionally, the Santa Cruz device must meet the following environment requirements:
 
- - Microsoft Mariner OS
-	 - (With other dependences below fulfilled, this tool should be able to run on various of Linux distros, or just need minor modifications.)
- - TPM must be enabled
- - TPM tool package ([tpm2-tools v4.2](https://github.com/tpm2-software/tpm2-tools/wiki)) must be included in the Mariner OS for the device.
-	 - For Wifi ZTP key feature, the version of tpm2-tools must be 4.2 or later. No action needed for PE100/DKSC-101 if using the private preview image.
- - The Serial Number of device shall be store in a permanent memory (e.g. EEPROM) and properly exposed to OS.
+ - Microsoft Mariner OS.
+	 - (With the other dependences listed below fulfilled, this tool should be able to run on various Linux distros or just need minor modifications.)
+ - TPM must be enabled.
+ - TPM tool package ([tpm2-tools v4.2](https://github.com/tpm2-software/tpm2-tools/wiki)) must be included in the device's Mariner OS.
+	 - For the Wi-Fi ZTP key feature, the version of tpm2-tools must be 4.2 or later. No action is needed for the PE100/DKSC-101 if using the private preview image.
+ - The Serial Number of the device must be stored in permanent memory (e.g. EEPROM) and properly exposed to the OS.
 
 ## Usage
-**Syntax**
+
+### Syntax
 
     aed-mfgtool-azuredeviceprovision.devkit.sh [-m|--model=<model_name>] [-n|--serialnum=<serial_number>] [--inittpm]
     [-h|--help] [-f|--file=<output_filename>] [-c|--checkrequired] [-o|--overridesn] [-q|--query]
-**Parameters**    
-Manufacturing featured options:
+    
+### Parameters
+
+Manufacturing options:
 
     -m, --model=<model_name> (Required)
         Name of supported models: pe100 pe101.
         (pe101 is for DKSC-101)
     -n, --serialnum=<serial_number> (Optional)
-        Given serial number to be compared with what've read from hardware. When this parameter is provided,
-        if the input serial number does not match to serial number that is stored in the hardware,
-        the tool will output error and will not return the device record. 
+        Give a serial number to be compared with what is read from the hardware. When this parameter is provided,
+        if the input serial number does not match the hardware serial number,
+        the tool will output an error and will not return the device record. 
     -o, --overridesn (Optional)
-        Override device record with given serial number instead of serial number read from hardware.
-        (This approach is not recommended, but is an alternative when S/N is not yet store in the firmware.)
+        Override the device record with the given serial number instead of the serial number read from the hardware.
+        (This approach is not recommended, but it is an alternative when the S/N is not yet stored in the firmware.)
     -f, --file=<output_filename> (Optional)
         Redirect device record output from standard output to a file at /tmp.
     --inittpm (Optional)
-        Clear TPM before to provision TPM. When this paramete is used, the tool actually call the following tpm2-tools commands:
+        Clear the TPM before reprovisioning the TPM. When this parameter is used, the tool calls the following tpm2-tools commands:
 		tpm2_clear -c p
 		tpm2_clear -c l
 
 Other options:
 
     -h, --help
-	    Apply this option solely to show help messages.
+	    Shows help messages.
     -c, --checkrequired
 	    Apply this option with "-m=<model_name>" to run system requirement check and then exit.
     -q, --query
-	    Apply this option with "-m=<model_name>" to run this tool in query mode (dry-run) without re-provisioning TPM.
-**Executing and example**
-To execute this tool. Copy the script file (aed-mfgtool-azuredeviceprovision.devkit.sh) to target device (PE100/DKSC-101) through SSH connection:
+	    Apply this option with "-m=<model_name>" to run this tool in query mode (dry-run) without re-provisioning the TPM.
+	  
+### Tool execution and example
+
+To execute this tool, first SSH into the target device (PE100/DKSC-101). Next, copy the script file (aed-mfgtool-azuredeviceprovision.devkit.sh) to the target device by entering the following command:
 
     scp [local file path]\aed-mfgtool-azuredeviceprovision.devkit.sh root@[remote server]:/[path to destination]
+    
 Make the script executable:
 
     chmod 755 ./aed-mfgtool-azuredeviceprovision.devkit.sh
-Log on to the target device and execute the script:
+    
 
-[Example]
- - To run provisioning and check serial number on DKSC-101 device:
+Script execution examples:
+
+ - To run provisioning and check the serial number on a DKSC-101 device:
 	 - `> ./aed-mfgtool-azuredeviceprovision.devkit.sh -m=pe101 -n=11111101111110011000 ; echo rc=$?`
- - To run provisioning without check serial number on DKSC-101 device:
+ - To run provisioning without checking the serial number on a DKSC-101 device:
 	 - `> ./aed-mfgtool-azuredeviceprovision.devkit.sh -m=pe101 ; echo rc=$?`
- - To check system requirement on DKSC-101 device:
+ - To check the system requirements on a DKSC-101 device:
 	 - `> ./aed-mfgtool-azuredeviceprovision.devkit.sh -m=pe101 -c ; echo rc=$? `
 
 Output example:
@@ -91,7 +91,8 @@ Output example:
     }
     rc=0
 
-## Description of Outputs Data
+### Description of Output Data
+
 The following device identity/information (if applicable to the hardware) shall exists before performing the capturing with the script.
 
  - SerialNumber
@@ -119,8 +120,19 @@ The following device identity/information (if applicable to the hardware) shall 
    the tool itself.
 
 ## Issue Reporting
+
 For any issue and feedback relates to the manufacturing tool, please file an issue on GitHub.
 1.	Log in to the [Project Santa Cruz Preview](https://github.com/microsoft/Project-Santa-Cruz-Preview/)
 2.	Select Issues, then New issue.
 3.	Use the following prefix “**[MFG Scrip]**”, followed by a clear title of issue.
 4.	Provide clear description and attach the error log if any.
+
+## Release Notes
+
+| Version | Release Date | Description |
+|--|--|--|
+| 0.1.200417.1 | April 24, 2020 | Beta version released. |
+| 0.2.200501.1 | May 20, 2020 | -Support PE101<br>-Provision/capture of Wifi ZTP key enabled. |
+| 0.3.200706.1 | July 10, 2020 | -Support read S/N on Mariner OS and checking mechanism.<br>-Modified/Add new fields: "WifiDPP_MAC, "WifiDPP_PSK". |
+| 0.4.200806.1 | August 15. 2020 | Minor bug fix. |
+| 1.0.201112.1001 | November 13. 2020 | (Open source version)<br>-Rename WifiDPP_PSK to Wifi-SoftAP_PSK. |
