@@ -26,23 +26,23 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 
 1. Copy the tool to your device by entering the following command into a command prompt or terminal:
 
-    ```powershell
+    ```
     scp [local file path]\scz-tool-wifisoftap-accessinfo.devkit.sh root@[remote server]:/[path to destination]
     ```
 
-    In this case, ```[remote server]``` is the IP address of your device. ```[path to destination]``` is the folder on your device which you would like to copy the file to. You may be prompted to enter the root SSH password for your device (p@ssw0rd) after entering the above command.
+    In this case, ```[remote server]``` is the IP address of your device. ```[path to destination]``` is the folder on your device which you would like to copy the file to. You may be prompted to enter the root SSH password for your device (p@ssw0rd).
 
 1. Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md).
 
 1. In the PuTTY terminal, navigate to the folder containing the SoftAP tool and enter the following command to change the permissions of the file to allow execution:
 
-    ```powershell
+    ```
     chmod 755 ./scz-tool-wifisoftap-accessinfo.devkit.sh
     ```
 
 1. Execute the file on your device to output your TPM-derived SoftAP password:
 
-    ```powershell
+    ```
     ./scz-tool-wifisoftap-accessinfo.devkit.sh -m=pe101
     ```
 
@@ -51,10 +51,10 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 
     Example output:
 
-    ```powershell
+    ```
     Wifi-SoftAP MAC Address: 1234567890ab
     Wifi-SoftAP SSID: scz-0000
     Wifi-SoftAP Pre-Shared Key: asdf1234  
     ```
 
-1. The **Wifi-SoftAP Pre-Shared Key** is your devkit’s TPM-derived SoftAP password. Write down and securely store this password.
+1. The ```Wifi-SoftAP Pre-Shared Key``` is your devkit’s TPM-derived SoftAP password. Write down and securely store this password.
