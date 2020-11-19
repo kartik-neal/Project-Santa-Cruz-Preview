@@ -7,6 +7,7 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - Host PC
 - Project Santa Cruz Development Kit
+- Serial cable (optional)
 
 ## SSH into the devkit
 
