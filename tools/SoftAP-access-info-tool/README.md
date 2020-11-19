@@ -16,34 +16,36 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 - Devkit IP address
 
 > [!NOTE]
-> If your devkit is connected to the SoftAP, your device's IP address will be 10.1.1.1. If your devkit is connected over Ethernet, use the local IP address of the devkit, which you can get from the Ethernet router or hub. If your devkit is connected over Wi-Fi, you must use the IP address that was provided during the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md).
+> If your devkit is connected to the SoftAP, your device's IP address will be 10.1.1.1. If your devkit is connected over Ethernet, use the local IP address of the devkit, which you can get from the Ethernet router or hub. If your devkit is connected over Wi-Fi, you must use the IP address that was provided during [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md).
 
 ## Using the tool
 
 1. Power on your device.
 
-1. Download the [SoftAP tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/scz-tool-wifisoftap-accessinfo.devkit.sh).
+1. Download the [SoftAP tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/scz-tool-wifisoftap-accessinfo.devkit.sh) to your local PC.
 
-1. Copy the tool to your device by entering the following command into a command prompt or terminal:
+1. Copy the tool to your device by entering the following command into a command prompt or terminal. This command should work for Windows or Linux PC's.  
 
     ```
-    scp [local file path]\scz-tool-wifisoftap-accessinfo.devkit.sh root@[remote server]:/[path to destination]
+    scp [local file path]\scz-tool-wifisoftap-accessinfo.devkit.sh [username]@[remote server]:./
     ```
-
-    In this case, ```[remote server]``` is the IP address of your device. ```[path to destination]``` is the folder on your device which you would like to copy the file to. You may be prompted to enter the root SSH password for your device (p@ssw0rd).
+    
+    In this case, ```[remote server]``` is the IP address of your device. ```[username]``` is either root or the username you defined in OOBE during SSH setup. The file will be placed in ~/home folder on your device which is the default folder shown after SSH logon. Enter your password when prompted.  The root SSH password for your device, if not changed, is (p@ssw0rd).
 
 1. Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md).
 
-1. In the PuTTY terminal, navigate to the folder containing the SoftAP tool and enter the following command to change the permissions of the file to allow execution:
+1. In the PuTTY terminal, enter the following command to change the permissions of the file to allow execution:  
 
     ```
     chmod 755 ./scz-tool-wifisoftap-accessinfo.devkit.sh
     ```
 
-1. Execute the file on your device to output your TPM-derived SoftAP password:
+1. Execute the file on your device to output your TPM-derived SoftAP password:  Note: If you are not signed in as root, you must add ```sudo ``` in front of the below command and enter your username password when prompted.
 
     ```
     ./scz-tool-wifisoftap-accessinfo.devkit.sh -m=pe101
+    --or--
+    sudo ./scz-tool-wifisoftap-accessinfo.devkit.sh -m=pe101
     ```
 
     > [!NOTE]
