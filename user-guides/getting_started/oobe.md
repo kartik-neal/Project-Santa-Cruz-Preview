@@ -95,6 +95,10 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
   
    ![oobe_complete](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_complete.png)
 
+## Notes
+
+To protect your security, after 30 minutes of inactivity we stop the OOBE process (and we remove the port 80 allow rule).  You will need to restart OOBE to restart the OOBE process. 
+
 ## Provide feedback
 
 After completing the OOBE, please provide feedback on your experience via this [questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzoJxrXKT0dEvfQyxsA0h8lUOEpDRkxZSUFWMFc2SEZYMDBBSlVQMUZMMy4u). Your feedback will help us continue to fine-tune and improve the OOBE experience.
