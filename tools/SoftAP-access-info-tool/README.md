@@ -30,7 +30,7 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
     scp [local file path]\scz-tool-wifisoftap-accessinfo.devkit.sh [username]@[remote server]:./
     ```
     
-    In this case, ```[remote server]``` is the IP address of your device. ```[username]``` is either root or the username you defined in OOBE during SSH setup. The file will be placed in ~/home folder on your device which is the default folder shown after SSH logon. Enter your password when prompted.  The root SSH password for your device, if not changed, is (p@ssw0rd).
+    In this case, ```[remote server]``` is the IP address of your device. ```[username]``` is either root or the username you defined in OOBE during SSH setup. The file will be placed in ~/home folder on your device which is the default folder shown after SSH logon. Enter your password when prompted.  The root SSH password for your device, if not changed, is p@ssw0rd.
 
 1. Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md).
 
@@ -44,7 +44,9 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 
     ```
     ./scz-tool-wifisoftap-accessinfo.devkit.sh -m=pe101
+   ```
     --or--
+    ```
     sudo ./scz-tool-wifisoftap-accessinfo.devkit.sh -m=pe101
     ```
 
