@@ -28,7 +28,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port. Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
 
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
-    2. Password: santacruz
+    2. Password: santacruz              (if you have already manually set your SoftAP password during the OOBE, enter that password here)
 
     > [!NOTE]
     > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
@@ -41,9 +41,19 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![welcome_screen](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_welcome_screen.png)
 
-1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
+1. On the **Network connection** page, click **Access advanced network settings**.
 
     ![network_connection](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_network_connection.png)
+
+1. On the **Advanced network settings** page, click **Define access point passphrase**.
+
+    ![advanced_settings](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_advanced_settings.PNG)
+
+1. On the **Define access point passphrase** page, enter a passphrase/password for your device's SoftAP hotspot and click **Save**. This will disconnect you from your device. Reconnect your device (and if connecting to the SoftAP, enter your new password when prompted). Navigate back to the **Network connection** page.
+
+    ![softap](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_softap.png)
+
+1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
 
 1. Select your Wi-Fi network from the available connections.
 
@@ -97,7 +107,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 ## Notes
 
-To protect your security, after 30 minutes of inactivity we stop the OOBE process (and we remove the port 80 allow rule).  You will need to restart OOBE to restart the OOBE process. 
+To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
 
 ## Provide feedback
 
