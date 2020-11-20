@@ -41,19 +41,9 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![welcome_screen](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_welcome_screen.png)
 
-1. On the **Network connection** page, click **Access advanced network settings**.
+1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
 
     ![network_connection](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_network_connection.png)
-
-1. On the **Advanced network settings** page, click **Define access point passphrase**.
-
-    ![advanced_settings](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_advanced_settings.PNG)
-
-1. On the **Define access point passphrase** page, enter a passphrase/password for your device's SoftAP hotspot and click **Save**. This will disconnect you from your device. Reconnect your device (and if connecting to the SoftAP, enter your new password when prompted). Navigate back to the **Network connection** page.
-
-    ![softap](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_softap.png)
-
-1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
 
 1. Select your Wi-Fi network from the available connections.
 
@@ -61,11 +51,19 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![wifi](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi.png)
 
-1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, click **Next**.
+1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, navigate back to the **Network connection** page.
 
     ![wifi_success](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi_success.png)
 
-1. We recommend you stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
+1. On the **Network connection** page, click **Access advanced network settings**.
+
+1. On the **Advanced network settings** page, click **Define access point passphrase**.
+
+    ![advanced_settings](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_advanced_settings.PNG)
+
+1. On the **Define access point passphrase** page, enter a passphrase/password for your device's SoftAP hotspot and click **Save**. After changing your password, you will be disconnected from the SoftAP and will need to reconnect your device to proceed with the OOBE. Instead of reconnecting to the SoftAP with your new password, we recommend connecting to either your Wi-Fi network that was set up in a previous step or over Ethernet. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE (if connected over Ethernet, use the IP gathered from your router) and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build.
+
+    ![softap](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_softap.png)
 
 1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
