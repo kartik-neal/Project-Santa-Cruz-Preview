@@ -55,7 +55,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![wifi_success](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi_success.png)
 
-1. We recommend you stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
+1. Stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
 
 1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
