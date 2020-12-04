@@ -102,7 +102,7 @@ Follow these steps to clean up resources you deployed in this quickstart:
 
 ### Project Santa Cruz is not available in the Azure portal
 
-1. Verify the Azure portal link. For the Project Santa Cruz private preview you must use special link [Project Santa Cruz Overview page](https://go.microsoft.com/fwlink/?linkid=2135819).
+1. Verify the Azure portal link. For the private preview you must use special link [Project Santa Cruz](https://go.microsoft.com/fwlink/?linkid=2135819).
 
 ### Voice Assistant was created but does not respond to commands
 
