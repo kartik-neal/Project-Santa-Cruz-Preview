@@ -79,6 +79,6 @@ To turn it on, please complete the steps below.
 
 1. Under **Check access**, verify that the AAD application and your Azure subscription username/alias have Device Update Administrator privileges.
 
-1. Finally, navigate to the [Project Santa Cruz Enterprise Onboarding and Update Management website](https://projectsantacruz.microsoft.com/), check the box next to **Automatic Import Update (AIU)** to turn on the service, and enter the name of your AAD application.
+1. Finally, navigate to the [Project Santa Cruz Enterprise Onboarding and Update Management website](https://projectsantacruz.microsoft.com/), check the box next to **Automatic Import Update (AIU)** to turn on the service, and enter the AAD application ID.
 
     ![set_aiu_service](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/aiu_set_aiu_service.png)
