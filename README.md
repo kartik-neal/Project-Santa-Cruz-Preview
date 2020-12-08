@@ -2,6 +2,7 @@
 # Welcome to the Project Santa Cruz Private Preview
 
 > **SERVICE DOWNTIME!**
+> 
 > The Azure Device Update service will be unavailable from 10:00 am PST to 8:00 pm PST on Tuesday, December 8th.
 
 
