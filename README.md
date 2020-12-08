@@ -1,6 +1,9 @@
 
 # Welcome to the Project Santa Cruz Private Preview
 
+> **SERVICE DOWNTIME**:The Azure Device Update service will be unavailable from 10:00 am PST to 8:00 pm PST on Tuesday, December 8th.
+
+
 This public repo provides documentation and example ML models to participants in the preview program. Although the content is public, participation in the program requires a devkit. If you are with a company working within the edge AI value chain, your company might qualify for a devkit. Go to https://aka.ms/scpreview to apply.
 
 On this page you will find everything you need to get started using your devkit, including these [getting started videos](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/videos.md).
