@@ -22,7 +22,7 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
 
     1. Hand screw both Wi-Fi antennas into the carrier board.
 
-    1. Connect the Azure Eye SoM to the carrier board with the USB-C cable.
+    1. Connect the Azure Eye SoM to the carrier board's USB-C port with the USB-C cable.
 
     1. Connect the Azure Ear SoM to the carrier board with the USB Micro Type-B to USB Type-A cable. Connect the Micro Type-B end of the cable to the SoM and the Type-A end to the carrier board.
 
