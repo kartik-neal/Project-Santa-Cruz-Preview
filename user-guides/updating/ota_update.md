@@ -87,20 +87,40 @@ Azure Device Update allows you to deploy an update to a group of IoT devices. To
 
 **NOTE**: If you have already created a group, you can skip directly to the next section, **Deploy an update**.
 
+ Limitations:
+
+  - You can add any value to your tag except for "Uncategorized," which is a reserved value.
+  - Tag value cannot exceed 255 characters.
+  - Tag value can only contain these special characters: “.”,”-“,”_”,”~”.
+  - Tag and group names are case sensitive.
+  - A device can only have one tag. Any subsequent tag added to the device will override the previous tag.
+  - A device can only belong to one group.
+
+### Method 1: using direct twin updates to add a tag (easy)
+
+Tags can also be added or updated in device twin directly.
+
+1. Log into the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and navigate to your IoT Hub.
+
+2. From **IoT Edge** on the left navigation pane, find your Project Santa Cruz device and navigate to the Device Twin.
+
+3. In the Device Twin, delete any existing ADU tag value by setting them to null.
+
+4. Add a new ADU tag value as shown below. Learn more about device twin JSON document tags [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins#device-twins).
+
+```JSON
+"tags": {
+"ADUGroup": "<CustomTagValue>"
+}
+```
+
+### Method 2: using jobs to add a tag (advanced)
+
 1. Follow [these steps](https://docs.microsoft.com/azure/iot-hub/iot-hub-csharp-csharp-schedule-jobs) to add a tag to your devices using Jobs.
 
     **NOTE**: Tags can only be successfully added to your device after it has been connected to ADU. It is possible to schedule a Job on multiple devices to add or update their Device Update tags. To do so, please follow [these examples](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-jobs).
 
     **NOTE**: This action may exceed your current daily IoT Hub message quota. It is recommended to change no more than 50,000 device twin tags at a time, otherwise you may need to buy additional IoT Hub units. Details can be found at [Quotas and throttling](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-quotas-throttling#quotas-and-throttling).
-
-    Limitations:
-
-    - You can add any value to your tag except for "Uncategorized," which is a reserved value.
-    - Tag value cannot exceed 255 characters.
-    - Tag value can only contain these special characters: “.”,”-“,”_”,”~”.
-    - Tag and group names are case sensitive.
-    - A device can only have one tag. Any subsequent tag added to the device will override the previous tag.
-    - A device can only belong to one group.
 
 1. Create a group by selecting an existing IoT Hub tag:
 
