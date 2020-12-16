@@ -96,17 +96,17 @@ Azure Device Update allows you to deploy an update to a group of IoT devices. To
   - A device can only have one tag. Any subsequent tag added to the device will override the previous tag.
   - A device can only belong to one group.
 
-### Method 1: Using Direct Twin Updates to add a Tag (easy)
+### Method 1: using direct twin updates to add a tag (easy)
 
 Tags can also be added or updated in device twin directly.
 
-1. Log into Azure Portal using this link and navigate to your IoT Hub.
+1. Log into the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and navigate to your IoT Hub.
 
-2. From 'IoT Edge' on the left navigation pane find your Project Santa Cruz device and navigate to the Device Twin.
+2. From **IoT Edge** on the left navigation pane, find your Project Santa Cruz device and navigate to the Device Twin.
 
 3. In the Device Twin, delete any existing ADU tag value by setting them to null.
 
-4. Add a new ADU tag value as shown below. Learn more about device twin JSON document with tags [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins#device-twins).
+4. Add a new ADU tag value as shown below. Learn more about device twin JSON document tags [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins#device-twins).
 
 ```JSON
 "tags": {
@@ -114,7 +114,7 @@ Tags can also be added or updated in device twin directly.
 }
 ```
 
-### Method 2: Using Jobs to add a Tag (advanced)
+### Method 2: using jobs to add a tag (advanced)
 
 1. Follow [these steps](https://docs.microsoft.com/azure/iot-hub/iot-hub-csharp-csharp-schedule-jobs) to add a tag to your devices using Jobs.
 
