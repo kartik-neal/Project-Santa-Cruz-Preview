@@ -20,9 +20,9 @@
 
         ![try_it_parameters](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/prereqs_try_it_parameters.png)
     
-    1. Please wait approximately 30 minutes for the Azure Feature Control registration to complete. Once this is complete, proceed to the next step.
+    **WARNING**: please wait at least 20 minutes for the Azure Feature Control registration to complete before proceeding to the next step. Otherwise, you will receive an error when attempting to register the ADU resource provider (below).
 
-1. Register the ADU resource provider within your subscription.
+1. Register the ADU resource provider within your subscription. **Do NOT proceed with this step until the Azure Feature Control registration is complete. This may take at least 20 minutes after clicking "Run" in the previous step.**
 
     1. Open the [Azure portal](https://ms.portal.azure.com/#home).
 
