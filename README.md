@@ -78,3 +78,7 @@ After building a speech no-code solution, check out the following resources for 
 - [Complete the focused test scenarios](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/test-scenarios.md)
 - [Known issues](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/release-notes/known-issues.md)
 - [Release notes](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/release-notes/release-notes.md)
+
+## Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft's Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party's policies.
