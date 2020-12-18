@@ -186,7 +186,7 @@ Once you are done working with the demo, follow these steps to clean up the spee
 
 ### Project Santa Cruz is not available in the Azure portal
 
-Verify the Azure portal link. To access the Project Santa Cruz preview extension from the Azure portal homepage, you must open the Azure portal through a [special link](https://ms.portal.azure.com/?AzureEdgeDevices_assettypeoptions=%7B%22SantaCruzProject%22%3A%7B%22options%22%3A%22%22%7D%7D&Microsoft_Azure_Iothub=aduprod#home). Alternatively, you may access the Project Santa Cruz portal directly through [this link](https://go.microsoft.com/fwlink/?linkid=2135819).
+To access the Project Santa Cruz portal, which is a preview extension, use this [special link](https://go.microsoft.com/fwlink/?linkid=2135819).
 
 ### Voice assistant was created but does not respond to commands
 
