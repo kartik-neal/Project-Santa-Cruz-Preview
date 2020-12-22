@@ -23,7 +23,7 @@ Register your Project Santa Cruz devices today to receive an enhanced support ex
 
 1. You will see a long GUID that starts with “m:” or “t:” – copy the entire GUID.
 
-1. Open a browser window and enter https://app-dev-sc.azurewebsites.net/ClaimDevice.
+1. Open a browser window and enter https://projectsantacruz.microsoft.com/ClaimDevice.
 
 1. Paste the ID collected in step 4 into the **Hardware ID** box under **Add a new device** and click **Claim Device**.
 
