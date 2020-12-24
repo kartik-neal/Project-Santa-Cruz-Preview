@@ -7,7 +7,9 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - Host PC
 - Project Santa Cruz Development Kit
-- Serial cable (optional)
+- [USB to TTL serial cable](https://www.adafruit.com/product/954) (for serial connection only)
+
+    ![USB to TTL serial cable](./images/usb_serial_cable.png)
 
 ## SSH into the devkit
 
@@ -43,17 +45,27 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 
 ## Serial connection to the devkit
 
-1. Connect your devkit to a serial port.
+**WARNING!** Do **NOT** attempt to connect your devkit over serial except in extreme failure cases (e.g. you bricked your device). Taking apart the carrier board enclosure to connect the serial cable is very difficult and will break your Wi-Fi antenna cables.
 
-1. Power on your devkit.
+1. Remove the carrier board from the 80/20 rail using the hex key (included in the devkit welcome card).
 
-1. In Windows, open the Device Manager. Go to **Ports** and click **USB to UART** to open **Properties**. Note which COM port your device is connected to.
+1. Remove the screws on the underside of the carrier board enclosure and remove the motherboard. **WARNING: this will break your Wi-Fi antenna cables. Do not proceed with the serial connection unless it is the last resort to recover your device.**
+
+1. Connect the [USB to TTL serial cable](https://www.adafruit.com/product/954) to the GPIO pins on the motherboard as shown below. Please note that the red wire is not connected.
+
+    ![Serial pin connections.](./images/serial_connection.png)
+
+1. Power on your devkit and connect the USB side of the serial cable to your PC.
+
+1. In Windows, go to **Start** -> **Windows Update settings** -> **View optional updates** -> **Driver updates**. Look for a Serial to USB update in the list, check the box next to it, and click **Download and Install**.  
+
+1. Next, open the Windows Device Manager (**Start** -> **Device Manager**). Go to **Ports** and click **USB to UART** to open **Properties**. Note which COM port your device is connected to.
 
 1. Click the **Port Settings** tab. Make sure **Bits per second** is set to 115200.
 
 1. Open PuTTY. Enter the following and click **Open** to connect to your devkit via serial:
 
-    1. Serial line: COM\<your COM port #>
+    1. Serial line: COM[your COM port #]
     1. Speed: 115200
     1. Connection Type: Serial
 
