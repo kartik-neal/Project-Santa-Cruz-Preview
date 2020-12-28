@@ -51,6 +51,8 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 
 1. Remove the screws on the underside of the carrier board enclosure and remove the motherboard. **WARNING: this will break your Wi-Fi antenna cables. Do not proceed with the serial connection unless it is the last resort to recover your device.**
 
+1. Remove the jumper board from the GPIO pins. **Note the direction that the jumper board is plugged in prior to removing it** (e.g. draw an arrow on or attach a sticker to the jumper board pointing towards the circuitry for reference). The jumper board is not keyed and may be accidentally connected backwards when reassembling your carrier board.
+
 1. Connect the [USB to TTL serial cable](https://www.adafruit.com/product/954) to the GPIO pins on the motherboard as shown below. Please note that the red wire is not connected.
 
     ![Serial pin connections.](./images/serial_connection.png)
