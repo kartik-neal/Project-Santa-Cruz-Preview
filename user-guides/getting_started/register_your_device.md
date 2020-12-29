@@ -27,6 +27,6 @@ Register your Project Santa Cruz devices today to receive an enhanced support ex
 
 1. Paste the ID collected in step 4 into the **Hardware ID** box under **Add a new device** and click **Claim Device**.
 
-    ![hardware_id](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/device_registration/user-guides/getting_started/getting_started_images/registration_hardware_id.png)
+    ![hardware_id](./getting_started_images/registration_hardware_id.png)
 
 1. Repeat process for additional devices.
