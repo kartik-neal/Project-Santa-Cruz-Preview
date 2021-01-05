@@ -24,6 +24,10 @@ New devices built and shipped after 11/17/2020 will contain a Welcome card with 
 
 If you do not have a sticker or it was misplaced, you will need to [retrieve your TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/README.md) from the device prior to installing the build released on 01/26/2021.  
 
+### Does this affect my manually-set SoftAP password?
+
+We’ve created a new OOBE flow that allows users to manually set their SoftAP password. However, this password will be lost after performing a USB update of your deivce (see FAQs below). To ensure access to your device's SoftAP network, make sure to [retrieve your TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/README.md) prior to performing a USB update. Afterward, you may reset your password through OOBE. 
+
 ### FAQ
 
 **Q**: How will a USB update vs ADU update affect my SoftAP password that I manually set through OOBE?
@@ -34,7 +38,7 @@ USB updates:
 
 - USB updates will wipe all device configuration settings and will reset your device to a factory clean state.  You will need to re-run OOBE and create your personal SoftAP password again.
 
-ADU updates:
+OTA (ADU) updates:
 
 - Updates taken from ADU will preserve your user configuration state. Your manually-set SoftAP password will remain intact.
 
