@@ -34,13 +34,13 @@ We’ve created a new OOBE flow that allows users to manually set their SoftAP p
 
 **A**: Your device-specific, TPM-derived SoftAP password is unaffected by any firmware or OS update and remains unchanged across all update scenarios. However, your manually set password will be lost after a USB update.
 
-USB updates:
+  USB updates:
 
-- USB updates will wipe all device configuration settings and will reset your device to a factory clean state.  You will need to re-run OOBE and create your personal SoftAP password again.
+  - USB updates will wipe all device configuration settings and will reset your device to a factory clean state.  You will need to re-run OOBE and create your personal SoftAP password again.
 
-OTA (ADU) updates:
+  OTA (ADU) updates:
 
-- Updates taken from ADU will preserve your user configuration state. Your manually-set SoftAP password will remain intact.
+    - Updates taken from ADU will preserve your user configuration state. Your manually-set SoftAP password will remain intact.
 
 **Q**: How do I contact support?
 
