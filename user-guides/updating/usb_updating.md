@@ -27,7 +27,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 - USB storage device.
 
-- USB-C cable, included in the Project Santa Cruz devkit.
+- USB-C cable, included in the Project Santa Cruz devkit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).
 
 - Devkit carrier board (Note: the carrier board needs to be running a SW version from September 16, 2020 (2020.109.116.120) or later. See step 4 below to confirm the version of your device. If your SW version is not from September 16, 2020 or later, please update your device [over-the-air (OTA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) or use method #2 or #3 below.)
 
@@ -86,7 +86,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 - Windows or Linux PC with an available USB-C port.
 
-- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit.  
+- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).  
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
@@ -129,7 +129,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
     ![cmd_flash](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_cmd_flash.png)  
 
-1. Connect the supplied **USB-C to USB-A** cable to the carrier board's USB-C port and to the host PC using the USB-A side of the cable.
+1. Connect the supplied USB-C cable to the carrier board's USB-C port and to the host PC.
 
 1. In the PuTTY terminal, run the following commands:
 
@@ -183,7 +183,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 - Windows or Linux PC with an available USB-C port.
 
-- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit.  
+- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately). 
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
