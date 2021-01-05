@@ -40,7 +40,7 @@ We’ve created a new OOBE flow that allows users to manually set their SoftAP p
 
   OTA (ADU) updates:
 
-    - Updates taken from ADU will preserve your user configuration state. Your manually-set SoftAP password will remain intact.
+   - Updates taken from ADU will preserve your user configuration state. Your manually-set SoftAP password will remain intact.
 
 **Q**: How do I contact support?
 
