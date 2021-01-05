@@ -16,13 +16,13 @@ As we move into our Public Preview stage, there are certain security configurati
 
 ### When will this change happen?
 
-In the build released on 12/08/2020.
+In the build released on 01/26/2021.
 
 ### What should I do prior to the change?
 
 New devices built and shipped after 11/17/2020 will contain a Welcome card with your device-specific, TPM-derived SoftAP password printed on a sticker. It is highly recommended that you keep this sticker so you can refer to it when needed.
 
-If you do not have a sticker or it was misplaced, you will need to [retrieve your TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/README.md) from the device prior to installing the build released on 12/08/2020.  
+If you do not have a sticker or it was misplaced, you will need to [retrieve your TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/README.md) from the device prior to installing the build released on 01/26/2021.  
 
 ### FAQ
 
