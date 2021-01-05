@@ -28,7 +28,7 @@ If you do not have a sticker or it was misplaced, you will need to [retrieve you
 
 We’ve created a new OOBE flow that allows users to manually set their SoftAP password. If you have not manually set your SoftAP password, you may do so through [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) at any time. However, this password will be lost after performing a USB update of your deivce (see FAQs below). To ensure access to your device's SoftAP network, make sure to [retrieve your TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/README.md) prior to performing a USB update. After updating, you may reset your password through OOBE. 
 
-### FAQ
+### FAQs
 
 **Q**: How will a USB update vs ADU update affect my SoftAP password that I manually set through OOBE?
 
