@@ -127,7 +127,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
     ![cmd_flash](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_cmd_flash.png)  
 
-1. Connect the supplied USB-C cable to the carrier board's USB-C port and to the host PC.
+1. Connect the supplied USB-C cable to the carrier board's USB-C port and to the host PC. If you are using a USB-C to USB-A cable (sold separately), connect the USB-A side to the PC and the USB-C side to the carrier board.
 
 1. In the PuTTY terminal, run the following commands:
 
