@@ -21,7 +21,7 @@ Register your Project Santa Cruz devices today to receive an enhanced support ex
     azure-device-health-id
     ```
 
-1. You will see a long GUID that starts with “m:” or “t:” – copy the entire GUID.
+1. You should see a long GUID that starts with “t:” – copy the entire GUID. If your GUID starts with "m:" or another character, please contact aedppsup@microsoft.com for support.
 
 1. Open a browser window and enter https://projectsantacruz.microsoft.com/ClaimDevice.
 
