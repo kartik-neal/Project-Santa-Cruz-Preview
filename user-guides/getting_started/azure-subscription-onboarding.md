@@ -53,15 +53,15 @@ Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits 
 
     ![DPS enablement screen.](./getting_started_images/onboarding_set_dps.png)  
 
-1. Next, you will see an option at the bottom of the screen for enabling Azure Device Update (ADU). Check the box and click **Next** to create your ADU account. This may take a few minutes to complete. When finished, you will see your ADU status (**ON**), ADU account name, and ADU instance name listed under **Device Management Services** on your screen.
+1. Next, you will see an option at the bottom of the screen for enabling Azure Device Update (ADU). We recommend enabling ADU so you may update your devkit [over-the-air (OTA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md). Check the box and click **Next** to create your ADU account. This may take a few minutes to complete. When finished, you will see your ADU status (**ON**), ADU account name, and ADU instance name listed under **Device Management Services** on your screen.
 
     ![ADU enablement screen.](./getting_started_images/onboarding_set_adu.png)
 
-1. Finally, you will see an option at the bottom of the screen for enabling Automatic Import Update (AIU). To enable AIU, first complete the steps detailed in this [AIU setup guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/automatic_import_of_updates.md). When you are done, check the box, enter your AAD Application ID, and click **Next**.
+1. Finally, you will see an option at the bottom of the screen for enabling Automatic Import Update (AIU). Like the name implies, AIU automatically imports new device updates into your ADU account, removing the need to manually download update files from the [Project Santa Cruz Update Management website](https://projectsantacruz.microsoft.com/Download). Please note that AIU is not required to perform OTA updates. To enable AIU, first complete the steps detailed in this [AIU setup guide](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/automatic_import_of_updates.md). When you are done, check the box, enter your AAD Application ID, and click **Next**.
 
     ![AIU enablement screen.](./getting_started_images/onboarding_set_aiu.png)
 
-1. After enabling DPS, ADU, and AIU, you will receive a confirmation page with settings summary.
+1. After enabling AIU, you will see your AIU status (**ON**) and your AIU application ID listed under **Device Management Services** on your screen.
 
     ![onboarding_confirmation](./getting_started_images/onboarding_confirmation.png)
 
