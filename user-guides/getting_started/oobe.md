@@ -61,7 +61,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![license_agreement](./getting_started_images/oobe_license_agreement.png)
 
-1. If you would like to set up SSH for remote access to your devkit, enter your SSH login and password. To disable the root SSH login (username = root, password = p@ssw0rd), check the box next to **SSH Root Login Disabled (Recommended)**. To prevent brute force security attacks, we recommend keeping SSH root login disabled. If you are an advanced user and choose to enable root login, please enable appropriate security measures for your deployment environment. Finally, click **Save**.  
+1. If you would like to set up SSH for remote access to your devkit, enter your SSH username and password. To disable the root SSH login (username = root, password = p@ssw0rd), check the box next to **SSH Root Login Disabled (Recommended)**. To prevent brute force security attacks, we recommend keeping SSH root login disabled. If you are an advanced user and choose to enable root login, please enable appropriate security measures for your deployment environment. Finally, click **Save**.  
 
     ![ssh](./getting_started_images/oobe_ssh.png)
 
