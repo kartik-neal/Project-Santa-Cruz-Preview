@@ -1,4 +1,4 @@
-# DiagTool usage guide
+# DiagTool user guide
 
 The Project Santa Cruz Devkit components (carrier board, Ear SOM, and Eye SOM) each have updatable firmware and/or software. The Santa Cruz Diagnostic tool (DiagTool) is a bash script that accomplishes the following when run:
 
