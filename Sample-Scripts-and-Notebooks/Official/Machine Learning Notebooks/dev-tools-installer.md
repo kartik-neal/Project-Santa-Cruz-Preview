@@ -13,8 +13,8 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
 
 ## Optional Tools Available for Installation
 
-* [Nvidia DeepStream SDK 5](https://developer.nvidia.com/deepstream-sdk)
-* [Intel OpenVino Toolkit 2020.2](https://docs.openvinotoolkit.org/)
+* [Nvidia DeepStream SDK 5](https://developer.nvidia.com/deepstream-sdk) (Toolkit for developing solutions for Nvidia Accelerators)
+* [Intel OpenVino Toolkit 2020.2](https://docs.openvinotoolkit.org/) (Toolkit for developing solutions for Intel Accelerators)
 * [Lobe.ai](https://lobe.ai/)  
 * [Streamlit](https://www.streamlit.io/)
 * [Pytorch 1.4.0 (Windows) or 1.2.0 (Linux)](https://pytorch.org/)
