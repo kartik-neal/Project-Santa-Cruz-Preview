@@ -93,6 +93,11 @@ cat diagtool_diagnosis.log
 
 ![DiagTool log output.](./images/diagtool_log.png)
 
+The log will contain the information listed in the table above. Additionally, the log may include any of the following statements:
+
+- “No SoM controllers found:" this indicates that SoM security firmware is missing.
+- “1 Azure Eye/Ear SoM(s) found but incorrect SoM controller VID/PID:" this indicates that the Eye/Ear SoM security firmware is present, but the VID/PID is incorrect.
+
 For further analysis and/or troubleshooting, you may copy this file to your host PC by dragging the file from your devkit's filesystem to your host PC's filesystem in WinSCP.
 
 ![Copying of diagtool log file from devkit to host PC.](./images/winscp_diagtool_log.png)
