@@ -34,7 +34,7 @@ To ensure access to your device's SoftAP network, make sure to [retrieve your TP
 
 **Q**: How will device updates affect my SoftAP password that I manually set through OOBE?
 
-**A**: Your manually-set password will be lost after a [USB update with the UUU tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-2-nxp-uuu-tool). In this case, the update will wipe all device configuration settings and will reset your device to a factory clean state. You will need to re-run OOBE to set your SoftAP password again.
+**A**: Your manually-set password will be lost after a [USB update with the UUU tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-2-nxp-uuu-tool). In this case, the update will wipe all device configuration settings and will reset your device to a factory clean state. You will need to re-run OOBE to set your user-configured SoftAP password again. **Until then, you will only be able to log in to your SoftAP network with your TPM-derived password.**
 
 [OTA updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) via ADU and [USB updates performed through a USB storage device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-1-usb-storage-device) will preserve your user configuration state, and your manually-set SoftAP password will remain intact.
 
