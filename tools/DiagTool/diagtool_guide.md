@@ -22,7 +22,7 @@ The DiagTool collects the following component information:
 |CODEC Firmware      |              |X             |                      |Audio CODEC info from Ear SOM. |
 |MCU Version         |X             |              |                      |Eye SOM MCU version. |
 |OS Version <br> Sub-release Version |   |         |X                     |OS version, version ID, and build date. |
-|List of Connected MyriadX Chipsets |X   |         |                      |Lists chipsets and their Microsoft verification status. |
+|List of Connected MyriadX Chipsets |X   |         |                      |Lists MyriadX chipsets and their Microsoft verification status. |
 |List of Mic Arrays  |              |X             |                      |Lists mic arrays and their Microsoft verification status. |
 
 ## Prerequisites
