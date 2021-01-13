@@ -28,7 +28,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port. Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
 
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
-    2. Password: santacruz
+    2. Password: santacruz              (if you have already manually set your SoftAP password during the OOBE, enter that password here)
 
     > [!NOTE]
     > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
@@ -51,11 +51,19 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![wifi](./getting_started_images/oobe_wifi.png)
 
-1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, click **Next**.
+1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, navigate back to the **Network connection** page.
 
     ![wifi_success](./getting_started_images/oobe_wifi_success.png)
 
-1. Stop at this point and disconnect your PC from the SoftAP/Devkit and reconnect your PC back to your home/office AP. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build. **<your_devices_ip>** will be the IP address noted in the previous step.
+1. On the **Network connection** page, click **Access advanced network settings**.
+
+1. On the **Advanced network settings** page, click **Define access point passphrase**.
+
+    ![advanced_settings](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_advanced_settings.PNG)
+
+1. On the **Define access point passphrase** page, enter a passphrase/password for your device's SoftAP hotspot and click **Save**. After changing your password, you will be disconnected from the SoftAP and will need to reconnect your device to proceed with the OOBE. Instead of reconnecting to the SoftAP with your new password, we recommend connecting to either your Wi-Fi network that was set up in a previous step or over Ethernet. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE (if connected over Ethernet, use the IP gathered from your router) and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build.
+
+    ![softap](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_softap.png)
 
 1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
@@ -97,7 +105,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 ## Notes
 
-To protect your security, after 30 minutes of inactivity we stop the OOBE process (and we remove the port 80 allow rule).  You will need to restart OOBE to restart the OOBE process.
+To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
 
 ## Provide feedback
 
