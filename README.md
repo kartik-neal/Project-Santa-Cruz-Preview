@@ -1,4 +1,3 @@
-
 # Welcome to the Project Santa Cruz Private Preview
 
 This public repo provides documentation and example ML models to participants in the preview program. Although the content is public, participation in the program requires a devkit. If you are with a company working within the edge AI value chain, your company might qualify for a devkit. Go to https://aka.ms/scpreview to apply.
@@ -58,8 +57,7 @@ After building a speech no-code solution, check out the following resources for 
 - [Devkit datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_developer_kit_datasheet.md)
 - [Eye SoM datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_eye_datasheet.md)
 - [Ear SoM Datasheet](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/project_santa_cruz_ear_datasheet.md)
-- [Devkit Safety Manual (EN)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/DevKit%20Safety%20Manual%20(2020-11-05).pdf)
-- [Devkit Safety Manual (FR-CA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/hardware/FR-CA%20DevKit%20Safety%20Manual%20(2020-10-21).pdf)
+- [Safety Information](https://github.com/microsoft/Project-Santa-Cruz-Preview/tree/main/user-guides/hardware/Safety%20Information)
 
 ### Containers
 
@@ -80,3 +78,7 @@ After building a speech no-code solution, check out the following resources for 
 - [Complete the focused test scenarios](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/test-scenarios.md)
 - [Known issues](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/release-notes/known-issues.md)
 - [Release notes](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/release-notes/release-notes.md)
+
+## Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft's Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party's policies.

@@ -39,21 +39,21 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 1. Click **Next** on the OOBE **Welcome** screen.  
 
-    ![welcome_screen](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_welcome_screen.png)
+    ![welcome_screen](./getting_started_images/oobe_welcome_screen.png)
 
 1. On the **Network connection** page, click **Connect to a new WiFi network** to connect your devkit to a Wi-Fi network.
 
-    ![network_connection](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_network_connection.png)
+    ![network_connection](./getting_started_images/oobe_network_connection.png)
 
 1. Select your Wi-Fi network from the available connections.
 
     >[!NOTE] The Wi-Fi network you connect to must currently have internet connectivity so we can communicate with Azure. EAP[PEAP/MSCHAP], captive portals, and Enterprise EAP-TLS connectivity is currently not supported.
 
-    ![wifi](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi.png)
+    ![wifi](./getting_started_images/oobe_wifi.png)
 
 1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, navigate back to the **Network connection** page.
 
-    ![wifi_success](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_wifi_success.png)
+    ![wifi_success](./getting_started_images/oobe_wifi_success.png)
 
 1. On the **Network connection** page, click **Access advanced network settings**.
 
@@ -67,41 +67,41 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
-    ![license_agreement](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_license_agreement.png)
+    ![license_agreement](./getting_started_images/oobe_license_agreement.png)
 
-1. If you would like to set up SSH for remote access to your devkit, enter your SSH login and password and click **Next**.  
+1. If you would like to set up SSH for remote access to your devkit, enter your SSH username and password. To disable the root SSH login (username = root, password = p@ssw0rd), check the box next to **SSH Root Login Disabled (Recommended)**. To prevent brute force security attacks, we recommend keeping SSH root login disabled. If you are an advanced user and choose to enable root login, please enable appropriate security measures for your deployment environment. Finally, click **Save**.  
 
-    ![ssh](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_ssh.png)
+    ![ssh](./getting_started_images/oobe_ssh.png)
 
 1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.
 
-    ![connect_device](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_connect_device.png)
+    ![connect_device](./getting_started_images/oobe_connect_device.png)
 
 1. Click **Copy** to copy your device code (this may take a few seconds to generate). Once you have copied your device code, click **Login to Azure**, which opens a new browser tab.
 
-    ![device_code](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_device_code.png)
+    ![device_code](./getting_started_images/oobe_device_code.png)
 
     1. On the new browser tab, paste the device code you copied in the previous step into the window and click **Next**.
 
-        ![enter_code](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_enter_code.png)
+        ![enter_code](./getting_started_images/oobe_enter_code.png)
 
     1. Sign into your Azure account (the same account used during the onboarding process) and click **Next**. Navigate back to the OOBE window, which will show “Successfully Linked” once account sign-in is successful.
 
-        ![code_sign_in](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_code_sign_in.png)
+        ![code_sign_in](./getting_started_images/oobe_code_sign_in.png)
 
 1. Select the IoT Hub you created during the onboarding process to assign it to your devkit. The asterisk "*" indicates IoT Hubs with DPS enabled. If you are not sure which IoT Hub name you created during the onboarding process, you can review it by accessing https://projectsantacruz.microsoft.com/.
 
-    ![iot_hub](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_iot_hub.png)
+    ![iot_hub](./getting_started_images/oobe_iot_hub.png)
 
 1. Enter a device name for your devkit, check the TPM enrollment box, and click **Next**.  
 
-    ![device_name](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_device_name.png)
+    ![device_name](./getting_started_images/oobe_device_name.png)
 
 1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home).
 
   >[!NOTE] If your **Preview Video Output** link is using 10.1.1.1:3000, we recommend you disconnect your PC from the SoftAP as outlined in step 5 and use http://<your_noted_IP_address>:3000 to get the best experience.
   
-   ![oobe_complete](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_complete.png)
+   ![oobe_complete](./getting_started_images/oobe_complete.png)
 
 ## Notes
 

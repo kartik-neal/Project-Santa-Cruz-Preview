@@ -19,7 +19,7 @@ ms.topic: reference  # the type of article
 |Included in Box                 |1x Carrier Board <br> 1x Azure Ear SoM <br> 1x Azure Eye SoM <br> 1x RGB Sensor <br> 1x USB 3.0 Type A to Micro B Cable <br> 1x USB 3.0 Type C Cable <br> 1x RGB MIPI Camera Cable <br> 1x DC Power Cable <br> 1x AC/DC Converter <br> 3x Carrier Board and SoM Enclosures <br> 2x Wi-Fi Antennas  |
 |External Dimensions             |  |
 |Weight                          |TBD          |
-|OS                              |Linux: CentOS           |
+|OS                              |CBL-Mariner           |
 |Management Control Plane        |OT Managed: <br> ADU <br> IOT Edge <br> IOT Hub          |
 |Supported Software and Services |Azure Device Update <br> Azure IoT <br> Azure IoT Hub <br> Azure IoT Central <br> Azure IoT Edge and Marketplace <br> Azure Container Registry <br> Azure Mariner OS with Connectivity <br> Azure Machine Learning <br> ONNX Runtime <br> TensorFlow <br> Azure Analysis Services <br> Azure PnP <br> Azure Device Provisioning Service (DPS) <br> Cognitive Service Containers <br> PowerBI       |
 |General Processor               |Carrier Board: NXP iMX8m         |
