@@ -16,7 +16,7 @@ As we move into our Public Preview stage, there are certain security configurati
 
 ### When will this change happen?
 
-In the build released on 01/26/2021.
+In the build released on 01/26/2021 and all future updates.
 
 ### What should I do prior to the change?
 
@@ -38,7 +38,7 @@ To ensure access to your device's SoftAP network, make sure to [retrieve your TP
 
 [OTA updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) via ADU and [USB updates performed through a USB storage device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-1-usb-storage-device) will preserve your user configuration state, and your manually-set SoftAP password will remain intact.
 
-Your device-specific, TPM-derived SoftAP password is unaffected by any firmware or OS update and remains unchanged across all update scenarios.
+Your device-specific, TPM-derived SoftAP password is unaffected by any firmware or OS update and remains unchanged across all update scenarios. This also applies to the current default password, "santacruz," until the build released on 01/26/2021 and thereafter.
 
 **Q**: How do I contact support?
 
