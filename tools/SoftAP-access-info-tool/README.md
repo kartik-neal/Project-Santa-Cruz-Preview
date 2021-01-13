@@ -22,7 +22,21 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 
 1. Power on your device.
 
-1. Download the [SoftAP tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/scz-tool-wifisoftap-accessinfo.devkit.sh) to your local PC.
+1. Download the [SoftAP tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/SoftAP-access-info-tool/scz-tool-wifisoftap-accessinfo.devkit.sh) to your local PC. To download the tool in the correct UNIX format, follow these steps:
+
+    1. Click the SoftAP tool link above.
+
+    1. In the GitHub file window, click **Raw**.
+
+        ![File window in Github.](./images/download.png)
+
+    1. In the new window containing the raw file, right click and select **Save as**.
+
+    1. Navigate to your preferred destination folder, and click **Save**. The file should now be saved in the correct UNIX format for executing on your devkit. If you did not save the file properly, you may receive an error of the following format when running the script:
+
+        ```bash
+        -bash: ./scz-tool-wifisoftap-accessinfo.devkit.sh: /bin/bash: bad interpreter: No such file or directory
+        ```
 
 1. Copy the tool to your device by entering the following command into a command prompt or terminal. This command should work for Windows or Linux PC's.  
 

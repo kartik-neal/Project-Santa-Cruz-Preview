@@ -17,18 +17,23 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
 
 1. Connect the devkit components:
 
+    > [!NOTE]
+    > The power adapter port is located on the right side of the carrier board. The remaining ports (2x USB-A, 1x USB-C, 1x HDMI, and 1x Ethernet) and the reset button are located on the left side of the carrier board.
+
     1. Hand screw both Wi-Fi antennas into the carrier board.
 
-    1. Connect the Azure Eye SoM to the carrier board with the USB-C cable.
+    1. Connect the Azure Eye SoM to the carrier board's USB-C port with the USB-C cable.
 
     1. Connect the Azure Ear SoM to the carrier board with the USB Micro Type-B to USB Type-A cable. Connect the Micro Type-B end of the cable to the SoM and the Type-A end to the carrier board.
 
+    1. Connect the power cable to the power adapter.
+
     1. Remove any remaining plastic packaging from the devices.
 
-    1. Connect the power adapter to the carrier board and a wall outlet. This will automatically power on the device. Please allow some time for the device to boot up.
+    1. Connect the power adapter/cable to the carrier board and a wall outlet. This will automatically power on the device. The reset button on the left side of the carrier board will be illuminated, and the Ear SoM LEDs will turn green, indicating device authentication is in progress (specifically, the LED marked L01 will turn on and remain green, and LED L02 will flash green). Please allow some time for the device to boot up.
 
         > [!NOTE]
-        > The button on the side of the carrier board is for powering off or resetting the device after powering on via the power adapter. In the event of a power outage, the device will automatically reset and power back on.
+        > The button on the left side of the carrier board is for powering off or resetting the device after powering on via the power adapter. In the event of a power outage, the device will automatically reset and power back on.
 
 ## Next steps
 

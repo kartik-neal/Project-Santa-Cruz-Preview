@@ -1,128 +1,222 @@
-# QuickStart: Creating a Voice Assistant with the Project Santa Cruz Devkit
+# QuickStart: creating a voice assistant with the Project Santa Cruz Devkit
 
-In this quickstart, you make your own voice assistant using the Project Santa Cruz Development Kit (DevKit) and [Speech services](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/overview).
+In this quickstart, you will create a voice assistant from a template to use with your Project Santa Cruz devkit and Azure Ear SoM. The voice assistant demo runs within the [Project Santa Cruz portal](https://go.microsoft.com/fwlink/?linkid=2135819) and contains a selection of virtual objects you can control with your voice. To control an object, simply say your keyword, which is a word or short phrase that wakes your device, followed by a command. Each template responds to a set of specific commands.
+
+This guide will walk you through the process of setting up your devkit, creating a voice assistant and the necessary [Speech Services](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/overview) resources, testing your voice assistant, configuring your keyword, and creating custom keywords.
 
 ## Prerequisites
 
-* Project Santa Cruz Development Kit with the Ear SoM connected.
-* Speaker (not included in the devkit).
-* [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) complete.
-* [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md) complete.
+* Project Santa Cruz Development Kit with the Azure Ear SoM connected.
+* Speaker or headphones (optional).
+* [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) has been completed.
+* [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md) has been completed.
 
-## Devkit setup 
+## Devkit setup
 
-1. Connect speaker to your Ear SoM.
-2. Connect the Ear SoM to your devkit.
-3. Power on the devkit.
-   * The 1st LED light on the Ear SoM will change to bright green to indicate Ear SoM was powered on. 
-   *	The 2nd LED changes to blinking green to indicate Ear SOM is waiting for authentication.
-4. Wait for the authentication process to complete. It can take up to 3 minutes.
-5. Proceed to the next section when you see one of the following:
-   * Both LED light turn off. This indicates that authentication is completed and devkit is not configured with a keyword.
-   * Three bright blue light turn on. This indicates that authentication is completed and devkit is configured with a keyword.
+1. (Optionally) connect your speaker or headphones to your Ear SoM via the headphone jack, which is labeled "Line Out." This will allow you to hear your voice assistant's audio responses. If you do not connect a speaker or headphones, you will still be able to see the responses as text in the demo window.
 
-**NOTE:** Reach out to your lead AED PM for support if your devkit cannot complete step 5.
+1. Connect the Ear SoM to the carrier board of your devkit.
 
-## Project Santa Cruz in the Azure portal
+1. Power on the devkit.
 
-The first step in creating a voice assistant is to navigate to the Project Santa Cruz in Azure portal.
+   * LED L01 on the Ear SoM will change to solid green to indicate that the Ear SoM was powered on.
+   * LED L02 will change to blinking green to indicate that the Ear SOM is waiting for authentication to complete.
 
-1. Start your browser and go to the [Azure portal](https://go.microsoft.com/fwlink/?linkid=2135819).
-2. Sign into your Azure account. 
-3. Use the Search box at the top of the page, enter *Project Santa Cruz*.
-4. In the list that appears, choose *Project Santa Cruz*. Your browser displays the Project Santa Cruz Overview page.
+1. Wait for the authentication process to complete--this can take up to 3 minutes.
 
-Alternatively, you can navigate directly to the [Project Santa Cruz Overview page](https://go.microsoft.com/fwlink/?linkid=2135819).
+1. Proceed to the next section when you see one of the following:
 
-![Project Santa Cruz Portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/aed-portal-home-page.png)
+   * LED L01 turns off and L02 turns white. This indicates that authentication is complete, and the devkit has not been configured with a keyword yet.
+   * All three LEDs turn blue. This indicates that authentication is complete, and the devkit is configured with a keyword.
 
+    **NOTE:** Reach out to support if your devkit cannot complete this step.
 
-## Create voice assistant using templates
+## Create a voice assistant using an available template
 
-You can build a voice assistant using available templates. The Hospitality template is available for the private preview. Healthcare is also scheduled to be released soon.
+1. Navigate to the [Project Santa Cruz portal](https://go.microsoft.com/fwlink/?linkid=2135819).
 
-1. Open **Demos & Tutorials** tab. 
-2. Click **Try out voice assistant templates** under **Speech tutorials and demos**.
-3. Select IoT hub to which your device is connected from the **IoT hub** list.
-4. Choose the device from the list.
-5. Select one of the speech templates.
-6. Click the **I agree to terms & conditions for this project.** checkbox.
-7. Click **Create** button. The portal deploys the resource to the device.
+1. Open the **Demos & tutorials** tab.
 
+    ![Project Santa Cruz portal overview page.](./article_images/speech_portal_overview.png)
 
-![Project Santa Cruz Portal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/getting_started_images/aed-try-speech-themes.png)
+1. Click **Try out voice assistant templates** under **Speech tutorials and demos**. This will open a window on the right side of your screen.
 
-8. Select the Azure subscription in the **Subscription** box.
-9. Select the resource group to use from the **Resource group** list.
-10. Enter name for the voice assistant. It will be used as a prefix to resource names.
-11. Select the region to deploy resources to from the **Region** list.
-12. Choose the pricing tier from the **Tier** list. (We recommend **Standard**).
-13. Click the **Create** button. Resources for the voice assistant application will be deployed to your subscription. <br/>
+1. Do the following in the window:
 
-**WARNING :** Do not close the pane until the portal finish deploying the resource. Closing the pane can result in unexpected behavior of voice assistant.
-   
-At this point, the portal displays the speech demo.
+    1. In the **IoT Hub** dropdown menu, select the IoT hub to which your devkit is connected.
 
-## Configure a keyword for your device
+    1. In the **Device** dropdown menu, select your devkit.
 
-Next, you can add a keyword to your device so that you can activate it using voice. You can use prebuilt keywords and custom keywords created in [Speech Studio](https://speech.microsoft.com/).
+    1. Select one of the available voice assistant templates.
 
-1. Click on **change** link near **Custom keyword**.
-2.	Select one of the available keywords. 
+    1. Click the **I agree to terms & conditions for this project** checkbox.
+
+    1. Click **Create**.
+
+    ![Try out voice assistant templates window.](./article_images/speech_template_creation.png)
+
+1. After clicking **Create**, the portal opens another window to create your speech theme resource. Do the following in the window:
+
+    1. Select your Azure subscription in the **Subscription** box.
+
+    1. Select your preferred resource group from the **Resource group** dropdown menu. If you would like to create a new resource group to use with your voice assistant, click **Create** under the dropdown menu and follow the prompts.
+
+    1. For **Application prefix**, enter a name. This will be the prefix for your project/custom command name.
+
+    1. Under **Region**, select the region to deploy resources to.
+
+    1. Under **LUIS prediction pricing tier**, select **Standard** (the free tier does not support speech requests).
+
+    1. Click the **Create** button. Resources for the voice assistant application will be deployed to your subscription.
+
+        **WARNING :** Do NOT close the window until the portal has finished deploying the resource. Closing the window prematurely can result in unexpected behavior of the voice assistant. Once your resource has been deployed, the demo will be displayed.
+
+    ![Subscription and resource group selection window.](./article_images/speech_resource_group.png)
 
 ## Test out your voice assistant
 
-Try any of the following commands to interact with your voice assistant. Always start with the keyword that you configured. For example - *Computer, turn on TV*.
-* "Turn on lights."
-* "Turn off lights."
-* "Turn on TV."
-* "Turn off TV."
-* "Turn on AC."
-* "Turn off AC."
-* "Open blinds."
-* "Close blinds."
-* "Set temp to 75."
+To interact with your voice assistant, say the keyword followed by a command. When the Ear SoM recognizes your keyword, the device emits a chime (which you can hear if a speaker or headphones are connected), and the LEDs will blink blue. The LEDs will switch to racing blue while your command is processed. The voice assistant's response to your command will be printed in text in the demo window and emitted audibly through your speaker/headphones. The default keyword (listed next to **Custom Keyword**) is set to "Computer," and each template has a set of compatible commands that allow you to interact with virtual objects in the demo window. For example, if you are using the hospitality or healthcare demo, say "Computer, turn on TV" to turn on the virtual TV.
+
+![Hospitality demo window.](./article_images/speech_hospitality_demo.png))
+
+### Hospitality and healthcare demo commands
+
+Both the healthcare and hospitality demos have virtual TVs, lights, blinds, and thermostats you can interact with. The following commands (and additional variations) are supported:
+
+* "Turn on/off the lights."
+* "Turn on/off the TV."
+* "Turn on/off the AC."
+* "Open/close the blinds."
+* "Set temperature to X degrees." (X is the desired temperature, e.g. 75.)
+
+![Healthcare demo window.](./article_images/speech_healthcare_demo.png)
+
+### Automotive demo commands
+
+The automotive demo has a virtual seat warmer, defroster, and thermostat you can interact with. The following commands (and additional variations) are supported:
+
+* "Turn on/off the defroster."
+* "Turn on/off the seat warmer."
+* "Set temperature to X degrees." (X is the desired temperature, e.g. 75.)
+* "Increase/decrease the temperature by Y degrees."
+
+![Automotive demo window.](./article_images/speech_auto_demo.png)
+
+### Inventory demo commands
+
+The inventory demo has a selection of virtual blue, yellow, and green boxes to interact with along with a virtual inventory app. The following commands (and additional variations) are supported:
+
+* "Add/remove X boxes." (X is the number of boxes, e.g. 4.)
+* "Order/ship X boxes."
+* "How many boxes are in stock?"
+* "Count Y boxes." (Y is the color of the boxes, e.g. yellow.)
+* "Ship everything in stock."
+
+![Inventory demo window.](./article_images/speech_inventory_demo.png)
+
+## Configure your keyword
+
+To change your keyword, click **change** next to **Custom Keyword** in the demo window. Select one of the available keywords and click **Save**. You will be able to choose from a selection of prebuilt keywords and any custom keywords you have created.
+
+![Selection of available keywords.](./article_images/speech_change_keyword.png)
+
+### Create a custom keyword
+
+To create a custom keyword, click **+ Create Custom Keyword** near the top of the demo window. Enter your desired keyword, which can be a single word or a short phrase, select your **Speech resource** (this is listed next to **Custom Command** in the demo window and contains your application prefix), and click **Save**. Training for your custom keyword may complete in just a few seconds.
+
+![Custom keyword creation window.](./article_images/speech_custom_keyword.png)
+
+## Create a custom command
+
+The portal also provides functionality for creating custom commands with existing speech resources. "Custom command" refers to the voice assistant application itself, not a specific command within the existing application. By creating a custom command, you are creating a new speech project, which you must further develop in [Speech Studio](https://speech.microsoft.com/).
+
+To create a new custom command from within the demo window, click **+ Create Custom Command** at the top of the page and do the following:
+
+1. Enter a name for your custom command.
+
+1. Enter a description of your project (optional).
+
+1. Select your preferred language.
+
+1. Select your speech resource.
+
+1. Select your LUIS resource.
+
+1. Select your LUIS authoring resource or create a new one.
+
+1. Click **Create**.
+
+![Custom commands creation window.](./article_images/speech_custom_commands.png)
+
+Once you create a custom command, you must go to [Speech Studio](https://speech.microsoft.com/) for further development. If you open Speech Studio and do not see your custom command listed, follow these steps:
+
+1. On the left-hand menu panel in the Project Santa Cruz portal, click on **Speech** under **AI Projects**.
+
+1. Select the **Commands** tab.
+
+    ![List of custom commands available to edit.](./article_images/speech_ai_projects.png)
+
+1. Select the custom command you wish to develop. This opens the project in Speech Studio.
+
+    ![Speech studio home screen.](./article_images/speech_speech_studio.png)
+
+For more information on developing custom commands, please see the [Speech Service documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-commands).
 
 ## Clean up resources
 
-Follow these steps to clean up resources you deployed in this quickstart: 
+Once you are done working with the demo, follow these steps to clean up the speech resources you deployed during this quickstart guide:
 
-1. From the Azure portal, select **Resource group** from the left menu.
-2. Enter the resource group name (selected in step 9) in the **Filter by name** field.
-3. Select the resource group from the list.
-4. Open the resource group to view its resources.
-5. There will be 6 resources with the name starting with prefix selected in step 10. Select each of them. 
-6. Click **Delete** action in the top menu.
-7. Confirm delete operation.
-8. Press **Delete** to delete resources.
+1. From the Azure portal, select **Resource groups** from the left menu panel or type it into the search bar.
 
-**WARNING:** This will remove any custom keywords you created in Speech Studio and voice assistant will no longer function. 
+    ![Azure portal homepage showing left menu panel and Resource Groups.](./article_images/speech_azure_portal_resource_groups.png)
+
+1. Select your resource group.
+
+1. Select all six resources that contain your application prefix and click the **Delete** icon on the top menu panel.
+
+    ![Speech resources selected for deletion.](./article_images/speech_select_resources.png)
+
+1. To confirm deletion, type **yes** in the confirmation box, verify you have selected the correct resources, and click **Delete**.
+
+    ![Delete confirmation window.](./article_images/speech_delete_confirmation.png)
+
+**WARNING:** This will remove any custom keywords created with the speech resources you are deleting, and the voice assistant demo will no longer function.
 
 ## Troubleshooting
 
 ### Project Santa Cruz is not available in the Azure portal
 
-1. Verify the Azure portal link. For the Project Santa Cruz private preview you must use special link [Project Santa Cruz Overview page](https://go.microsoft.com/fwlink/?linkid=2135819).
+To access the Project Santa Cruz portal, which is a preview extension, use this [special link](https://go.microsoft.com/fwlink/?linkid=2135819).
 
-### Voice Assistant was created but does not respond to commands
+### Voice assistant was created but does not respond to commands
 
-Check led lights on the Ear SOM. 
-   * 3 bright blue lights indicate that voice assistant is ready and waiting for the keyword.
-   * no lights when devkit is powered indicate that devkit completed initialization and needs to be configured.
-   * any combination of green lights indicates that Ear SOM did not complete initialization. 
+Check the LED lights on the Ear SoM:
 
-Read more about [Ear SOM led lights](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ear_som_speech_module_troubleshooting.md#understanding-ear-som-led-indicators).
-   
-### Voice Assistant does not respond to a custom keyword created in Speech Studio
+* Three solid blue lights indicate that the voice assistant is ready and waiting for the keyword.
 
-This might happen if the speech module is out of date. Follow these steps to update the speech module to the latest version.
+* If the center LED (L02) is white, the devkit completed initialization and needs to be configured with a keyword.
 
-1. Click on **Devices** in the left navigation menu.
-2. Find your device in the list and click on it - the device window will open.
-3. Open **Speech** tab.
-4. Check module version.  
-5. You will see the **Update** button if an update is available. 
-6. Click on the **Update** button. usually it takes around 2-3 minutes to deply an updated version.
+* Any combination of green lights indicates that the Ear SoM has not completed initialization yet. Initialization may take a few minutes to complete.
+
+For more information about the Ear SoM LED indicators, please see this [troubleshooting article](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ear_som_speech_module_troubleshooting.md#understanding-ear-som-led-indicators).
+
+### Voice assistant does not respond to a custom keyword created in Speech Studio
+
+This may occur if the speech module is out of date. Follow these steps to update the speech module to the latest version:
+
+1. Click on **Devices** in the left-hand menu panel of the Project Santa Cruz portal homepage.
+
+1. Find and select your device.
+
+    ![Device list in Project Santa Cruz portal.](./article_images/speech_devices.png)
+
+1. In the device window, select the **Speech** tab.
+
+1. Check the speech module version. If an update is available, you will see an **Update** button next to the version number.
+
+    ![Devkit speech settings window.](./article_images/speech_devkit.png)
+
+1. Click **Update** to deploy the speech module update. The update process generally takes 2-3 minutes to complete.
 
 ## Provide feedback
 
@@ -132,4 +226,4 @@ For more information on Project Santa Cruz Quests and to provide feedback on oth
 
 ## Next Steps
 
-Now that you have created a voice assistant, you could try creating a [Vision project](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/create-nocode-vision.md).
+Now that you have created a no-code speech solution, try creating a [no-code vision solution](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/create-nocode-vision.md) for your devkit.
