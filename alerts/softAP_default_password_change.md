@@ -2,7 +2,7 @@
 
 ### What is the change?
 
-The default SoftAP password will be changing soon from “santacruz” to a device-specific, TPM-derived password.
+The default SoftAP password will be changing soon from “santacruz” to a device-specific, TPM-derived password. The existing password on your device will be unaffected and preserved if you do an OTA update via ADU or USB Stick.  However, if you perform a [USB update with the UUU tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-2-nxp-uuu-tool) using builds published after January 26th 2021, your initial SoftAP password will now be your device specific TPM-derived password.  Instructions for retrieving this password are below.
 
 SoftAP, or software-enabled access point, allows your device to act as a wireless access point/hotspot through its integrated Wi-Fi module. By connecting to your device's SoftAP hotspot, you can set your device settings through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) or [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md) for [troubleshooting](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/general_devkit_troubleshooting.md) and [USB updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md), even if your device is not yet connected to your home or office network over Wi-Fi or Ethernet.
 
@@ -16,7 +16,7 @@ As we move into our Public Preview stage, there are certain security configurati
 
 ### When will this change happen?
 
-In the build released on 01/26/2021.
+In the build released on 01/26/2021 and all future updates.
 
 ### What should I do prior to the change?
 
@@ -36,7 +36,7 @@ To ensure access to your device's SoftAP network, make sure to [retrieve your TP
 
 **A**: Your manually-set password will be lost after a [USB update with the UUU tool](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-2-nxp-uuu-tool). In this case, the update will wipe all device configuration settings and will reset your device to a factory clean state. You will need to re-run OOBE to set your user-configured SoftAP password again. **Until then, you will only be able to log in to your SoftAP network with your TPM-derived password.**
 
-[OTA updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) via ADU and [USB updates performed through a USB storage device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-1-usb-storage-device) will preserve your user configuration state, and your manually-set SoftAP password will remain intact.
+[OTA updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) via ADU and [USB updates performed through a USB storage device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-1-usb-storage-device) will preserve your user configuration state.  Our initial default password "santacruz" and any manually-set SoftAP password will remain intact.
 
 Your device-specific, TPM-derived SoftAP password is unaffected by any firmware or OS update and remains unchanged across all update scenarios.
 
