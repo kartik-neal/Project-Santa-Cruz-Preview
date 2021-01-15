@@ -9,7 +9,7 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 - Project Santa Cruz Development Kit
 - [USB to TTL serial cable](https://www.adafruit.com/product/954) (for serial connection only)
 
-    ![USB to TTL serial cable](./images/usb_serial_cable.png)
+    ![USB to TTL serial cable.](./images/usb_serial_cable.png)
 
 ## SSH into the devkit
 
@@ -43,7 +43,7 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 
     ![putty_login](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_putty_login.png)  
 
-## Serial connection to the devkit
+## Connect to your devkit over serial
 
 **WARNING!** Do **NOT** attempt to connect your devkit over serial except in extreme failure cases (e.g. you bricked your device). Taking apart the carrier board enclosure to connect the serial cable is very difficult and will break your Wi-Fi antenna cables.
 
@@ -51,9 +51,14 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 
 1. Remove the screws on the underside of the carrier board enclosure and remove the motherboard. **WARNING: this will break your Wi-Fi antenna cables. Do not proceed with the serial connection unless it is the last resort to recover your device.**
 
+1. Remove the heatsink to access the GPIO Pins.
+
 1. Remove the jumper board from the GPIO pins. **Note the direction that the jumper board is plugged in prior to removing it** (e.g. draw an arrow on or attach a sticker to the jumper board pointing towards the circuitry for reference). The jumper board is not keyed and may be accidentally connected backwards when reassembling your carrier board.
 
 1. Connect the [USB to TTL serial cable](https://www.adafruit.com/product/954) to the GPIO pins on the motherboard as shown below. Please note that the red wire is not connected.
+    - Connect the black cable (GND) to pin 6.
+    - Connect the white cable (RX) to pin 8.
+    - Connect the green cable (TX) to pin 10.
 
     ![Serial pin connections.](./images/serial_connection.png)
 
@@ -72,3 +77,5 @@ Follow the steps below to set up an SSH or serial connection to your Project San
     1. Connection Type: Serial
 
     ![putty_serial](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/general/article_images/troubleshooting_putty.png)
+
+To update an unbootable device over serial with the [USB to TTL serial cable](https://www.adafruit.com/product/954), please see the [USB update guide for non-standard situations](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/usb_updating.md#usb-update-method-3-non-standard-situations).
