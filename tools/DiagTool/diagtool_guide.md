@@ -31,7 +31,7 @@ The DiagTool collects the following component information:
 - Host PC
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - [WinSCP](https://winscp.net/eng/download.php)
-- DiagTool: download **diagtool.zip** onto your PC and unzip **diagtool.sh**
+- DiagTool: download [diagtool.zip](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/tools/DiagTool/diagtool.zip) onto your PC and unzip **diagtool.sh**
 
 ## Usage
 
