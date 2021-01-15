@@ -13,10 +13,6 @@ SoftAP, or software-enabled access point, allows your device to act as a wireles
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - Host PC
 - Project Santa Cruz AI Perception Devkit (PE100 or PE101)
-- Devkit IP address
-
-> [!NOTE]
-> If your devkit is connected to the SoftAP, your device's IP address will be 10.1.1.1. If your devkit is connected over Ethernet, use the local IP address of the devkit, which you can get from the Ethernet router or hub. If your devkit is connected over Wi-Fi, you must use the IP address that was provided during [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md).
 
 ## Using the tool
 
