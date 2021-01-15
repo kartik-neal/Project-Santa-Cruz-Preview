@@ -2,6 +2,12 @@
 
 ## Release date: 01/12/2021
 
+### Upcoming Breaking Change alert
+
+- What is the change?
+    - The default SoftAP password will be changing soon from “santacruz” to a device-specific, TPM-derived password.
+    - Go [here](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/alerts/softAP_default_password_change.md) for the full details
+
 ### New features and fixes
 
 - Updated the OOBE package:
