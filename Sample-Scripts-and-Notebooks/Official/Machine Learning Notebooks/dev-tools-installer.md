@@ -32,7 +32,7 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
 
 ## Instructions
 
-1. Download the Dev Tools Pack Installer for [Windows](https://go.microsoft.com/fwlink/?linkid=2132187), [Mac](https://go.microsoft.com/fwlink/?linkid=2132186) and [Mac](https://go.microsoft.com/fwlink/?linkid=2132296).
+1. Download the Dev Tools Pack Installer for [Windows](https://go.microsoft.com/fwlink/?linkid=2132187), [Linux](https://go.microsoft.com/fwlink/?linkid=2132186) and [Mac](https://go.microsoft.com/fwlink/?linkid=2132296).
 
 1. Click on the **Dev-Tools-Pack-Installer** to open the installation wizard.
 
