@@ -1,12 +1,3 @@
-<!---
-title: USB updating                        # the article title to show on the browser tab
-description: Walks a user through the usb update process for the devkit carrier board (July 2020).
-author: elqu20      # the author's GitHub ID - will be auto-populated if set in settings.json
-ms.author: v-elqu     # the author's Microsoft alias (if applicable) - will be auto-populated if set in settings.json
-ms.date: {@date}           # the date - will be auto-populated when template is first applied
-ms.topic: reference  # the type of article
---->
-
 # USB updating
 
 This guide will show you how to update the carrier board of the Project Santa Cruz Development Kit with a new image file over USB. Ensure all prerequisites corresponding to your selected USB update method are satisfied before working through the update procedure.
@@ -15,7 +6,7 @@ There are three USB update methods:
 
 - Method #1: .swu file with a USB storage device.
 - Method #2: .raw file with the NXP UUU tool.
-- Method #3: variation of method #1 for non-standard situations (e.g. your device does not boot).
+- Method #3: variation of method #2 for non-standard situations (e.g. your device does not boot).
 
 Please note that Method #1 keeps the data intact on the device, while Method #2 and #3 will delete the contents of your device's data partition during the update process. If your data is deleted during the update process (i.e. has been reset to factory settings), you will need to work through the [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/oobe.md) again to set up WiFi connections, SSH login information, etc.
 
@@ -23,17 +14,19 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 ### Method #1 prerequisites
 
-- Windows or Linux PC with an available USB-C port.
+- Windows or Linux PC with an available USB port.
 
 - USB storage device.
 
-- Devkit carrier board (Note: the carrier board needs to be running a SW version from September 16, 2020 (2020.109.116.120) or later. See step 4 below to confirm the version of your device. If your SW version is not from September 16, 2020 or later, please update your device [over-the-air (OTA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) or use method #2 or #3 below.)
+- Devkit carrier board (Note: the carrier board needs to be running a software version from September 16, 2020 (2020.109.116.120) or later. See step 4 below to confirm the software version of your device. If your software version is not from September 16, 2020 or later, please update your device [over-the-air (OTA)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) or use method #2 or #3 below.)
 
-- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (optional]).
+- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (optional).
 
-### Update procedure
+### USB storage device update procedure
 
-1. Navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download) and download the **Microsoft-PE-101-\<version>.swu** file for your target build (located under the OTA category).
+1. Navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download) and download the **Microsoft-PE-101-\<version>.swu** file for your target build (this will be listed as an OTA update file).
+
+    ![Project Santa Cruz update management website page with OTA files highlighted.](./images/ota_download_update.png)
 
 1. Copy the .swu file onto an empty USB storage device.
 
@@ -42,21 +35,32 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 1. Update your device:
 
     1. Option 1: use PuTTY to reboot the device.
+
         - Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
-        - To confirm the current software version, enter the following into the PuTTY terminal:
-            ```
+
+        - To confirm the current software version, enter the following into the PuTTY terminal. Do **NOT** proceed with the update if your software version is not from September 16, 2020 (2020.109.116.120) or later.
+
+            ```bash
             cat /etc/adu-version
             ```
+
         - Once you are ready to start the update, enter:
-            ```
+
+            ```bash
             reboot
             ```
-        - Once the device has rebooted, SSH into the device again and run **cat /etc/adu-version** to check the software version and confirm that the update was successful.
 
-    1. Option 2: use the physical on/off button to reboot the device.
-       - Turn the device off.
+        - Once the device has rebooted, SSH into the device again and run ```cat /etc/adu-version``` to check the software version and confirm that the update was successful.
+
+    1. Option 2: use the physical on/off button on the left side of the carrier board to reboot the device.
+
+        - Hold the button for a couple seconds to turn the device off.
+
         - Once it has completely powered down, turn it back on again.
-        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
+
+        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). From your IoT hub page, click **IoT Edge** and then select your device. On your device page, click **Device Twin**. Scroll down to find **swVersion**. You may need to refresh the page.
+
+        ![Device twin page in Azure portal.](./images/usb_device_twin.png)
 
 ### Common issues
 
@@ -65,6 +69,8 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 - The NTFS USB file system is not supported as it is not readable by the devkit’s kernel. Please use an alternate USB file system.
 
 ### Common error messages
+
+To access error messages after attempting an update, [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit) after it has rebooted and enter ```journalctl``` in the PuTTY terminal.
 
 |Error Message - Status|Issue    |Solution  |
 |----------------------|---------|----------|
@@ -77,12 +83,11 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 |Error\|INSTALL_ERROR (13) |Incorrect .swu file (e.g. bad signature, incorrect file). |Ensure you are using the correct .swu file. |
 |ESRCH (2) |Unrecognized file system/unexpected error. |Ensure you are using a supported USB file system (NTFS USB file system is not supported).|
 
-
 ## USB update method #2: NXP UUU tool
 
 ### Method #2 prerequisites
 
-- Windows or Linux PC with an available USB-C port.
+- Windows or Linux PC an available USB-C or USB-A port.
 
 - Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).  
 
@@ -90,120 +95,153 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 - [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases). Download the **Latest Release** uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
 
-    ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
+    ![nxp](./images/usb_nxp.png)
 
-- [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
+- [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download and install the appropriate .exe file.
 
-### Update procedure
+### UUU tool update procedure
 
-1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files.
+1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) and the associated **emmc_full.txt** and **fast-hab-fw.raw** files (these will be listed as USB update files).
 
-    ![update_download](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_update_download.png)
+    ![update_download](./images/usb_update_download.png)
 
 1. Extract the **pe101-uefi-\<version>.raw** file from the compressed **pe101-uefi\<version>.raw.xz** file. Right click on the .xz image file and select **7-Zip** > **Extract Here**.  
 
-    ![extract_update_files](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_extract_update_files.png)
-
-1. Copy the extracted **pe101-uefi-\<version>.raw** file, as well as the associated **emmc_full.txt** and **fast-hab-fw.raw** files, to the folder containing the UUU tool (uuu.exe for Windows or uuu for Linux).  
+1. Copy the extracted **pe101-uefi-\<version>.raw** file and the associated **emmc_full.txt** and **fast-hab-fw.raw** files to the folder containing the UUU tool (uuu.exe for Windows or uuu for Linux).  
 
 1. Plug in the carrier board power cable and turn on the device.  
 
-1. Connect to the devkit's Wi-Fi AP (password = santacruz).
-
 1. Open PuTTY and [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit).
 
-    ![putty](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty.png)
-
-1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command:
+1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command to initiate the update:
 
     - Windows:
-        ```console
+
+        ```bash
         uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
         ```
+
     - Linux:
-        ```console
+
+        ```bash
         sudo ./uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
         ```
 
-    ![cmd_flash](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_cmd_flash.png)  
+    ![cmd_flash](./images/usb_cmd_flash.png)  
 
 1. Connect the supplied USB-C cable to the carrier board's USB-C port and to the host PC. If you are using a USB-C to USB-A cable (sold separately), connect the USB-A side to the PC and the USB-C side to the carrier board.
 
-1. In the PuTTY terminal, run the following commands:
+1. In the PuTTY terminal, enter the following commands. If you are not signed into SSH as root, please add ```sudo``` to the beginning of these commands.
 
-    1. Set the device to usb update mode.  If you are not signed into SSH as root please add **"sudo"** to the beginning of these commands.
+    1. Set the device to usb update mode:
 
-        ```console
+        ```bash
         flagutil    -wBfRequestUsbFlash    -v1
         ```
-        or if you are not logged on as a root
-        ```console
-        sudo flagutil    -wBfRequestUsbFlash    -v1
-        ```        
 
     1. Reboot the device. The update installation will begin.
 
-        ```console
+        ```bash
         reboot -f
         ```
-        or if you are not logged in as root
-        ```console
-        sudo reboot -f
-        ```
 
-        ![putty_usb_update_mode](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_putty_usb_update_mode.png)
+        ![putty_usb_update_mode](./images/usb_putty_usb_update_mode.png)
 
-1. Navigate back to the command prompt. When the update is finished, you will see the following screen:
+1. Navigate back to the command prompt. When the update is finished, you will see the following screen with ```Success 1```:
 
-    ![update_complete](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_update_complete.png)
+    ![update_complete](./images/usb_update_complete.png)
   
-1. Once the update is complete, power off the carrier board. Unplug the USB-C cable from the PC.  
+1. Once the update is complete, power off the carrier board. Unplug the USB cable from the PC.  
 
 1. Power the carrier board back on.
 
-1. To verify the update, SSH into your devkit to check the software version.
+1. To verify the update, [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit) and enter the following command to check the software version:
 
-    1. First, reconnect to the devkit's Wi-Fi AP (password = santacruz).
+    ```bash
+    cat /etc/adu-version
+    ```
 
-    1. Restart the PuTTY session and enter the following:
+    The terminal will display the current software version, which should match the installed update.
 
-        ```console
-        cat /etc/adu-version
-        ```
-
-        The terminal will display the current software version, which should match the installed update (**pe101-uefi-\<version>.raw**).
-
-        ![putty_terminal](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/ota_putty_terminal.png)
+    ![putty_terminal](./images/ota_putty_terminal.png)
 
 ## USB update method #3: non-standard situations
 
+There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier board (e.g. if you need to recover an unbootable device). In these situations, please follow this guidance.
+
 ### Method #3 prerequisites
 
-- Windows or Linux PC with an available USB-C port.
+- Windows or Linux PC with an available USB-C or USB-A port.
 
-- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately). 
+- Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).
+
+- [USB to TTL serial cable](https://www.adafruit.com/product/954) (optional--for serial variation only)
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 - [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases). Download the **Latest Release** uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
 
-    ![nxp](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/usb_nxp.png)
+- [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file.  Download and install the appropriate .exe file.
 
-- [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file. Download the appropriate .exe file and click on the .exe file to install 7zip.  
+### Non-standard USB update procedure
 
-### Update procedure
+1. On your PC, navigate to the [Project Santa Cruz update management website](https://projectsantacruz.microsoft.com/Download). Download the full devkit image (**pe101-uefi-\<version>.raw.xz**) and the associated **emmc_full.txt** and **fast-hab-fw.raw** files (these will be listed as USB update files).
 
-There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (e.g. if you need to recover an unbootable device). In these situations, please follow this guidance.
+1. Extract the **pe101-uefi-\<version>.raw** file from the compressed **pe101-uefi\<version>.raw.xz** file. Right click on the .xz image file and select **7-Zip** > **Extract Here**.  
 
- 1. Toggle the Boot Configuration DIP switches to 1011 and remove the SD card so the device will boot into USB flash mode.
+1. Copy the extracted **pe101-uefi-\<version>.raw** file and the associated **emmc_full.txt** and **fast-hab-fw.raw** files to the folder containing the UUU tool (uuu.exe for Windows or uuu for Linux).  
 
- 1. Run the UUU command corresponding to your build (see method #1 above).
+1. Toggle the Boot Configuration DIP switches to 1011 so the device will boot into USB flash mode. If you have an early version of the devkit that includes an SD card, remove the card.
 
- 1. Power on the device.
+1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command to initiate the update:
 
- 1. Wait for UUU to complete, then power down the carrier board.
+    - Windows:
 
- 1. Toggle the DIP switches to eMMC boot mode (1001).
+        ```bash
+        uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
+
+    - Linux:
+
+        ```bash
+        sudo ./uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
+
+1. Connect the supplied USB-C cable to the carrier board's USB-C port and to the host PC. If you are using a USB-C to USB-A cable (sold separately), connect the USB-A side to the PC and the USB-C side to the carrier board.
+
+1. Power on the device.
+
+1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB cable.
+
+1. Toggle the DIP switches to eMMC boot mode (1001).
+
+### Non-standard update variation: using a serial to USB adapter
+
+You may also update your device over serial by using a [USB to TTL serial cable](https://www.adafruit.com/product/954).
+
+**WARNING!** Do **NOT** attempt to connect your devkit over serial except in extreme failure cases (e.g. you bricked your device). Taking apart the carrier board enclosure to connect the serial cable is very difficult and will break your Wi-Fi antenna cables.
+
+1. Complete steps 1-4 listed above (download and extract the update files, copy them to the folder containing the UUU tool, and toggle your DIP switches).
+
+1. [Connect to your devkit over serial](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#connect-to-your-devkit-over-serial). If you powered on your devkit to download a driver update and determine your COM port, please power down your device before starting your PuTTY session.
+
+1. Power on your device and **WATCH THE PUTTY TERMINAL WINDOW**. Within 3 seconds, press any key to break into the U-Boot command line.
+
+1. Enter the following command at the U-Boot command prompt:
+
+    ```bash
+    fastboot 0
+    ```
+
+1. Enter the same UUU command to flash your device:
+
+    ```bash
+    uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw
+    ```
+
+1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB to TTL serial cable.
+
+1. Toggle the DIP switches to eMMC boot mode (1001).
 
 ## Provide feedback
 
