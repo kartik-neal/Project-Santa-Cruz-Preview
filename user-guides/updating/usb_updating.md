@@ -233,11 +233,19 @@ You may also update your device over serial by using a [USB to TTL serial cable]
     fastboot 0
     ```
 
-1. Enter the same UUU command to flash your device:
+1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command to initiate the update:
 
-    ```bash
-    uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw
-    ```
+    - Windows:
+
+        ```bash
+        uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
+
+    - Linux:
+
+        ```bash
+        sudo ./uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
+        ```
 
 1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB to TTL serial cable.
 
