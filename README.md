@@ -20,6 +20,7 @@ On this page you will find everything you need to get started using your devkit,
 - [Onboard your Azure subscription](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md)
 - [Unbox and assemble your devkit](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md)
 - [Connect your devkit to Wi-Fi and Azure](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md)
+- [Register your devkit](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/register_your_device.md)
 
 ## Build a no-code prototype
 
