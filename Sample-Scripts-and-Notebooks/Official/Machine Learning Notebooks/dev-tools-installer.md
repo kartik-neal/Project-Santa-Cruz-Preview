@@ -46,13 +46,13 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
         
         1. Click on “Dev-Tools-Pack-Installer.app” to open the installation wizard.
         
-        1. If you get an “unidentified developer” security dialog
+        1. If you get an “unidentified developer” security dialog:
         
-        1. Go to System Preferences -> Security & Privacy -> General and click the “Open Anyway” button next to “Dev-Tools-Pack-Installer.app”
+            1. Go to System Preferences -> Security & Privacy -> General and click the “Open Anyway” button next to “Dev-Tools-Pack-Installer.app”
         
-        1. Click the Electron icon on the Dock again
+            1. Click the Electron icon on the Dock again
         
-        1. Click the “Open” button in the security dialog
+            1. Click the “Open” button in the security dialog
     
     1. For Linux:
     
@@ -82,7 +82,7 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
             
             1. Check 'Allow executing file as a program' box
             
-            1. Close properties and open the .appimage file 
+            1. Close properties and open the .appimage file
 
 1. On the **Install Dev Tools Pack Installer** page, click **View license** to view the license agreements of each software package included in the installer. If you accept the terms in the license agreements, check the box and click **Next**.
 
