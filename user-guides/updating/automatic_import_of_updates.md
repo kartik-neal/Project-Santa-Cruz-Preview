@@ -11,7 +11,7 @@ To turn it on, please complete the steps below.
 
 ## Create an AAD application within App Registrations
 
-1. Log in to the [Azure portal](https://ms.portal.azure.com/#home).
+1. Log in to the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home).
 
 1. Navigate to **App Registrations**. If the icon is not displayed on your portal home page, enter **App Registrations** into the search bar.
 
@@ -47,7 +47,7 @@ To turn it on, please complete the steps below.
 
 ## Assign Device Update Administrator role to AAD application
 
-1. Navigate to **Device Update for IoT Hubs** by entering it into the search bar or clicking the icon on the [Azure portal](https://ms.portal.azure.com/#home) home page.
+1. Navigate to **Device Update for IoT Hubs** by entering it into the search bar or clicking the icon on the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) home page.
 
     ![device_update_for_iot_hubs](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/images/aiu_device_update_for_iot_hubs.png)
 

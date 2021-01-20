@@ -56,7 +56,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
     1. Option 2: use the physical on/off button to reboot the device.
        - Turn the device off.
         - Once it has completely powered down, turn it back on again.
-        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
+        - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
 
 ### Common issues
 
