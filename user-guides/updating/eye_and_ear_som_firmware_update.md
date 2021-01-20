@@ -22,7 +22,7 @@ ms.topic: reference  # the type of article
 
 1. Plug in and power on the devkit. There are three LEDs on the Azure Ear SoM, labeled L01, L02, and L03. Upon powering on the devkit, L01 and L02 will turn green, and L02 will flash on and off for several seconds, indicating that the Ear SoM authentication is in progress. After authentication is complete, all three LEDs will turn blue.
  
-1. On your PC, login to the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and click **All resources** under the **Azure services** section of the portal homepage.
+1. On your PC, login to the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) and click **All resources** under the **Azure services** section of the portal homepage.
 
     ![azure_services](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/images/firmware_azure_services_all_resources.png)
 

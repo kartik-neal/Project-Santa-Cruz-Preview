@@ -59,11 +59,11 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
 1. On the **Advanced network settings** page, click **Define access point passphrase**.
 
-    ![advanced_settings](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_advanced_settings.PNG)
+    ![advanced_settings](./getting_started_images/oobe_advanced_settings.PNG)
 
 1. On the **Define access point passphrase** page, enter a passphrase/password for your device's SoftAP hotspot and click **Save**. After changing your password, you will be disconnected from the SoftAP and will need to reconnect your device to proceed with the OOBE. Instead of reconnecting to the SoftAP with your new password, we recommend connecting to either your Wi-Fi network that was set up in a previous step or over Ethernet. Once you are back on your home/office network, use the IP address you noted from above to restart OOBE (if connected over Ethernet, use the IP gathered from your router) and skip the Wi-Fi connection screen. To restart OOBE, open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build.
 
-    ![softap](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/getting_started_images/oobe_softap.png)
+    ![softap](./getting_started_images/oobe_softap.png)
 
 1. Read through the License Agreement, select **I have read and agree to the License Agreement**, and click **Next**.
 
@@ -97,7 +97,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![device_name](./getting_started_images/oobe_device_name.png)
 
-1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home).
+1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home).
 
   >[!NOTE] If your **Preview Video Output** link is using 10.1.1.1:3000, we recommend you disconnect your PC from the SoftAP as outlined in step 5 and use http://<your_noted_IP_address>:3000 to get the best experience.
   

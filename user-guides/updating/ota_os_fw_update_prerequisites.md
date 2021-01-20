@@ -43,7 +43,7 @@ These are common issues faced if you are not able to successfully create an Azur
 
 1. Register the ADU resource provider within your subscription. **Do NOT proceed with this step until the Azure Feature Control registration is complete. This may take at least 20 minutes after clicking "Run" in the previous step.**
 
-    1. Open the [Azure portal](https://ms.portal.azure.com/#home).
+    1. Open the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home).
 
     1. In the search bar, type **Subscriptions** and click on the yellow key icon to open the **Subscriptions** page.
 
@@ -59,7 +59,7 @@ These are common issues faced if you are not able to successfully create an Azur
 
 ## Next steps
 
-Once you have completed the steps above, you will be able to use Azure Device Update by navigating to the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod). This link turns on Azure Device Update functionality, which is a Private Preview feature.
+Once you have completed the steps above, you will be able to use Azure Device Update by navigating to the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home). This link turns on Azure Device Update functionality, which is a Private Preview feature.
 
 The first time you use Azure Device Update, you will be asked to provide your Azure Device Update Account name and Instance name. Your Account name and Instance name are located on the [onboarding website](https://aka.ms/projectsantacruz) under the Azure Device Update section.
 
