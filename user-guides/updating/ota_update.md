@@ -96,7 +96,9 @@ Azure Device Update allows you to deploy an update to a group of IoT devices. To
   - A device can only have one tag. Any subsequent tag added to the device will override the previous tag.
   - A device can only belong to one group.
 
-### Method 1: using direct twin updates to add a tag (easy)
+### Step 1: Add a Tag to Devices
+
+#### Method 1: using direct twin updates to add a tag (easy)
 
 Tags can also be added or updated in device twin directly.
 
@@ -114,7 +116,7 @@ Tags can also be added or updated in device twin directly.
 }
 ```
 
-### Method 2: using jobs to add a tag (advanced)
+#### Method 2: using jobs to add a tag (advanced)
 
 1. Follow [these steps](https://docs.microsoft.com/azure/iot-hub/iot-hub-csharp-csharp-schedule-jobs) to add a tag to your devices using Jobs.
 
@@ -122,23 +124,23 @@ Tags can also be added or updated in device twin directly.
 
     **NOTE**: This action may exceed your current daily IoT Hub message quota. It is recommended to change no more than 50,000 device twin tags at a time, otherwise you may need to buy additional IoT Hub units. Details can be found at [Quotas and throttling](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-quotas-throttling#quotas-and-throttling).
 
-1. Create a group by selecting an existing IoT Hub tag:
+### Step 2: Create a group by selecting an existing IoT Hub tag
 
-    1. Navigate back to your IoT Hub page.
+  1. Navigate back to your IoT Hub page.
 
-    1. Select **Device Updates** under **Automatic Device Management** on the left-hand menu panel.
+  1. Select **Device Updates** under **Automatic Device Management** on the left-hand menu panel.
 
-    1. Select the **Groups** tab. This page will display the number of ungrouped devices connected to Device Update.
+  1. Select the **Groups** tab. This page will display the number of ungrouped devices connected to Device Update.
 
         ![ota_groups](./images/ota_groups.png)
 
-    1. Select **+ Add** to create a new group.
+  1. Select **+ Add** to create a new group.
 
-    1. Select an IoT Hub tag from the list and click **Submit**.
+  1. Select an IoT Hub tag from the list and click **Submit**.
 
         ![ota_create_group](./images/ota_create_group.png)
 
-    1. Once the group is created, the update compliance chart and groups list will update. The chart shows the number of devices in various states of compliance: **On latest update**, **New updates available**, **Updates in progress**, and **Not yet grouped**.
+  1. Once the group is created, the update compliance chart and groups list will update. The chart shows the number of devices in various states of compliance: **On latest update**, **New updates available**, **Updates in progress**, and **Not yet grouped**.
 
         ![ota_groups_tags](./images/ota_groups_tags.png)
 
