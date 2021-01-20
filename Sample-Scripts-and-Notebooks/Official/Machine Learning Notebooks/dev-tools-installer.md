@@ -68,11 +68,11 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
                 
             1. Type the following in the Terminal to make the AppImage executable
             
-                1. chmod +x  Dev-Tools-Pack-Installer-0.3.1.AppImage
+                1. chmod +x  Dev-Tools-Pack-Installer.AppImage
                 
             1. Type the following in the Terminal to run the installer
             
-                1. ./Dev-Tools-Pack-Installer-0.3.1.AppImage
+                1. ./Dev-Tools-Pack-Installer.AppImage
         
         1. Add execution permissions to the .appimage file method 2 (UI):
         
