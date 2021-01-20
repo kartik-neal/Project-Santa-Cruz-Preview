@@ -20,6 +20,7 @@ On this page you will find everything you need to get started using your devkit,
 - [Onboard your Azure subscription](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md)
 - [Unbox and assemble your devkit](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md)
 - [Connect your devkit to Wi-Fi and Azure](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md)
+- [Register your devkit](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/register_your_device.md)
 
 ## Build a no-code prototype
 
@@ -59,6 +60,12 @@ After building a speech no-code solution, check out the following resources for 
 - [Update your devkit carrier board over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/ota_update.md)
 - [Update your devkit carrier board via USB](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/updating/usb_updating.md)
 - [Update your Eye or Ear SoM firmware over-the-air](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/eye_and_ear_som_firmware_update.md)
+
+## Tools
+
+- [SoftAP Tool: collect your device's TPM-derived password](https://github.com/microsoft/Project-Santa-Cruz-Preview/tree/main/tools/SoftAP-access-info-tool)
+- [DiagTool: collect your device's software and firmware information](https://github.com/microsoft/Project-Santa-Cruz-Preview/tree/main/tools/DiagTool)
+- [Manufacturing Provisioning Tool: capture device identities or hardware keys in the manufacturing line](https://github.com/microsoft/Project-Santa-Cruz-Preview/tree/main/tools/Manufacturing-Provisioning-Tool-Sample-Script)
 
 ## Additional technical information
 

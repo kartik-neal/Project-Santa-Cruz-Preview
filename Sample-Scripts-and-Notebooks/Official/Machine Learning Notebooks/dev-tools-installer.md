@@ -34,7 +34,55 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
 
 1. Download the Dev Tools Pack Installer for [Windows](https://go.microsoft.com/fwlink/?linkid=2132187), [Linux](https://go.microsoft.com/fwlink/?linkid=2132186) and [Mac](https://go.microsoft.com/fwlink/?linkid=2132296).
 
-1. Click on the **Dev-Tools-Pack-Installer** to open the installation wizard.
+1. Depending on your Platform there will be some differences in launching the installer.
+
+    1. For Windows:
+    
+        1. Click on the **Dev-Tools-Pack-Installer** to open the installation wizard.
+        
+    1. For Mac:
+    
+        1. Click on the Electron icon on the Dock
+        
+        1. Click on “Dev-Tools-Pack-Installer.app” to open the installation wizard.
+        
+        1. If you get an “unidentified developer” security dialog:
+        
+            1. Go to System Preferences -> Security & Privacy -> General and click the “Open Anyway” button next to “Dev-Tools-Pack-Installer.app”
+        
+            1. Click the Electron icon on the Dock again
+        
+            1. Click the “Open” button in the security dialog
+    
+    1. For Linux:
+    
+        1. When prompted by the browser click “Save” to complete the installer download
+        
+        1. Add execution permissions to the .appimage file method 1 (Commandline):
+            
+            1. Open the Linux Terminal
+            
+            1. Type the following in the Terminal to go to the Downloads folder
+            
+                1. cd ~/Downloads/
+                
+            1. Type the following in the Terminal to make the AppImage executable
+            
+                1. chmod +x  Dev-Tools-Pack-Installer.AppImage
+                
+            1. Type the following in the Terminal to run the installer
+            
+                1. ./Dev-Tools-Pack-Installer.AppImage
+        
+        1. Add execution permissions to the .appimage file method 2 (UI):
+        
+            1. Right click on the .appimage file and select properties
+            
+            1. Open Permissions tab
+            
+            1. Check 'Allow executing file as a program' box
+            
+            1. Close properties and open the .appimage file
 
 1. On the **Install Dev Tools Pack Installer** page, click **View license** to view the license agreements of each software package included in the installer. If you accept the terms in the license agreements, check the box and click **Next**.
 

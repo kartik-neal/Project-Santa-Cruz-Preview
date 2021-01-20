@@ -27,7 +27,7 @@ With Project Santa Cruz, you can update your devkit carrier board software over-
 
     ![download_update](./images/ota_download_update.png)
 
-1. Login to the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service). Click **All resources** under the **Azure services** section of the portal homepage. Alternatively, enter **All resources** into the search bar at the top of the page.
+1. Login to the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service). Click **All resources** under the **Azure services** section of the portal homepage. Alternatively, enter **All resources** into the search bar at the top of the page.
 
     ![azure_services_all_resources](./images/firmware_azure_services_all_resources.png)
 
@@ -45,7 +45,7 @@ With Project Santa Cruz, you can update your devkit carrier board software over-
 
 If you have [Automatic Import of Updates (AIU)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/automatic_import_of_updates.md) turned ON, you can skip this section and go directly to the next section, **Create a group**.
 
-1. On the left-hand menu panel, select **Device Updates** under **Automatic Device Management**. Note: If you can’t see this UI, make sure you are logging in to the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home), which allows you to access the Azure Device Update extension.
+1. On the left-hand menu panel, select **Device Updates** under **Automatic Device Management**. Note: If you can’t see this UI, make sure you are logging in to the Azure Portal using [this link](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home), which allows you to access the Azure Device Update extension.
 
     ![ota_device_updates](./images/ota_device_updates.png)
 
@@ -96,11 +96,13 @@ Azure Device Update allows you to deploy an update to a group of IoT devices. To
   - A device can only have one tag. Any subsequent tag added to the device will override the previous tag.
   - A device can only belong to one group.
 
-### Method 1: using direct twin updates to add a tag (easy)
+### Step 1: Add a Tag to Devices
+
+#### Method 1: using direct twin updates to add a tag (easy)
 
 Tags can also be added or updated in device twin directly.
 
-1. Log into the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and navigate to your IoT Hub.
+1. Log into the Azure Portal using [this link](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) and navigate to your IoT Hub.
 
 2. From **IoT Edge** on the left navigation pane, find your Project Santa Cruz device and navigate to the Device Twin.
 
@@ -114,7 +116,7 @@ Tags can also be added or updated in device twin directly.
 }
 ```
 
-### Method 2: using jobs to add a tag (advanced)
+#### Method 2: using jobs to add a tag (advanced)
 
 1. Follow [these steps](https://docs.microsoft.com/azure/iot-hub/iot-hub-csharp-csharp-schedule-jobs) to add a tag to your devices using Jobs.
 
@@ -122,23 +124,23 @@ Tags can also be added or updated in device twin directly.
 
     **NOTE**: This action may exceed your current daily IoT Hub message quota. It is recommended to change no more than 50,000 device twin tags at a time, otherwise you may need to buy additional IoT Hub units. Details can be found at [Quotas and throttling](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-quotas-throttling#quotas-and-throttling).
 
-1. Create a group by selecting an existing IoT Hub tag:
+### Step 2: Create a group by selecting an existing IoT Hub tag
 
-    1. Navigate back to your IoT Hub page.
+  1. Navigate back to your IoT Hub page.
 
-    1. Select **Device Updates** under **Automatic Device Management** on the left-hand menu panel.
+  1. Select **Device Updates** under **Automatic Device Management** on the left-hand menu panel.
 
-    1. Select the **Groups** tab. This page will display the number of ungrouped devices connected to Device Update.
+  1. Select the **Groups** tab. This page will display the number of ungrouped devices connected to Device Update.
 
         ![ota_groups](./images/ota_groups.png)
 
-    1. Select **+ Add** to create a new group.
+  1. Select **+ Add** to create a new group.
 
-    1. Select an IoT Hub tag from the list and click **Submit**.
+  1. Select an IoT Hub tag from the list and click **Submit**.
 
         ![ota_create_group](./images/ota_create_group.png)
 
-    1. Once the group is created, the update compliance chart and groups list will update. The chart shows the number of devices in various states of compliance: **On latest update**, **New updates available**, **Updates in progress**, and **Not yet grouped**.
+  1. Once the group is created, the update compliance chart and groups list will update. The chart shows the number of devices in various states of compliance: **On latest update**, **New updates available**, **Updates in progress**, and **Not yet grouped**.
 
         ![ota_groups_tags](./images/ota_groups_tags.png)
 

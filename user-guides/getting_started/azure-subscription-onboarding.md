@@ -39,7 +39,7 @@ Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits 
 
     1. Select your location from the drop-down menu. Note that you may use any available region regardless of your country of residence.  
 
-    1. After selecting your IoT Hub properties, click **Submit**. It will take a few minutes to create and activate your new IoT Hub. After submitting, any changes to your IoT Hub properties can be made in your [Azure account](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home).
+    1. After selecting your IoT Hub properties, click **Submit**. It will take a few minutes to create and activate your new IoT Hub. After submitting, any changes to your IoT Hub properties can be made in your [Azure account](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home).
 
         ![onboarding_create_iot_hub](./getting_started_images/onboarding_create_iot_hub.png)
 
@@ -65,7 +65,7 @@ Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits 
 
     ![onboarding_confirmation](./getting_started_images/onboarding_confirmation.png)
 
-Congratulations! You have successfully completed the onboarding tool and are ready to get started with Project Santa Cruz. Any changes to the settings you selected in the onboarding tool can now be made in your in your [Azure account](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service).  
+Congratulations! You have successfully completed the onboarding tool and are ready to get started with Project Santa Cruz. Any changes to the settings you selected in the onboarding tool can now be made in your in your [Azure account](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service).  
 
 ## Next steps
 

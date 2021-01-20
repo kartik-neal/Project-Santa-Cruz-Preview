@@ -4,7 +4,7 @@ The Project Santa Cruz onboarding portal is set up for corporate (work/school) a
 
 If you are using an MSA personal account, we will need you to complete some additional steps. If you have any questions, please don’t hesitate to reach out to your Microsoft and Project Santa Cruz representative.
 
-1. Log in to the [Azure portal](https://ms.portal.azure.com/#home) with your personal account (MSA account) or GitHub account.
+1. Log in to the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) with your personal account (MSA account) or GitHub account.
 
 1. Open **Azure Active Directory**.
 
