@@ -2,7 +2,7 @@
 
 This article describes how to configure your voice assistant application using IoT Hub. For a step-by-step tutorial that guides you through the process of creating a voice assistant using demo template, see [QuickStart: Creating a Voice Assistant with the Project Santa Cruz Devkit](../../nocode-speech.md).
 
-1. Open the [Azure portal](https://portal.azure.com) and type **IoT Hub** into the search bar. Click on the icon to open the IoT Hub page.
+1. Open the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) and type **IoT Hub** into the search bar. Click on the icon to open the IoT Hub page.
 
 1. On the IoT Hub page, select the IoT Hub to which your device was provisioned.
 

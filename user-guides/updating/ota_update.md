@@ -27,7 +27,7 @@ With Project Santa Cruz, you can update your devkit carrier board software over-
 
     ![download_update](./images/ota_download_update.png)
 
-1. Login to the [Azure Portal](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service). Click **All resources** under the **Azure services** section of the portal homepage. Alternatively, enter **All resources** into the search bar at the top of the page.
+1. Login to the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) (this link allows you to access the Azure Device Update extension, which is a Private Preview service). Click **All resources** under the **Azure services** section of the portal homepage. Alternatively, enter **All resources** into the search bar at the top of the page.
 
     ![azure_services_all_resources](./images/firmware_azure_services_all_resources.png)
 
@@ -45,7 +45,7 @@ With Project Santa Cruz, you can update your devkit carrier board software over-
 
 If you have [Automatic Import of Updates (AIU)](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/automatic_import_of_updates.md) turned ON, you can skip this section and go directly to the next section, **Create a group**.
 
-1. On the left-hand menu panel, select **Device Updates** under **Automatic Device Management**. Note: If you can’t see this UI, make sure you are logging in to the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home), which allows you to access the Azure Device Update extension.
+1. On the left-hand menu panel, select **Device Updates** under **Automatic Device Management**. Note: If you can’t see this UI, make sure you are logging in to the Azure Portal using [this link](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home), which allows you to access the Azure Device Update extension.
 
     ![ota_device_updates](./images/ota_device_updates.png)
 
@@ -100,7 +100,7 @@ Azure Device Update allows you to deploy an update to a group of IoT devices. To
 
 Tags can also be added or updated in device twin directly.
 
-1. Log into the Azure Portal using [this link](https://ms.portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod#home) and navigate to your IoT Hub.
+1. Log into the Azure Portal using [this link](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home) and navigate to your IoT Hub.
 
 2. From **IoT Edge** on the left navigation pane, find your Project Santa Cruz device and navigate to the Device Twin.
 
