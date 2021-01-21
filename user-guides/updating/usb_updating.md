@@ -66,7 +66,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 ### Common error messages
 
-To access error messages after attempting an update, [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit) after it has rebooted and enter ```journalctl -xe -u usb-update``` in the PuTTY terminal. This will show all logs from usb-update, from newest to oldest. However, as a first step, we recommend verifying the update by checking the image version by entering ```/etc/adu-version```. If the version has not changed, check the usb-update logs for the error messages listed below. 
+To access error messages after attempting an update, [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#ssh-into-the-devkit) after it has rebooted and enter ```journalctl -xe -u usb-update``` in the PuTTY terminal. This will show all logs from usb-update, from newest to oldest. However, as a first step, we recommend verifying the update by checking the image version with ```/etc/adu-version```. If the version has not changed, check the usb-update logs for the error messages listed below. 
 
 |Error Message - Status|Issue    |Solution  |
 |----------------------|---------|----------|
