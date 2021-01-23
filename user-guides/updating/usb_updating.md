@@ -187,7 +187,7 @@ There are a few situations where it is not possible to gracefully USB update (re
 
 1. Copy the extracted **pe101-uefi-\<version>.raw** file and the associated **emmc_full.txt** and **fast-hab-fw.raw** files to the folder containing the UUU tool (uuu.exe for Windows or uuu for Linux).  
 
-1. Toggle the Boot Configuration DIP switches to 0101 so the device will boot into SDP mode. If you have an early version of the devkit that includes an SD card, remove the card.
+1. Toggle the Boot Configuration DIP switches to 0101 so the device will boot into USB flash mode. If you have an early iteration of the devkit and 0101 did not work, the DIP switches should be set to 1011.
 
 1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command to initiate the update:
 
@@ -209,7 +209,7 @@ There are a few situations where it is not possible to gracefully USB update (re
 
 1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB cable.
 
-1. Toggle the DIP switches to eMMC boot mode (1001).
+1. Toggle the DIP switches back to eMMC boot mode (1001) - this applies to all devkit iterations.
 
 ## Provide feedback
 
