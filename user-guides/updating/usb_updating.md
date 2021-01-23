@@ -197,7 +197,7 @@ To access error messages after attempting an update, [SSH into your device](http
 
 There are a few situations where it is not possible to gracefully USB update (re-flash) the carrier boards (e.g. if you need to recover an unbootable device). In these situations, please follow this guidance.
 
- 1. Toggle the Boot Configuration DIP switches to 1011 so the device will boot into USB flash mode. If you have an early iteration of the devkit that contains an SD card, remove the card.
+ 1. Toggle the Boot Configuration DIP switches to 0101 so the device will boot into USB flash mode. If you have an early iteration of the devkit that contains an SD card, remove the card.
 
  1. Run the UUU command corresponding to your build (see method #1 above).
 
