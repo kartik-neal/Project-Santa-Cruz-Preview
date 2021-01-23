@@ -175,10 +175,6 @@ There are a few situations where it is not possible to gracefully USB update (re
 
 - Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).
 
-- [USB to TTL serial cable](https://www.adafruit.com/product/954) (optional--for serial variation only)
-
-- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
-
 - [NXP UUU tool](https://github.com/NXPmicro/mfgtools/releases). Download the **Latest Release** uuu.exe file (for Windows) or the uuu file (for Linux) under the Assets tab.
 
 - [7zip](https://www.7-zip.org/). This software will be used for extracting the raw image file from its XZ compressed file.  Download and install the appropriate .exe file.
@@ -212,42 +208,6 @@ There are a few situations where it is not possible to gracefully USB update (re
 1. Power on the device.
 
 1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB cable.
-
-1. Toggle the DIP switches to eMMC boot mode (1001).
-
-### Non-standard update variation: using a serial to USB adapter
-
-You may also update your device over serial by using a [USB to TTL serial cable](https://www.adafruit.com/product/954).
-
-**WARNING!** Do **NOT** attempt to connect your devkit over serial except in extreme failure cases (e.g. you bricked your device). Taking apart the carrier board enclosure to connect the serial cable is very difficult and will break your Wi-Fi antenna cables.
-
-1. Complete steps 1-4 listed above (download and extract the update files, copy them to the folder containing the UUU tool, and toggle your DIP switches).
-
-1. [Connect to your devkit over serial](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md#connect-to-your-devkit-over-serial). If you powered on your devkit to download a driver update and determine your COM port, please power down your device before starting your PuTTY session.
-
-1. Power on your device and **WATCH THE PUTTY TERMINAL WINDOW**. Within 3 seconds, press any key to break into the U-Boot command line.
-
-1. Enter the following command at the U-Boot command prompt:
-
-    ```bash
-    fastboot 0
-    ```
-
-1. Next, open a Windows command prompt (**Start** > **cmd**) or a Linux terminal and navigate to the folder where the update files are stored. Run the following command to initiate the update:
-
-    - Windows:
-
-        ```bash
-        uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
-        ```
-
-    - Linux:
-
-        ```bash
-        sudo ./uuu -b emmc_full.txt fast-hab-fw.raw pe101-uefi-<version>.raw  
-        ```
-
-1. Wait for the UUU tool to complete the update, then power down the carrier board and disconnect the USB to TTL serial cable.
 
 1. Toggle the DIP switches to eMMC boot mode (1001).
 
