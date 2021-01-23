@@ -60,7 +60,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
         - To check the software version and confirm that the update was successful, go to your IoT hub in the [Azure portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home). Navigate to your device page and click **Device Twin**. Scroll down and find **swVersion**. You may need to refresh the page.
         
-                ![Device twin page in Azure portal.](./images/usb_device_twin.png)
+         ![Device twin page in Azure portal.](./images/usb_device_twin.png)
 
 ### Common issues
 
