@@ -6,6 +6,7 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
 
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) for Private Preview has been completed.
 - Project Santa Cruz Devkit.
+- P7 screwdriver (optional, used for securing the power cable connector to the carrier board).
 
 ## Devkit unboxing and setup procedure
 
@@ -30,10 +31,12 @@ After [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Previ
 
     1. Remove any remaining plastic packaging from the devices.
 
-    1. Connect the power adapter/cable to the carrier board and a wall outlet. This will automatically power on the device. The reset button on the left side of the carrier board will be illuminated, and the Ear SoM LEDs will turn green, indicating device authentication is in progress (specifically, the LED marked L01 will turn on and remain green, and LED L02 will flash green). Please allow some time for the device to boot up.
+    1. Connect the power adapter/cable to the carrier board and a wall outlet. To fully secure the power cable connector to the carrier board, use a P7 screwdriver (not included in the devkit) to tighten the connector screws. 
+    
+    1. After plugging the power cable into a wall outlet, the device will automatically power on. The reset button on the left side of the carrier board will be illuminated, and the Ear SoM LEDs will turn green, indicating device authentication is in progress (specifically, the LED marked L01 will turn on and remain green, and LED L02 will flash green). Please allow some time for the device to boot up.
 
         > [!NOTE]
-        > The button on the left side of the carrier board is for powering off or resetting the device after powering on via the power adapter. In the event of a power outage, the device will automatically reset and power back on.
+        > The reset button is for powering off or resetting the device while connected to a power outlet. In the event of a power outage, the device will automatically reset and power back on.
 
 ## Next steps
 
