@@ -30,6 +30,50 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
 
 1. Optional CUDA install fails on incompatible systems. Before attempting to install the [CUDA Toolkit 10.0.130](https://developer.nvidia.com/cuda-toolkit) through the Dev Tools Pack Installer, verify your system compatibility.
 
+## Minimum Requirements
+
+* Docker minimum Requirements:
+
+    * Windows:
+        * https://docs.docker.com/docker-for-windows/install/#system-requirements
+        > ### System Requirements
+        > 
+        >   - Windows 10 64-bit: Pro, Enterprise, or Education (Build 16299 or later).
+        >   
+        >     For Windows 10 Home, see [Install Docker Desktop on Windows Home](install-windows-home.md).
+        >   - Hyper-V and Containers Windows features must be enabled.
+        >   - The following hardware prerequisites are required to successfully run Client
+        > Hyper-V on Windows 10:
+        > 
+        >      - 64 bit processor with [Second Level Address Translation (SLAT)](https://en.wikipedia.org/wiki/Second_Level_Address_Translation)
+        >      - 4GB system RAM
+        >     - BIOS-level hardware virtualization support must be enabled in the
+        >     BIOS settings.  For more information, see
+        >     [Virtualization](troubleshoot.md#virtualization-must-be-enabled).
+        > 
+        > > **Note:** Docker supports Docker Desktop on Windows based on Microsoft’s support lifecycle for Windows 10 operating system. For more information, see the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet).
+
+    * Mac:
+        * https://docs.docker.com/docker-for-mac/install/#system-requirements
+        > 
+        > Your Mac must meet the following requirements to successfully install Docker Desktop:
+        > 
+        > - **Mac hardware must be a 2010 or a newer model with an Intel processor**, with Intel’s hardware support for memory management unit (MMU) virtualization, including Extended Page Tables (EPT) and Unrestricted Mode. You can check to see if your machine has this support by running the following command in a terminal: `sysctl kern.hv_support`
+        > 
+        >  If your Mac supports the Hypervisor framework, the command prints `kern.hv_support: 1`.
+        > 
+        > - **macOS must be version 10.14 or newer**. That is, Mojave, Catalina, or Big Sur. We recommend upgrading to the latest version of macOS.
+        > 
+        >  If you experience any issues after upgrading your macOS to version 10.15, you must install the latest version of Docker Desktop to be compatible with this version of macOS.
+        > 
+        >  > **Note:**
+        >  >
+        >  > Docker supports Docker Desktop on the most recent versions of macOS. That is, the current release of macOS and the previous two releases. As new major versions of macOS are made generally available, Docker stops supporting the oldest version and supports the newest version of macOS (in addition to the previous two releases). Docker Desktop currently supports macOS Mojave, macOS Catalina, and macOS Big Sur.
+        > 
+        > - At least 4 GB of RAM.
+        > 
+        > - VirtualBox prior to version 4.3.30 must not be installed as it is not compatible with Docker Desktop.
+
 ## Instructions
 
 1. Download the Dev Tools Pack Installer for [Windows](https://go.microsoft.com/fwlink/?linkid=2132187), [Linux](https://go.microsoft.com/fwlink/?linkid=2132186) and [Mac](https://go.microsoft.com/fwlink/?linkid=2132296).
