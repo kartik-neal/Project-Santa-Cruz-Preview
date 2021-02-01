@@ -1,5 +1,11 @@
 # Welcome to the Project Santa Cruz Private Preview
 
+## **MAINTENANCE ALERT**
+
+Azure Device Update (ADU) will be unavailable on 02/03/2021 from 10:30am to 2:00pm PST due to planned maintenance. 
+
+You will not be able to create any Device Update resources or carry out update activities during this time. No action is required once the maintenance is completed; your device update resources will be restored to their previous states with no impact to you. 
+
 ## **BREAKING CHANGE ALERT**
 
 #### What is the change?
