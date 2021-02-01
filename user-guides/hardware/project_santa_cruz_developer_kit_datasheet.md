@@ -34,6 +34,7 @@ ms.topic: reference  # the type of article
 |Certification                   |CE <br> FCC     |
 |Operating Temperature           |-20 to 70 degrees C     |
 |Relative Humidity               |8% to 90%    |
+|Power Supply                    |19VDC at 3.42A (65W) |
 |Noise                           |NA     |
 |Shock                           |NA     |
 |Vibration                       |2.0Grms from 1 to 300Hz.     |
