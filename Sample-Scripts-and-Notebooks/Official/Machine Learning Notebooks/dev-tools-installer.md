@@ -86,7 +86,7 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
         
     1. For Mac:
     
-        1. Click on the Electron icon on the Dock
+        1. After downloading, move the the Dev-Tools-Pack-Installer.app file to the Applications folder.
         
         1. Click on “Dev-Tools-Pack-Installer.app” to open the installation wizard.
         
@@ -112,7 +112,7 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
                 
             1. Type the following in the Terminal to make the AppImage executable
             
-                1. chmod +x  Dev-Tools-Pack-Installer.AppImage
+                1. chmod +x Dev-Tools-Pack-Installer.AppImage
                 
             1. Type the following in the Terminal to run the installer
             
