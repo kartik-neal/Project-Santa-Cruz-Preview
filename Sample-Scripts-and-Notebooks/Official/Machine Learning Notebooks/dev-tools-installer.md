@@ -149,3 +149,23 @@ The Dev Tools Pack Installer is a one-stop solution that installs and configures
 1. After successful installation of all selected components, the wizard proceeds to the **Completing the Setup Wizard** page. Click **Finish** to exit the installer.
 
     ![finish](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/prototyping/article_images/dev_tools_finish.png)
+
+## Docker status check
+
+If the installer notifies you to verify Docker Desktop is in a good running state please see the following steps:
+
+   1. Windows:
+   
+      1. Expand system tray hidden icons:
+      
+         1. Expand system tray hidden icons if hidden:
+         
+            * ![System Tray](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/SystemTray.png)
+         
+         1. Verify the Docker Desktop icon shows 'Docker Desktop is Running':
+         
+            * ![Docker Status](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/Sample-Scripts-and-Notebooks/Official/Machine%20Learning%20Notebooks/article_images/DockerStatusRunning.png)
+         
+         1. If you do not see the above icon listed in the system tray, launch Docker Desktop from the start menu.
+         
+         1. If Docker prompts you to reboot, it's fine to close the installer and relaunch after a reboot has completed and Docker is in a running state. Any successfully installed third party applications should be detected and will not be automatically re-installed.
