@@ -10,11 +10,13 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 - Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed
 - Computer with Wi-Fi connectivity
 
-### Definition of SoftAP
-
-SoftAP, or software-enabled access point, allows your devkit to act as a wireless access point/hotspot through its integrated Wi-Fi module. The devkit's SoftAP IP address is 10.1.1.1.  We will be using the devkit's SoftAP for the initial setup.
-
 ## Connecting to OOBE for Initial Setup
+
+### What is SoftAP?
+
+SoftAP, or software-enabled access point, allows your devkit to act as a wireless access point/hotspot through its integrated Wi-Fi module. The devkit's SoftAP IP address is 10.1.1.1. We will be using the devkit's SoftAP for the initial setup.
+
+### Connect to OOBE
 
 **We do NOT recommend using a mobile device for completing OOBE unless you only want to configure non-IoT Hub items.**
 
