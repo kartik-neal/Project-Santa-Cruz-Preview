@@ -8,7 +8,7 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 - Ethernet cable (optional)
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) completed
 - Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed
-- Device with Wi-Fi connectivity and browser
+- Host Computer with Wi-Fi connectivity and browser
 
 ## Connecting to OOBE for Initial Setup
 
@@ -22,10 +22,13 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
 1. To get started, power on your devkit.
 
-1. From your computer, establish a Wi-Fi connection to the devkit's SoftAP. This varies by platform (Windows/Linux/Mac).
+1. If the host computer you will be using has an active WWAN/Cellular connection, disconnect from it before proceeding.  This can sometimes cause interference to the SoftAP.
+
+1. From your host computer, establish a Wi-Fi connection to the devkit's SoftAP. This varies by platform (Windows/Linux/Mac).
 
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
     2. Password: santacruz              (if you have already manually set your SoftAP password during the OOBE, enter that password here)
+
 
     > [!NOTE]
     > If you experience issues while trying to connect with the devkit's SoftAP please review the [known issues](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/release-notes/known-issues.md) page.
