@@ -1,21 +1,24 @@
-<!---
-title: Project Santa Cruz onboarding                     # the article title to show on the browser tab
-description: Walks a user through the onboarding process for Project Santa Cruz Private Preview (July 2020). 
-author: elqu20      # the author's GitHub ID - will be auto-populated if set in settings.json
-ms.author: v-elqu     # the author's Microsoft alias (if applicable) - will be auto-populated if set in settings.json
-ms.date: {@date}           # the date - will be auto-populated when template is first applied
-ms.topic: reference  # the type of article
---->
 # Project Santa Cruz onboarding
 
-Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits and devices, please complete the onboarding as described herein. The onboarding process involves connecting an appropriate Azure subscription and IoT Hub to Project Santa Cruz, which allows you to connect, manage, and update your devices with ease. Perform the following steps to complete the onboarding:
+Welcome to Project Santa Cruz! Prior to getting started with the Santa Cruz devkit, please complete the onboarding as described herein. During onboarding, you will:
 
-1. Open a browser and enter https://projectsantacruz.microsoft.com/ in the address bar to open the onboarding tool.  
+- create an IoT Hub within your Azure account and connect it to Project Santa Cruz
+- enable Device Provisioning Service (DPS), Azure Device Update (ADU), and Automatic Import Update (AIU) within your IoT Hub
+
+Please note that it may take up to two business days to process your request to access the onboarding portal.
+
+## Prerequisites
+
+- [Azure account](https://azure.microsoft.com/en-us/free/) with Azure Active Directory enabled
+
+## Request access
+
+1. Open a browser and enter https://projectsantacruz.microsoft.com/ in the address bar to open the onboarding portal.  
 
 1. Enter your account login details and click **Next**.
 
-    > [!NOTE]
-    >To ensure you onboard the correct Azure subscription, you must log into the site with an Azure Active Directory-enabled account that is a member of the Azure subscription you wish to onboard. In most cases, users will want to onboard a subscription from their company's Azure account, in which case they should log in with their corporate credentials. If you want to onboard an Azure subscription that is different than your corporate subscription, you will need to log in with a user account that is a member of that subscription. If you do not have a user account for that subscription, or if your company does not use Azure Active Directory, you can follow [these instructions](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create an account. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
+    > [!IMPORTANT]
+    > To ensure you onboard the correct Azure subscription, you must log into the site with an Azure Active Directory-enabled account that is a member of the Azure subscription you wish to onboard. In most cases, users will want to onboard a subscription from their company's Azure account, in which case they should log in with their corporate credentials. If you want to onboard an Azure subscription that is different than your corporate subscription, you will need to log in with a user account that is a member of that subscription. If you do not have a user account for that subscription, or if your company does not use Azure Active Directory, you can follow [the MSA account onboarding access instructions](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/msa_account_onboarding_access.md) to create an account. Once you have successfully created your new user, return to this article for guidance on completing the rest of the onboarding process.
 
     ![onboarding_welcome_page](./getting_started_images/onboarding_welcome_page.png)
 
@@ -23,9 +26,11 @@ Welcome to Project Santa Cruz! Prior to getting started with Santa Cruz devkits 
 
     ![request_access](./getting_started_images/oobe_request_access.png)
 
-1. Once you have access to the onboarding portal through the URL above, click **Get Started** on the onboarding welcome screen.
+## Create an IoT Hub and enable Azure services
 
-1. Select the Azure subscription you would like to use with Project Santa Cruz from the drop-down menu. If you do not have an Azure subscription, or if you would like to create a new subscription to use with Project Santa Cruz, click the blue **Learn more** icon. This link redirects to the Azure website where you may create a new Azure account. Note that the free account, which currently provides $200 in credits to use within 30 days of the account opening, is sufficient to get started with Project Santa Cruz. Your account credit card will be charged for usage following the exhaustion or expiration of the credits. After you have selected the appropriate Azure subscription from the drop-down on the onboarding screen, click **Next**.
+1. Once your access request has been processed, return to the [onboarding portal](https://projectsantacruz.microsoft.com/). Click **Get Started** on the welcome screen.
+
+1. Select the Azure subscription you would like to use with Project Santa Cruz from the drop-down menu. If you do not have an Azure subscription, or if you would like to create a new subscription to use with Project Santa Cruz, click the blue **Learn more** icon. This link redirects to the Azure website where you may create a new Azure account. Please note that the free account is sufficient to get started with Project Santa Cruz. Your account credit card will be charged for usage following the exhaustion or expiration of account credits. After you have selected the appropriate Azure subscription from the drop-down on the onboarding screen, click **Next**.
 
     ![onboarding_select_azure_subscription](./getting_started_images/onboarding_select_azure_subscription.png)
 
