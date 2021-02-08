@@ -106,6 +106,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 ## Notes
 
 To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
+During the WiFi connection, three blue dots will be shown.  These will go away once the WiFi connection has been established. 
 Captive Portal is not supported on IPV6. 
 
 ## Provide feedback
