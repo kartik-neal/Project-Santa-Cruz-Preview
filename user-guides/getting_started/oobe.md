@@ -73,7 +73,8 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
     ![ssh](./getting_started_images/oobe_ssh.png)
 
-1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.
+1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.  To check your Azure subscription go to https://ms.portal.azure.com/#home, then tap Subscriptions. 
+    >[NOTE] Depending on your build, the screen might say "Azure cross platform command Line interface". This has been updated in more recent builds. 
 
     ![connect_device](./getting_started_images/oobe_connect_device.png)
 
