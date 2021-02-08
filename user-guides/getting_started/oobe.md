@@ -29,8 +29,7 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
     > If you experience issues while trying to connect with the devkit's SoftAP please review the [known issues](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/release-notes/known-issues.md) page.
     > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
 
-1. Open a browser and go to http://10.1.1.1:4242   *For newly unboxed Private Preview devices* 
-1. *If you have flashed your device to a newer build use http://10.1.1.1*
+1. Open a browser and go to http://10.1.1.1:4242 to access the OOBE. If you have already flashed your device to a newer build, use http://10.1.1.1.
 
 ## OOBE procedure
 
