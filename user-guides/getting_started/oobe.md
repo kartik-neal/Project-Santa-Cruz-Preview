@@ -89,7 +89,7 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
 
         ![code_sign_in](./getting_started_images/oobe_code_sign_in.png)
 
-1. Select the IoT Hub you created during the [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) process to assign it to your devkit. If you are not sure which IoT Hub name you created during onboarding, you can review it on the [onboarding website](https://projectsantacruz.microsoft.com/).
+1. Select the IoT Hub you created during the [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) process to assign it to your devkit. If you are not sure which IoT Hub was created during onboarding, please check the [onboarding website](https://projectsantacruz.microsoft.com/).
 
     ![iot_hub](./getting_started_images/oobe_iot_hub.png)
 
