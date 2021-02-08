@@ -10,22 +10,17 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 - Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed
 - Computer with Wi-Fi connectivity
 
-## Connecting to OOBE
+### Definition of SoftAP
 
-You can connect to and start OOBE through any of the following interfaces: SoftAP, Wi-Fi, or Ethernet. Replace **<your_devices_ip>** in the table below with your device's corresponding IP address.
+SoftAP, or software-enabled access point, allows your devkit to act as a wireless access point/hotspot through its integrated Wi-Fi module. The devkit's SoftAP IP address is 10.1.1.1.  We will be using the devkit's SoftAP for the initial setup.
 
-If connecting over the SoftAP, your IP address will be 10.1.1.1. If connecting over Ethernet, use the local IP address of the devkit, which you can get from the Ethernet router or hub. Connecting over Wi-Fi requires the device IP address that is provided during the OOBE (step 4 of the OOBE procedure below).
+## Connecting to OOBE for Initial Setup
 
-OOBE Web Address |      Note
------------------- | ----------------
-http://<your_devices_ip>:4242 | for builds released prior to 09/08/2020
-http://<your_devices_ip> | for builds released on or after 09/08/2020
-
-**We do NOT recommend using a mobile device for the OOBE unless you only want to configure non-IoT Hub items.**
+**We do NOT recommend using a mobile device for completing OOBE unless you only want to configure non-IoT Hub items.**
 
 1. To get started, power on your devkit.
 
-1. If you wish to connect your devkit over Ethernet, connect the Ethernet cable to the devkit and to your Ethernet hub or port. Otherwise, open your network and internet settings on your computer and connect to the SoftAP:
+1. From your computer, establish a Wi-Fi connection to the devkit's SoftAP. This varies by platform (Windows/Linux/Mac).
 
     1. SoftAP/Hotspot SSID: scz-xxxx    (where xxxx = the last four digits of the devkit's Wi-Fi MAC address)
     2. Password: santacruz              (if you have already manually set your SoftAP password during the OOBE, enter that password here)
@@ -33,7 +28,8 @@ http://<your_devices_ip> | for builds released on or after 09/08/2020
     > [!NOTE]
     > Windows may complain about the SoftAP using a less secure standard (WPA2+TKIP cipher). This will be addressed in a future build to only allow connections via the CCMP pairwise cipher.
 
-1. Open a browser and go to http://<your_devices_ip>:4242 or http://<your_devices_ip>, depending on your build as noted above.
+1. Open a browser and go to http://10.1.1.1:4242   *For newly unboxed Private Preview devices* 
+1. *If you have flashed your device to a newer build use http://10.1.1.1*
 
 ## OOBE procedure
 
