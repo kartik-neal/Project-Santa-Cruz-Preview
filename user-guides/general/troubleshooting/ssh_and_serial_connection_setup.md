@@ -5,7 +5,7 @@ Follow the steps below to set up an SSH or serial connection to your Project San
 ## Prerequisites
 
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-- Host PC
+- Host computer with Wi-Fi connectivity
 - Project Santa Cruz Development Kit
 - [USB to TTL serial cable](https://www.adafruit.com/product/954) (for serial connection only)
 
