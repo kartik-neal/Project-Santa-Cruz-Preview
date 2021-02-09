@@ -6,7 +6,7 @@ Register your Project Santa Cruz devices today to receive an enhanced support ex
 
 - Project Santa Cruz devkit
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) completed
-- Host PC
+- Host computer with Wi-Fi connectivity
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 ## Collect your device's hardware ID
