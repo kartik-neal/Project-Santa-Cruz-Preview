@@ -108,9 +108,10 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
 ## Notes
 
-To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
-During the WiFi connection, three blue dots will be shown.  These will go away once the WiFi connection has been established. 
-Captive Portal is not supported on IPV6. 
+1. To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
+1. If at anytime during OOBE you see blue dots and then OOBE restarts, this is due to losing internet connectivity. Please verify you have a consistent internet connection. 
+1. During the WiFi connection, three blue dots will be shown.  These will go away once the WiFi connection has been established.
+1. Captive portal is not supported on IPV6
 
 ## Provide feedback
 
