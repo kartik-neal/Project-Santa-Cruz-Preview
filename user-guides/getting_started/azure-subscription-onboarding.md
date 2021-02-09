@@ -7,6 +7,12 @@ Welcome to Project Santa Cruz! Prior to getting started with the Santa Cruz devk
 
 Please note that it may take up to two business days to process your request to access the onboarding portal.
 
+### Why is onboarding important?
+
+An IoT Hub is required for working with the Project Santa Cruz devkit. In addition, the onboarding portal is currently the only location where you may create an IoT Hub with ADU enabled. ADU allows you to perform [over-the-air (OTA) updates](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/updating/ota_update.md) from within the Azure portal--a feature we highly recommend.
+
+Onboarding also allows for easy enablement of DPS and AIU, both recommended features. DPS enables zero-touch provisioning of devices, and AIU will automatically upload new device updates to your ADU account.
+
 ## Prerequisites
 
 - [Azure account](https://azure.microsoft.com/en-us/free/) with Azure Active Directory enabled
