@@ -10,7 +10,7 @@ ms.topic: reference  # the type of article
 
 ## Prerequisites:
 
-- Host PC.
+- Host computer with Wi-Fi connectivity
 - Project Santa Cruz Devkit
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) complete with ADU enabled.
 - [OOBE](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md) complete.
