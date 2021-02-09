@@ -8,6 +8,7 @@ If you encounter any of these issues, it is not necessary to open a bug. If you 
 | OOBE | Can’t complete OOBE unless device’s Wifi is configured (Azure login fails). | 1. SSH to the device access point (10.1.1.1) 2. Identify and copy the device ethernet IP address 3. Connect to OOBE using the copied ethernet IP based URL |
 | OOBE | Clicking on links in the EULA during OOBE sometimes does not open a new web page. | Copy the link and open it in a separate browser window. |
 | OOBE | Cannot work through OOBE when connected to a mobile Wi-Fi hotspot. | Connect your device directly to the SoftAP, a Wi-Fi network, or to a network over ethernet. |
+| Wi-Fi/SoftAP | The SoftAP can sometimes disconnect or disappear. | We are investigating.  Rebooting the device will typically bring it back. |
 | Wi-Fi | The hardware button that toggles the Wi-Fi SoftAP on and off sometimes does not work. | Continue to try pressing the button or reboot the device. |
 | Wi-Fi | Users may see a message after connecting to Wi-Fi saying "This Wi-Fi network uses an older security standard." | The devkit's hotspot/SoftAP uses the WEP encryption algorithm.  We will be updating this to WPA2 in a future update. |
 | Wi-Fi | Unable to connect to SoftAP from Windows 10 PC with the following error message: <br> "Can't connect to this network" | Reboot both the devkit and the computer. |
