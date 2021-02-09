@@ -8,7 +8,7 @@ After completing the [onboarding](https://github.com/microsoft/Project-Santa-Cru
 - Ethernet cable (optional)
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) completed
 - Project Santa Cruz Devkit [setup](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md) completed
-- Host Computer with Wi-Fi connectivity and browser
+- Device with Wi-Fi connectivity and browser
 
 ## Connecting to OOBE for Initial Setup
 
