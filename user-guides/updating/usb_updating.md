@@ -14,7 +14,7 @@ Please note that Method #1 keeps the data intact on the device, while Method #2 
 
 ### Method #1 prerequisites
 
-- Windows or Linux PC with an available USB port.
+- Host computer with an available USB port.
 
 - USB storage device.
 
@@ -87,7 +87,7 @@ To access error messages after attempting an update, [SSH into your device](http
 
 ### Method #2 prerequisites
 
-- Windows or Linux PC an available USB-C or USB-A port.
+- Host computer with an available USB-C or USB-A port.
 
 - Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).  
 
@@ -171,7 +171,7 @@ There are a few situations where it is not possible to gracefully USB update (re
 
 ### Method #3 prerequisites
 
-- Windows or Linux PC with an available USB-C or USB-A port.
+- Host computer with an available USB-C or USB-A port.
 
 - Carrier board and USB-C cable, included in the Project Santa Cruz Development Kit. If your PC has a USB-A port but not a USB-C port, you may use a USB-C to USB-A cable (sold separately).
 
