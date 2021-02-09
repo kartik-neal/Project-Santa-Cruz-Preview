@@ -32,7 +32,7 @@ Please see the specifications below for the Eye SoM that is included in the Proj
 |Power                           |3.5 W     |
 |Ports                           |1x USB 3.0 Type C <br> 2 MIPI 4 Lane (up to 1.5 Gbps per lane)     |
 |Control Interfaces              |x2 I2C <br> x2 SPI <br> x6 PWM (GPIOs, e.g. x2 clock, x2frame sync, x2 unused) <br> x2 spare GPIO |
-|Certification (Eye SoM assembly with housing)                   |CE <br> FCC      |
+|Certification                   |CE <br> FCC      |
 |Operating Temperature           |0 to 27 degrees C (Eye SoM assembly with housing) <br> -10 to 70 degrees C (Eye SoM chip) |
 |Touch Temperature               |<= 48 degrees C |
 |Relative Humidity               |8% to 90%    |
