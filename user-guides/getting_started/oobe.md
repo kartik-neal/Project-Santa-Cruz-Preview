@@ -75,7 +75,7 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
     ![ssh](./getting_started_images/oobe_ssh.png)
 
-1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.  To check your Azure subscription go to https://ms.portal.azure.com/#home, then tap Subscriptions. 
+1. On the next screen, click **Connect with a new device** to begin the process of linking your devkit to Azure.  To check your Azure subscription status go to https://ms.portal.azure.com/#home, then tap Subscriptions. 
 
     ![connect_device](./getting_started_images/oobe_connect_device.png)
 
