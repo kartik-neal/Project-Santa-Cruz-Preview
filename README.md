@@ -4,7 +4,7 @@
 
 #### What is the change?
 
-The default SoftAP password will be changing soon from “santacruz” to a device-specific, TPM-derived password.
+In an upcoming system update, the default WiFi access point password will be changed  from “santacruz” to a device-specific, secure password.
 
 Go [here](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/alerts/softAP_default_password_change.md) for the full details.
 
