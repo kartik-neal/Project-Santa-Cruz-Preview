@@ -12,7 +12,7 @@ With Project Santa Cruz, you can update your devkit carrier board software over-
 
 ## Prerequisites
 
-- Host PC.
+- Host computer with Wi-Fi connectivity.
 - Project Santa Cruz Development Kit.
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 - [Onboarding](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) complete with ADU enabled (please wait 2 business days after completing this).
