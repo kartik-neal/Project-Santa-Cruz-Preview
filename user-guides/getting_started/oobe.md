@@ -53,7 +53,7 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
     ![wifi](./getting_started_images/oobe_wifi.png)
 
-1. Once your devkit has successfully connected to your network of choice, write down the IP address you are shown. You can use this IP address for OOBE or SSH sessions. Then, navigate back to the **Network connection** page.
+1. Write down the IP address you are shown once a connection is established. You will want to use this IP address after OOBE completes for viewing the Preview Video Output instead of 10.1.1.1:3000. You can also use this IP address for [SSH sessions](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md) and connecting to OOBE. Once you’ve noted your IP address, navigate to the **Network connection** page.
 
     ![wifi_success](./getting_started_images/oobe_wifi_success.png)
 
@@ -100,12 +100,14 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
     ![device_name](./getting_started_images/oobe_device_name.png)
 
-1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home).
+1. Congratulations! Your devkit has been successfully linked to your Azure account and Project Santa Cruz IoT Hub. You may now access your device within the [Azure Portal](https://portal.azure.com/?feature.canmodifystamps=true&Microsoft_Azure_Iothub=aduprod&microsoft_azure_marketplace_ItemHideKey=Microsoft_Azure_ADUHidden#home). Before doing so, disconnect your computer from the devkit's SoftAP.
 
-  >[!NOTE] If your **Preview Video Output** link is using 10.1.1.1:3000, we recommend you disconnect your PC from the SoftAP as outlined in step 5 and use http://<your_noted_IP_address>:3000 to get the best experience.
-  
+    > [!NOTE]
+    > The Preview Video Output hyperlink on the final screen will no longer work once disconnected. Instead, use the IP address you wrote down in step 4 to preview the video output for the best streaming performance: http://<your_noted_IP_address>:3000.
+    > If you need to [SSH into your devkit](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md), use <your_noted_IP_address>.
+
    ![oobe_complete](./getting_started_images/oobe_complete.png)
-
+  
 ## Notes
 
 1. To protect your security, after 30 minutes of inactivity, we stop the OOBE process (and we remove the port 80 allow rule). If this occurs, please restart the OOBE.
