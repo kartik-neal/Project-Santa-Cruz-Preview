@@ -116,7 +116,17 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 1. Captive portal is not supported on IPV6
 1. If you have added an IoT Hub outside of OOBE, please refresh the browser and wait a few minutes for it propogate on the IoT Hub screen.
 
-## Provide feedback
+## SSH Into Your Device
+
+1. Download and install Putty - https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
+1. Open Putty and enter the following: Host Name - 10.1.1.1, Port - 22, Connection Type - SSH
+1. Tap Open
+1. Login to the Putty Terminal: Login as - root, Password - p@ssw0rd
+1. You will be prompted to enter a new password, it will need to contain letters and numbers and be least 12 characters in length
+1. Write down your password in a safe place
+1. You are free to exit Putty 
+
+## Provide Feedback
 
 After completing the OOBE, please provide feedback on your experience via this [questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzoJxrXKT0dEvfQyxsA0h8lUOEpDRkxZSUFWMFc2SEZYMDBBSlVQMUZMMy4u). Your feedback will help us continue to fine-tune and improve the OOBE experience.
 
