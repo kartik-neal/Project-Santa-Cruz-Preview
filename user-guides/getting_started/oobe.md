@@ -114,6 +114,7 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 1. If at anytime during OOBE you see blue dots and then OOBE restarts, this is due to losing internet connectivity. Please verify you have a consistent internet connection. 
 1. During the WiFi connection, three blue dots will be shown.  These will go away once the WiFi connection has been established.
 1. Captive portal is not supported on IPV6
+1. If you have added an IoT Hub outside of OOBE, please refresh the browser and wait a few minutes for it propogate on the IoT Hub screen.
 
 ## Provide feedback
 
