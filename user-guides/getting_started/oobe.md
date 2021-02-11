@@ -18,7 +18,7 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 
 ### Connect to OOBE
 
-**We do NOT recommend using a mobile device for completing OOBE unless you only want to configure non-IoT Hub items.**
+**Warning: If completing OOBE via a mobile device, be aware that data rates from your mobile carrier may apply.**
 
 1. To get started, power on your devkit.
 
