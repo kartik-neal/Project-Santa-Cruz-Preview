@@ -88,9 +88,8 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
         ![enter_code](./getting_started_images/oobe_enter_code.png)
 
     1. Sign into your Azure account (the same account used during the onboarding process) and click **Next**. Navigate back to the OOBE window, which will show “Successfully Linked” once account sign-in is successful.
-        >[!NOTE] Depending on your build, the screen might say "Azure cross platform command Line interface". This has been updated in more recent builds. 
 
-        ![code_sign_in](./getting_started_images/oobe_code_sign_in.png)
+        ![code_sign_in](./getting_started_images/oobe_Command_Line.png)
 
 1. Select the IoT Hub you created during the [onboarding](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md) process to assign it to your devkit. If you are not sure which IoT Hub was created during onboarding, please check the [onboarding website](https://projectsantacruz.microsoft.com/).
 
