@@ -1,5 +1,11 @@
 # Welcome to the Project Santa Cruz Private Preview
 
+## **MAINTENANCE ALERT**
+
+The [onboarding portal](https://projectsantacruz.microsoft.com/) will be undergoing scheduled maintenance from 02/15/2021 through 02/23/2021. During this time, you will not be able to onboard new subscriptions or create new IoT Hubs through the onboarding portal. Attempting to do so will result in an error.
+
+IoT Hubs that were created through the onboarding portal prior to the mainentance period will remain functional. Other features of the onboarding portal, including device updates, SoM updates, and device registration, will still be available.
+
 ## **BREAKING CHANGE ALERT**
 
 #### What is the change?
