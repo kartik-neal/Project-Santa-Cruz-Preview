@@ -74,6 +74,9 @@ Next, you must either load images or capture images for training your AI model. 
 
 When you have enough photos, click **Next: Tag images and model training** at the bottom of the screen. All images will be saved in [Custom Vision](https://www.customvision.ai/).
 
+> [!NOTE]
+> If you elect to upload training images directly to Custom Vision, please note that image file size cannot exceed 6MB.
+
 ## Tag images and train your model
 
 Before training your model, add labels to your images.
@@ -97,6 +100,9 @@ Before training your model, add labels to your images.
 1. When the training has completed, your screen will show your model performance. For more information about evaluating these results, please see the [model evaluation documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/get-started-build-detector#evaluate-the-detector). After training, you may also wish to [test your model](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/test-your-model) on additional images and retrain as necessary. Each time you train your model, it will be saved as a new iteration. Reference the [Custom Vision documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-improving-your-classifier) for additional information on how to improve model performance.
 
     ![Model performance screen after training has completed.](./article_images/no_code_vision_model_performance.png)
+    
+    > [!NOTE]
+    > If you elect to test your model on additional images in Custom Vision, please note that test image file size cannot exceed 4MB.
 
 Once you are satisfied with the performance of your model, close Custom Vision by closing the browser tab.
 
