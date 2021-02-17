@@ -60,9 +60,28 @@ journalctl -u hostapd.service -u wpa_supplicant.service -u ztpd.service -u syste
 |[docker image prune](https://docs.docker.com/engine/reference/commandline/image_prune/) |removes all dangling images |
 |watch docker ps <br> watch ifconfig [interface] |check docker container download status |
 
-
 ## USB Updating
 
 |Error:                                    |Solution:                                               |
 |------------------------------------------|--------------------------------------------------------|
 |LIBUSB_ERROR_XXX during USB flash via UUU |This error is the result of a USB connection failure during UUU updating. If the USB cable is not properly connected to the USB ports on the PC or the PE-10X, an error of this form will occur. Try unplugging and replugging both ends of the USB cable and jiggling the cable to ensure a secure connection. This almost always solves the issue. |
+
+## Devkit carrier board LED states
+
+There are three small LEDs on top of the carrier board housing. A cloud icon is printed next to LED 1, a Wi-Fi icon is printed next to LED 2, and an exclamation mark icon is printed next to LED 3. Please see the table below for information on each LED state.
+
+|LED             |State      |Description                      |
+|----------------|-----------|---------------------------------|
+|LED 1 (IoT Hub) |On (solid) |Device is connected to an IoT Hub. |
+|LED 2 (Wi-Fi)   |Slow blink |Device authentication in progress. |
+|LED 2 (Wi-Fi)   |Fast blink |Authentication was successful, device association in progress. |
+|LED 2 (Wi-Fi)   |On (solid) |Authentication and association were successful; device is connected to a Wi-Fi network. |
+|LED 3           |NA         |LED not in use. |
+
+> [!Note] devmmmodule is used to check the IoT Hub connection status. If the device does not have devmmmodule, LED 1 will remain off, even if the device is connected to an IoT Hub. It can also take 30 to 60 seconds after all modules are loaded and running on the device before devmmmodule sends the connection status to the LED.
+
+### Device LED testing:
+
+- Power on the devkit. Once the device finishes booting, LED 2 will slow blink.
+- Start OOBE. After connecting to a Wi-Fi network, LED 2 will turn solid.
+- Complete OOBE. After selecting an IoT Hub to connect your device to, wait for all device modules to deploy and start running. LED 1 will turn on (this may take an additional 30 to 60 seconds).
