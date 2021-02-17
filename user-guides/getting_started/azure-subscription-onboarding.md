@@ -15,7 +15,7 @@ Onboarding also allows for easy enablement of DPS and AIU, both recommended feat
 
 ## Prerequisites
 
-- [Azure account](https://azure.microsoft.com/en-us/free/) with Azure Active Directory enabled
+- [Azure account](https://azure.microsoft.com/en-us/free/) with Azure Active Directory enabled and "owner" or "contributor" permissions
 
 ## Request access
 
