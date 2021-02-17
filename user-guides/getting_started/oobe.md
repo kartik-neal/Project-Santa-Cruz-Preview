@@ -116,15 +116,16 @@ SoftAP, or software-enabled access point, allows your devkit to act as a wireles
 1. Captive portal is not supported on IPV6
 1. If you have added an IoT Hub outside of OOBE, please refresh the browser and wait a few minutes for it propogate on the IoT Hub screen.
 
-## SSH Into Your Device
+## Update your device's root SSH password
 
-1. Download and install Putty - https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
-1. Open Putty and enter the following: Host Name - 10.1.1.1, Port - 22, Connection Type - SSH
-1. Tap Open
-1. Login to the Putty Terminal: Login as - root, Password - p@ssw0rd
-1. You will be prompted to enter a new password, it will need to contain letters and numbers and be least 12 characters in length
-1. Write down your password in a safe place
-1. You are free to exit Putty 
+The root SSH password for your device (p@ssw0rd) will expire after 90 days. We recommend updating this password now to avoid any interruption to root SSH access.
+
+1. [SSH into your device](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/general/troubleshooting/ssh_and_serial_connection_setup.md) with the root login:
+    - User: root
+    - Password: p@ssw0rd
+1. You will be prompted to enter a new password, which must contain letters and numbers and be least 12 characters in length. Type your new password into the PuTTY terminal and hit **Enter**.
+1. Write down your password in a safe place.
+1. You are now free to close the PuTTY terminal.
 
 ## Provide Feedback
 
