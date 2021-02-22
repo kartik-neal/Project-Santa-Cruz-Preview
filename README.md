@@ -1,10 +1,14 @@
 # Welcome to the Project Santa Cruz Private Preview
 
+
+<!---
 ## **MAINTENANCE ALERT**
 
 The [onboarding portal](https://projectsantacruz.microsoft.com/) will be undergoing scheduled maintenance from 02/15/2021 through 02/23/2021. During this time, you will not be able to onboard new subscriptions or create new IoT Hubs through the onboarding portal. Attempting to do so will result in an error.
 
 IoT Hubs that were created through the onboarding portal prior to the mainentance period will remain functional. Other features of the onboarding portal, including device updates, SoM updates, and device registration, will still be available.
+
+--->
 
 ## **BREAKING CHANGE ALERT**
 
@@ -23,10 +27,10 @@ On this page you will find everything you need to get started using your devkit,
 ## Getting started
 
 - [Project Santa Cruz devkit overview](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/project_santa_cruz_development_kit_overview.md)
-- [Onboard your Azure subscription](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/azure-subscription-onboarding.md)
+- **no longer required** - Onboard your Azure subscription
 - [Unbox and assemble your devkit](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/devkit-unboxing-setup.md)
 - [Connect your devkit to Wi-Fi and Azure](https://github.com/microsoft/Project-Santa-Cruz-Private-Preview/blob/main/user-guides/getting_started/oobe.md)
-- [Register your devkit](https://github.com/microsoft/Project-Santa-Cruz-Preview/blob/main/user-guides/getting_started/register_your_device.md)
+- **no longer required** - Register your devkit
 
 ## Build a no-code prototype
 
