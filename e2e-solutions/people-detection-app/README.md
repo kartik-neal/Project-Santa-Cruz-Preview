@@ -1,9 +1,22 @@
 # Open Source People Counting AI Application
 
+## Prerequisites
+- A service principal with an object id, app id, and secret is required in order to deploy the solution. Please ensure you have the appropriate rights to create such - a service principal, or contact your Azure Active Directory Administrator to assist you in creating one.
+- You must have Owner access on the Azure subscription you wish to deploy to
+- To install this application you must have Owner level access to the target subscription.  This deployment will create resources within the following Azure namespaces. These resource providers must be enabled on the subscription.
+    * Microsoft.Devices
+    * Microsoft.Authorization
+    * Microsoft.ContainerInstance
+    * Microsoft.ManagedIdentity
+    * Microsoft.Web
+    * Microsoft.Storage
+    * Microsoft.Resources
+    * Microsoft.Media
 
+## Deployment
 Press this button to deploy the people counting application to your Santa Cruz AI device:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Funifiededgescenariostest.blob.core.windows.net%2Farm-template%2Fazure-percept%2Flatest%2FARM-template.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Funifiededgescenariostest.blob.core.windows.net%2Farm-template%2Fazure-percept%2F20210223.2%2FARM-template-20210223.2.json)
 
 				
 ### Overview
@@ -25,7 +38,7 @@ This application can execute with a physical Santa Cruz AI Devkit.
 # Installation details
 This reference open source application showcases best practices for AI security, privacy and compliance.  It is intended to be immediately useful for anyone to use with their Santa Cruz AI device. Deployment starts with this button:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://ms.portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Funifiededgescenarios.blob.core.windows.net%2Farm-template%2Fazure-eye%2Flatest%2Fazuredeploy-eye.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Funifiededgescenariostest.blob.core.windows.net%2Farm-template%2Fazure-percept%2F20210223.2%2FARM-template-20210223.2.json)
 #
 
 This will redirect you to the Azure portal with this deployment page:
