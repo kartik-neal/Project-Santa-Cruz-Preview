@@ -239,10 +239,10 @@ GRAPH_INSTANCE=$(< lva-topology-params.json jq '.name = "'"$GRAPH_INSTANCE_NAME"
     jq --arg replace_value "$RTSP_URL" '.properties.parameters[0].value = $replace_value'
 )
 
-INSTANCE_LIST=$(az iot hub invoke-module-method -n "$IOTHUB_NAME" -d "$DEVICE_NAME" -m lvaEdge --mn GraphInstanceList \
+INSTANCE_LIST=$(az iot hub invoke-module-method -n "$IOTHUB_NAME" -d "$DEVICE_NAME" -m lvaEdge --mn GraphInstanceGet \
     --mp '{"@apiVersion": "2.0","name": "'"$GRAPH_INSTANCE_NAME"'"}')
 
-if [ "$(echo "$INSTANCE_LIST" | jq '.payload.value[].name' | cut -d'"' -f2 )" == "$GRAPH_INSTANCE_NAME" ]; then
+if [ "$(echo "$INSTANCE_LIST" | jq -r '.payload.name')" == "$GRAPH_INSTANCE_NAME" ]; then
     echo "$(info) Graph Instance already exist"
     echo "$(info) Deactivating LVA graph instance..."
     az iot hub invoke-module-method \
@@ -261,15 +261,15 @@ az iot hub invoke-module-method \
     -d "$DEVICE_NAME" \
     -m lvaEdge \
     --mn GraphInstanceSet \
-    --mp "$GRAPH_INSTANCE" \
-    --output "none"
+    --mp "$GRAPH_INSTANCE" #\
+    #--output "none"
 
 
 echo "$(info) Getting LVA graph instance status..."
-INSTANCE_STATUS=$(az iot hub invoke-module-method -n "$IOTHUB_NAME" -d "$DEVICE_NAME" -m lvaEdge --mn GraphInstanceList \
+INSTANCE_STATUS=$(az iot hub invoke-module-method -n "$IOTHUB_NAME" -d "$DEVICE_NAME" -m lvaEdge --mn GraphInstanceGet \
     --mp '{"@apiVersion": "2.0","name": "'"$GRAPH_INSTANCE_NAME"'"}')
 
-if [ "$(echo "$INSTANCE_STATUS" | jq '.payload.value[].name' | cut -d'"' -f2 )" == "$GRAPH_INSTANCE_NAME" ]; then
+if [ "$(echo "$INSTANCE_STATUS" | jq -r '.payload.name')" == "$GRAPH_INSTANCE_NAME" ]; then
     echo "$(info) Graph Instance has been created on device."
 else
     echo "$(error) Graph Instance has not been created on device"

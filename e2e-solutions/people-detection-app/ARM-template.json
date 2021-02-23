@@ -66,7 +66,7 @@
         "webappName": "[concat('ues-perceptapp',substring(uniqueString(subscription().id,variables('resourceGroupAMS')),1,4))]",
         "appServiceName": "[concat('ues-perceptasp',substring(uniqueString(subscription().id,variables('resourceGroupAMS')),1,4))]",
         "graphTopology": "CVRToAMSAsset",
-        "graphInstance": "AzurePerceptSOM"
+        "graphInstance": "AzurePerceptVisionSOM"
     },
     "resources": [
         {
